@@ -1,0 +1,1086 @@
+*
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-color: white;
+    margin-left:100px;
+    margin-right:100px;
+    margin-top:100px;
+  }
+
+  
+  .link, .link i {
+    font-size: 1em; /* Relative font size */
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Your existing styles */
+  .free {
+    display: flex;
+    justify-content: center; /* Center content */
+    align-items: center; /* Center content */
+    padding: 10px;
+    background-color: #2a2a6a; /* Darker violet background color */
+    color: white;
+  }
+  
+  .social-icons, .center, .auth {
+    margin: 0 10px; /* Add some margin for spacing */
+  }
+  
+  /* Adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .free {
+      flex-direction: column; /* Stack elements in a column */
+      text-align: center; /* Center text */
+    }
+  
+    .auth button {
+      font-size: 1em; /* Relative font size */
+    }
+  }
+  
+  /* Adjustments for larger screens */
+  @media (min-width: 1200px) {
+    .free {
+      justify-content: space-between; /* Adjust to your preference */
+    }
+  }
+  
+  .free .icon {
+  display:flex;
+  border-radius: 50%;
+  
+  display: inline-flex; /* Align the icon and text in the same line */
+  }
+  
+  .free .icon i {
+  font-size: 15px;
+  }
+  
+  .free .free-shipping-text {
+  font-size:small;
+  
+  }
+  
+  .free .auth {
+    display: flex;
+    align-items: center;
+  }
+  
+  .free .auth p {
+    margin-right: 10px; /* Add some spacing between "Follow Us On" and the icons */
+  }
+  
+  .social-icons {
+  display: inline-block;
+  vertical-align: middle; /* Align with the middle of the adjacent content */
+  }
+  
+  .social-icons p {
+  display: inline-block; /* Display the paragraph as inline block */
+  margin: 0; /* Remove default margin */
+  margin-right: 10px; /* Adjust spacing between the text and icons */
+  }
+  
+  .social-icons a {
+  display: inline-block; /* Display the anchor tags as inline block */
+  margin-right: 10px; /* Adjust spacing between the icons */
+  }
+  
+  .social-icons a i {
+    font-size: 15px;
+    border-radius: 50%; /* Make the icons round */
+    padding: 10px; /* Adjust padding to match text size */
+   
+    color: white; /* Set the color for the icons */
+  }
+  
+  
+  .free .auth button {
+    font-size: 15px; /* Set button font size to match text */
+    font-weight: bold; /* Make the buttons bold */
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px; /* Add some margin between the buttons */
+  }
+  
+        .logo {
+          display: flex;
+          align-items: center;
+          margin-right: 20px;
+          padding-right:20px;
+         
+        
+        }
+    
+        .logo .icon {
+            background: linear-gradient(45deg, #8b00ff, #3d0b37); /* Adjust colors as needed */
+          color: white;
+          font-size: 24px;
+          width: 50px;
+          height: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 20px;
+          padding:20px;
+    
+  }
+    
+
+  
+        .logo .logo-text {
+          font-weight: bold;
+          font-size: 24px;
+        }
+    
+        .main_header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          color: #fff;
+          background-color: #2a2a6a; /* Darker violet background color */
+        }
+        
+        .main_header .logo {
+          display: flex;
+          margin-right: 20px;
+         
+        }
+        
+        .main_header .search_box {
+          display: flex;
+          margin-right: 20px;
+          flex: 1;
+        }
+        
+        .main_header .search_box input {
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          margin-right: 10px;
+          width: auto;
+          font-size: 14px; /* Adjust font size */
+         
+        }
+        
+        .main_header .search_box button {
+          padding: 10px;
+          background-color: #2a2a6a; /* Darker violet background color */
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+  
+  
+  
+    /* end of navbar */
+
+  .col-md-6 {
+    padding: 0;
+  }
+  
+  #carousel-container {
+    padding: 30px;
+  }
+
+  .carousel {
+    position: relative;
+    /* Add other carousel styles as needed */
+  }
+  
+  .shop-button {
+    display: inline-block;
+    color: #fff;
+    background-color: #1a237e; /* Dark blue background */
+    padding: 10px 20px;
+    border-radius: 50px; /* Rounded shape */
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  .shop-button:hover {
+    background-color: #263238; /* Darker blue on hover */
+  }
+  
+  
+  .carousel-item img {
+    max-height: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .carousel-image {
+    height: 200px; /* Adjust the height to your preference */
+    width: auto; /* Adjust the width to maintain aspect ratio */
+    margin: 0 auto; /* Centers the image horizontally */
+  }
+  
+
+  /* Video and Promotions styling */
+  iframe {
+    border: none;
+    margin-top:28px;
+    
+  }
+  .promotion-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-image: url("./img/KYTbackground.png");
+    background-size: cover; /* Ensure the image covers the box */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    background-position: center center; /* Center the background image */
+  
+  }
+  
+  .promotion-box h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+        
+  }
+
+
+.product_type {
+    margin-top: 20px; /* Add some top margin for spacing */
+  }
+
+  .product_type .container {
+    text-align: center; /* Center align the product type title */
+    cursor: pointer;
+  }
+
+  .product_type .container .box {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    width: auto; /* Adjust the box width */
+    height:auto;
+    margin: 10px; /* Adjust margin for spacing */
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 3); /* Add box shadow for depth */
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); /* Updated box-shadow for floating effect */
+
+  }
+
+  .product_type .container .box:hover {
+    transform: translateY(-10px); 
+  }
+
+  .product_type .container .img_box {
+    position: relative;
+   height:auto;
+    overflow: hidden;
+    padding-top:10px;
+    padding-bottom:10px;
+    
+  }
+
+
+  .product_type .container .box .img_box img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    
+  }
+
+  .product_type .container .box:hover .img_box img {
+    transform: scale(1.2);
+ 
+}
+  
+.product_type .container .box:hover .detail {
+    transform: translateY(0);
+  }
+
+.product_type .container .box .detail {
+  position: absolute;
+  bottom: 200px; /* Adjust as needed to position the details outside the box */
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  box-sizing: border-box;
+  color: white;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.about {
+    padding: 20px;
+    background: white;
+    color: #fff;
+    margin-left:10px;
+    margin:100px;
+    text-align: center;
+
+  }
+
+.about .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding:10px 20px;
+
+
+}
+
+.about .container .box {
+    margin: 10px 0;
+    background: linear-gradient(45deg, #2a2a6a, #38388e, #c1c1e2);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); /* Updated box-shadow for floating effect */
+    padding: 20px;
+    margin: 10px;
+    width: 300px; /* Adjust width as needed */
+  }
+  
+.about .container .box .icon {
+    font-size: 30px;
+    color: #e9e9f0;
+    justify-content: center;
+    margin-top: 0;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Added transition for smooth hover effect */
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .about .container .box:hover .icon {
+    font-size: 35px; /* Increase size on hover */
+    color: #fff; /* Change color on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3) transparent; /* Floating shadow effect on hover */
+  }
+.currency-icon {
+    font-weight: bold;
+    font-size: 20px;
+
+    
+  }
+
+.about .container .box .detail
+{
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    justify-content: center;
+}
+.about .container .box .detail h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #fff; /* White color for the heading */
+  }
+  .about .container .box .detail p {
+    color: #ccc; /* Lighter color for the text */
+    justify-content: center;
+  }
+
+  /* Add your existing CSS for styling here */
+
+/* Modal styles */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+  
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  
+  .modal-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .modal-content p {
+    font-size: 18px;
+    color: #555;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto; /* This centers the container horizontally */
+    padding: 20px; /* Add padding for spacing */
+  }
+.product h2
+{
+    font-size: 30px;
+    color: #030303;
+    margin-bottom: 50px;
+    
+   
+}
+.product .container
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+   
+  
+}
+.product .container .box
+{
+    padding: 10px 20px;
+    overflow: hidden;
+    width: 280px;
+    height: 300px;
+    border: 1px solid #e2e0e0;
+    margin-bottom: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left:5px;
+    margin-right:5px;
+    justify-content:center;
+    align-items: center;
+    background: linear-gradient(45deg, #2a2a6a, #38388e, #c1c1e2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9); /* Updated box-shadow for floating effect */
+
+}
+.product .container .box:hover
+{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.product .container .box .img_box
+{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e2e0e0;
+   
+}
+.product .container .box .img_box img
+{
+    width: 300px;
+    height: 250px;
+    margin-right: 50px;
+  
+}
+.product .container .box .img_box .icon
+{
+    z-index: 1;
+    position: relative;
+    right: 0;
+    display: flex;
+    flex-direction:column;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+.product .container .box .img_box:hover .icon
+{
+    transform: translateX(-130px);
+ 
+}
+.product .container .box .img_box .icon li
+{
+    list-style: none;
+    padding: 10px 10px;
+    color:rgb(235, 236, 246);
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    font-size: 18px;
+}
+.product .container .box .img_box .icon li:hover
+{
+    background: #0989ff;
+    color: #fff;
+}
+.product .container .box .detail
+{
+    margin-top: 10px;
+}
+.product .container .box .detail p
+{
+  
+    font-size: 14px;
+}
+.product .container .box .detail h3
+{
+    font-size: 16px;
+    margin-top: 5px;
+    color:white;
+    transition: 0.3s;
+
+}
+.product .container .box:hover .detail h3
+{
+    color: #0989ff;
+}
+.product .container .box .detail h4
+{
+    margin-top: 5px;
+    font-size: 14px;
+    color: #0989ff;
+    letter-spacing: 1px;
+}
+.banner {
+    background: linear-gradient(45deg, #2a2a6a, #38388e, #c1c1e2);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: #fff;
+  }
+
+  .banner .container .img_box img {
+    max-width: 100%; /* Adjust the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    width:300px;
+  }
+  
+  .banner .container {
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .banner .container .detail {
+    margin-left: 20px;
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .banner .container .detail h4 {
+    font-size: 16px;
+  }
+  
+  .banner .container .detail h3 {
+    margin-top: 10px;
+    font-size: 36px;
+  }
+  
+  .banner .container .detail p {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .banner .container .detail .link {
+    padding: 10px 30px;
+    background: #fff;
+    color: #1e90ff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .banner .container .detail .link:hover {
+    color: #fff;
+    background: #010f1c;
+  }
+
+  .box {
+    position: relative;
+    border: 1px solid #ccc;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  
+  .img_box {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  .img_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+  }
+
+  .img_box:hover img {
+    transform: scale(1.1);
+  }
+
+  .box img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+  align-items: center;
+  }
+
+.product  .icon {
+    position: absolute;
+    top: 0;
+    right:0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex; 
+  }
+
+  .box:hover .icon {
+    display: flex; /* Display icons on hover */
+    opacity: 1;
+  }
+
+  .box .icon li {
+    margin: 0 5px;
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .box .icon li i {
+    font-size: 20px;
+  }
+
+  .detail {
+    padding: 10px;
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  @media (min-width: 576px) {
+    .box {
+      width: 48%;
+    }
+  }
+
+
+
+
+  /* Product Detail Section */
+  .product_detail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .product_detail .container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .product_detail .closebtn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  
+  .product_detail .container .productbox {
+    display: flex;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .product_detail .container .productbox .img-box {
+    padding: 20px;
+    width: 40%;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product_detail .container .productbox .img-box img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .product_detail .container .productbox .detail {
+    margin-left: 20px;
+  }
+  
+  .product_detail .container .productbox .detail h4 {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    color: #9a9a9a;
+  }
+  
+  .product_detail .container .productbox .detail h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #010f1c;
+    text-transform: capitalize;
+  }
+  
+  .product_detail .container .productbox .detail p {
+    margin-top: 10px;
+    color: white;
+  }
+  
+  .product_detail .container .productbox .detail h3 {
+    margin-top: 10px;
+    color: #010f1c;
+    font-size: 24px;
+  }
+  
+  .product_detail .container .productbox .detail button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    background: #010f1c;
+    transition: 0.3s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .product_detail .container .productbox .detail button:hover {
+    background: #0989ff;
+    
+  }
+  
+
+  .cart-icon {
+    position:static;
+    top: 20px; /* Adjust the top position */
+    right: 20px; /* Adjust the right position */
+    color: #000; /* Adjust the color of the cart icon */
+    font-size: 24px; /* Adjust the font size of the cart icon */
+    display: flex;
+  }
+  .icon li {
+    display: inline-block;
+    padding: 5px; /* Adjust the padding to control the spacing */
+    width: 40px; /* Fixed width for each icon */
+    text-align: center; /* Center the icon within the box */
+  }
+
+  .icon li:hover {
+    background-color: lightgray;
+    border-radius: 5px;
+  }
+
+  .icon li .icon {
+    display: block;
+    width: 100%; /* Ensure the icon takes the full width of the box */
+    height: 100%; /* Ensure the icon takes the full height of the box */
+  }
+  
+  .banner {
+    background: linear-gradient(45deg, #2a2a6a, #38388e, #c1c1e2);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: #fff;
+  }
+
+  .banner .container .img_box img {
+    max-width: 100%; /* Adjust the maximum width of the image */
+    height: auto; /* Maintain aspect ratio */
+    width:300px;
+  }
+  
+  .banner .container {
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .banner .container .detail {
+    margin-left: 20px;
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .banner .container .detail h4 {
+    font-size: 16px;
+  }
+  
+  .banner .container .detail h3 {
+    margin-top: 10px;
+    font-size: 36px;
+  }
+  
+  .banner .container .detail p {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .banner .container .detail .link {
+    padding: 10px 30px;
+    background: #fff;
+    color: #1e90ff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+  }
+  
+  .banner .container .detail .link:hover {
+    color: #fff;
+    background: #010f1c;
+  }
+  
+  .product_detail {
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+  }
+  
+  .product_detail .container {
+    width: 800px;
+    max-height: 80%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .product_detail .container .closebtn {
+    margin-left: auto;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    background: none;
+  }
+  
+  .product_detail .container .productbox {
+    display: flex;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .product_detail .container .productbox .img-box {
+    padding: 20px;
+    width: 40%;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .product_detail .container .productbox .img-box img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .product_detail .container .productbox .detail {
+    margin-left: 20px;
+  }
+  
+  .product_detail .container .productbox .detail h4 {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    color: #9a9a9a;
+  }
+  
+  .product_detail .container .productbox .detail h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #010f1c;
+    text-transform: capitalize;
+  }
+  
+  .product_detail .container .productbox .detail p {
+    margin-top: 10px;
+    color: #4a4a4a;
+  }
+  
+  .product_detail .container .productbox .detail h3 {
+    margin-top: 10px;
+    color: #010f1c;
+    font-size: 24px;
+  }
+  
+  .product_detail .container .productbox .detail button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    background: #010f1c;
+    transition: 0.3s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .product_detail .container .productbox .detail button:hover {
+    background: #0989ff;
+  }
+  
+
+  .cart-icon {
+    position:static;
+    top: 20px; /* Adjust the top position */
+    right: 20px; /* Adjust the right position */
+    color: #f2eded; /* Adjust the color of the cart icon */
+    font-size: 24px; /* Adjust the font size of the cart icon */
+    display: flex;
+    float:right;
+    justify-content: space-between;
+    padding-left:50px;
+    font-size: medium;
+  }
+  
+  
+*
+
+
+*
+{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  
+
+}
+.footer {
+  background: linear-gradient(45deg, #000033, #000066, #000099);
+  color: white;
+display: flex;
+  justify-content: space-around;
+  position: flex;
+  bottom: 0;
+  width: 100%;
+  padding-top:20px;
+ 
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+
+.footer .container .about,
+.footer .container .account,
+.footer .container .page,
+.footer .container .payment {
+
+max-width: 25%;
+padding: 0 20px;
+}
+
+
+.footer .container .about .detail .icon {
+  display: flex;
+}
+
+
+.footer .container .about .detail .icon {
+  margin-top: 20px;
+  display: flex;
+
+}
+.footer .container .about .detail .icon li {
+  margin-left: 10px;
+  list-style: none;
+  padding: 10px;
+  box-shadow: rgb(244, 240, 240) 1.95px 1.95px 2.6px;
+  cursor: pointer;
+  transition: 0.5s;
+  color: gold;
+}
+
+
+.footer .container .about .detail .icon li:hover {
+  background: #0989ff;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.footer .container .account h3,
+.footer .container .page h3,
+.footer .container .payment h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer .container .account ul li,
+.footer .container .page ul li,
+.footer .container .payment .payment-icon {
+  margin-top: 5px;
+  color: #e5e9ed;
+  font-size: 14px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.footer .container .account ul li:hover,
+.footer .container .page ul li:hover {
+  color: #0989ff;
+}
+
+.footer .container .payment .payment-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+
+
+
+  
