@@ -1,0 +1,90 @@
+/* Add your CSS styles here */
+body {
+    background-color: #d11414; /* Replace with the color you want */
+  }
+/* Style for the logo image */
+.logo-img {
+    max-width: 80px;
+    height: auto;
+  }
+  
+  /* Style for the navigation links */
+  .link {
+    text-decoration: none;
+    color: #510f0f;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* Style for the 'FREE Shipping' text */
+  .free-shipping-text {
+    font-weight: bold;
+  }
+  
+  /* Style for the 'Login' and 'Sign Up' buttons */
+  .auth button {
+    font-size: 18px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: #100101;
+    cursor: pointer;
+  }
+  
+  /* Style for the icons */
+  .user_icon,
+  .second_icon i {
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  /* Style for the second icon group */
+  .second_icon {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style for the user account information */
+  .account {
+    display: none;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style for the main header container */
+  .main_header {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Style for the navigation container */
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Style for the search box */
+  .search_box input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 100%;
+  }
+  
+  /* Style for the search button */
+  .search_box button {
+    padding: 10px 20px;
+    background: #1e90ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  
