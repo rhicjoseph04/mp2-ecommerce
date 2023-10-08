@@ -1,90 +1,97 @@
-/* Add your CSS styles here */
-body {
-    background-color: #d11414; /* Replace with the color you want */
-  }
-/* Style for the logo image */
-.logo-img {
-    max-width: 80px;
-    height: auto;
-  }
-  
-  /* Style for the navigation links */
-  .link {
-    text-decoration: none;
-    color: #510f0f;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  /* Style for the 'FREE Shipping' text */
-  .free-shipping-text {
-    font-weight: bold;
-  }
-  
-  /* Style for the 'Login' and 'Sign Up' buttons */
-  .auth button {
-    font-size: 18px;
-    font-weight: bold;
-    background: none;
-    border: none;
-    color: #100101;
-    cursor: pointer;
-  }
-  
-  /* Style for the icons */
-  .user_icon,
-  .second_icon i {
-    font-size: 22px;
-    color: #fff;
-    cursor: pointer;
-    margin-right: 10px;
-  }
-  
-  /* Style for the second icon group */
-  .second_icon {
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Style for the user account information */
-  .account {
-    display: none;
-    margin-right: 20px;
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Style for the main header container */
-  .main_header {
-    color: #fff;
-    display: flex;
-    justify-content: center;
-  }
-  
-  /* Style for the navigation container */
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  /* Style for the search box */
-  .search_box input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 10px;
-    width: 100%;
-  }
-  
-  /* Style for the search button */
-  .search_box button {
-    padding: 10px 20px;
-    background: #1e90ff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #e4dbdb;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5bc0de;
+  color: white;
+}
+
+.modal-body {
+  padding: 10px 20px;
+}
+
+/* Adjust spacing between buttons */
+.d-flex.justify-content-between.mb-3 button {
+  margin-right: 10px;
+}
+
+/* Add styling for the social login buttons */
+.social-login button {
+  margin-right: 10px;
+}
+
+/* Add styling for the 'or' separator */
+.or-separator {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.or-separator span {
+  background-color: #fefefe;
+  padding: 0 10px;
+}
+
+/* Add some space between the form elements */
+.form-group {
+  margin-bottom: 10px;
+}
+
+/* Add a bit of padding to the input icons */
+.input-icon {
+  position: relative;
+  display: flex;
+}
+
+.input-icon i {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Style the "Forgot password" link */
+.forgot-password {
+  color: #007bff;
+  cursor: pointer;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
   

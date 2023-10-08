@@ -24,47 +24,77 @@
 </head>
 <body>
 
-    <div class="free">
-        <div class="social-icons">
-            <p>Follow Us On:</p>
-            <a href="#"><img src="../img/fblogo.png" alt="Facebook"></a>
-            <a href="#"><img src="../img/instag.png" alt="Instagram"></a>
-            <a href="#"><img src="../img/twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="../img/youtube.png" alt="YouTube"></a>
+
+  <div class="free">
+    <p class="journey-text"><i class="fa-solid fa-motorcycle larger-icon"></i>Your Journey Awaits with <span
+            class="free-shipping-text">FREE Shipping! 🚚</span></p>
+</div>
 
 
-            <p class="journey-text"><i class="fa-solid fa-motorcycle larger-icon"></i>Your Journey Awaits with <span
-                    class="free-shipping-text">FREE Shipping! 🚚</span></p>
-        </div>
-    </div>
 
-    <div class="navbar">
-        <div class="container">
-            <div class="logo">
-                <div class="icon">
-                    <i class="fa-brands fa-shopware"></i>
+<div class="navbar">
+    <div class="container">
+
+        <div class="logo">
+         
+                <div class="icon">   <a href="./index.html">
+                    <i class="fa-brands fa-shopware"></i></a>
                 </div>
-                <div class="logo-text">Helmet Hub</div>
+                <div class="logo-text">Helmet <span>hub</span></div>
+                
+        </div>
+
+        <div class="search">
+            <input type="text" placeholder="Sign up and get 100% off on your first order" autocomplete="off">
+            <button><i class="fa fa-search"></i></button>
+        </div>
+
+        <div class="nav">
+            <ul>
+                <li><a href="./index.html" class="link">Home</a></li>
+                <li><a href="./product.html" class="link">Product</a></li>
+                <li><a href="/about" class="link">About</a></li>
+                <li><a href="/contact" class="link">Contact</a></li>
+            </ul>
+        </div>
+        <div class="user-icon" onclick="toggleLogin()">
+            <div class="outer-circle">
+                <div class="inner-circle">
+                    <i class="fas fa-user"></i>
+                </div>
             </div>
-            <div class="search">
-                <input type="text" placeholder="Sign up and get 100% off on your first order" autocomplete="off">
-                <button><i class="fa fa-search"></i></button>
-            </div>
-            <div class="user-cart-icons">
-                <a href="#" class="link"><i class="fas fa-user"></i></a>
-                <a href="#" class="link"><i class="fas fa-shopping-bag"></i></a>
-                <button class="login-button" onclick="toggleModal()">Login / Sign Up</button>
-            </div>
-            <div class="nav">
-                <ul>
-                    <li><a href="/" class="link">Home</a></li>
-                    <li><a href="../product.html" class="link">Product</a></li>
-                    <li><a href="/about" class="link">About</a></li>
-                    <li><a href="/contact" class="link">Contact</a></li>
-                </ul>
+            <div class="login-content" id="loginContent">
+                <a href="./login.html">Login</a>
+                <a href="signup.html">SignUp</a>
             </div>
         </div>
     </div>
+
+
+</div>
+</div>
+
+
+<div class="social-icons">
+    <div class="container">
+        <p>Follow Us On:</p>
+        <a href="#"><img src="./img/fblogo.png" alt="Facebook"></a>
+        <a href="#"><img src="./img/instag.png" alt="Instagram"></a>
+        <a href="#"><img src="./img/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="./img/youtube.png" alt="YouTube"></a>
+
+        <div class="user-cart-icons">
+
+            <a href="#" class="link"><i class="fas fa-user"></i></a>
+            <a href="#" class="link"><i class="fas fa-shopping-bag"></i></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
       
 
 
@@ -100,7 +130,7 @@
           </div>
         </div>
         <div id="productBox" class="productbox">
-          <div class="contant">
+          <div class="content">
 
             <div id="app"></div>
             
@@ -120,7 +150,7 @@
         <!-- Product detail content will go here -->
       </div>
       <button onclick="addToCart()">Add to Cart</button>
-      <a href="/cart.html">Proceed to Checkout</a>
+      <a href="./cart.html">Proceed to Checkout</a>
     </div>
   </div>
 
@@ -163,7 +193,7 @@
   </div>
 
   
-  <script src="productdetails.js"></script>
+ 
   <script src="product.js"></script>
 </body>
 </html>

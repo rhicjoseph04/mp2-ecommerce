@@ -101,3 +101,5 @@ updateCartUI();
             // window.location.href = '/login'; 
         }
     }
+
+    

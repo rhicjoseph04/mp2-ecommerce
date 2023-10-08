@@ -172,7 +172,7 @@ const productDetail = [
 
 function openProductDetail(product) {
     // Implement what happens when you click on a product
-    console.log('Clicked on product:', product);
+    // console.log('Clicked on product:', product);
     const productDetailModal = document.getElementById('productDetailModal');
   const productDetailContent = document.getElementById('productDetailContent');
 
