@@ -4,6 +4,8 @@
      margin: 0;
      padding: 0;
      border: none;
+     background: radial-gradient(circle, #808080, #000000);
+    margin-top:0;
      
 
    
@@ -57,7 +59,7 @@
 
  /* Navbar styles */
  .navbar {
-    background: #1b1b1b;
+    background:	#1b1b1b;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
  }
   
@@ -67,13 +69,14 @@
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top:5px; /* Adjust as needed */
+    padding-top:5px;
     padding-bottom:0;
   }
   
   .navbar .logo {
     display: flex;
     align-items: center;
+    padding:10px;
   }
   
   .navbar .logo .icon {
@@ -120,10 +123,9 @@
      padding-bottom:5px;
      padding-right: 20px;
      justify-content:center;
-     background-color: #292929;
      border-radius: 10px;
-     padding-right:10px;
-     padding-left:10px;
+     padding-right:5px;
+     padding-left:5px;
 
 }
 
@@ -154,13 +156,14 @@
   .logo-text span {
     color: black;
     background-color:#ffa31a;
-    padding: 5px 10px; /* Adjust padding as needed */
-    border-radius: 5px; /* Optional: Add rounded corners */
-    font-size:30px;
+    padding: 2px;
+    border-radius: 3px;
+
+  font-size:32px;
   }
 
  .logo-text {
-     font-size: 30px;
+     font-size: 32px;
      font-weight: bold;
      font-family: 'Orbitron', sans-serif;
      color:white;
@@ -185,15 +188,16 @@
 }
 
  .search button {
-     padding: 10px 20px;
+     padding: 10px;
      margin-left: 10px;
-     background-color:		#ffa31a;
+     background-color:#292929;
      color: white;
      border: none;
-     border-radius: 5px;
+     border-radius: 2px;
      cursor: pointer;
-     border-radius: 20px;
-
+     font-size:15px;
+     border: 1px solid #ccc;
+ 
 }
 
 .social-icons .container {
@@ -214,42 +218,55 @@
     padding-bottom:5px;
     background-color:	#1b1b1b;
    justify-content: center;
+   font-size:15px;
+  }
+
+  .social-icons:hover{
+    color:#ffa31a;
   }
   
 
   .social-icons a {
     margin-right: 10px; /* Adjust margin between icons as needed */
+    font-size:20px;
+    color:	#ffffff;
   }
   
 .social-icons a img {
-    width: 30px;
-    height: 30px;
+    width: 23px;
+    height: 23px;
+
+}
+
+.social-icons a:hover {
+    color:#ffa31a;
 }
 
 .social-icons p {
     margin: 0;
     margin-right: 20px;
+    font-size:15px;
 }
 
 .user-icon {
     cursor: pointer;
     display: flex;
-    align-items: center;
-
+    align-items: center; 
+    padding: 10px ;
   }
   
   .outer-circle {
-    background-color: #292929; /* Outer circle color */
-    border-radius: 50%; /* Make it a circle */
-    width: 50px; /* Adjust size as needed */
-    height: 50px; /* Adjust size as needed */
+    background-color: #292929; 
+    border-radius: 50%; 
+    width: 50px;
+    height: 50px; 
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
   .inner-circle {
-    background-color: white; /* Inner white circle */
+    background-color: #ffffff; /* Inner white circle */
     border-radius: 50%; /* Make it a circle */
     width: 30px; /* Adjust size as needed */
     height: 30px; /* Adjust size as needed */
@@ -259,7 +276,7 @@
   }
   
   .user-icon i {
-    color: black; /* Black color for the icon */
+    color: black; 
   }
   
   .login-content {
@@ -267,14 +284,13 @@
     flex-direction: column;
     align-items: center;
     position: absolute;
-    left: 120%; /* Align to the right of the user icon */
-    top: 50%;
+    left: 120%; 
     transform: translateY(-50%);
-    background-color: #fff; /* Background color for the login content */
+    background-color: #fff; 
     padding: 10px;
   }
   
-  /* Show login content when user icon is clicked */
+ 
   .user-icon.clicked .login-content {
     display: flex;
   }
@@ -295,15 +311,7 @@
     display: block;
   }
   
-
-  .user-cart-icons {
-    display: flex;
-    align-items: center;
-   
- 
-  }
   
-
 
  .nav ul {
      list-style-type: none;
@@ -347,28 +355,28 @@
 
 
 
-
-
  /*start of sliding section*/
 
 /* Override Bootstrap container padding */
 .container-fluid {
-
-    background: radial-gradient(circle, #808080, #000000);
+    background:transparent;
     margin-top:0;
-;
     padding: 1% 1%; /* Adjust padding as needed */
-
+  
 }
 
 /* Override Bootstrap column padding */
 .container-fluid .col-md-8{
     padding:0px;
+    
+   
+   
 }
 
 
 .container-fluid .col-md-4 {
 padding-right:5%;
+
 }
 
 /* Carousel styling */
@@ -377,12 +385,14 @@ padding-right:5%;
     max-width: 100%;
     padding-left:5%;
     
+    
 
 }
 
 .carousel-item img {
     height: 350px;
     width: 100%;
+    border: 1px solid #ffffff;
 }
 
 
@@ -433,25 +443,34 @@ padding-right:5%;
 
  /* start of product */
 
- .product_type {
-    background: radial-gradient(circle, #808080, #000000);
-    margin-top: 0;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
- }
-
- .product_type .box {
+.product_type .box {
     width: 200px; /* Adjust the width of each box */
     margin: 20px;
-    padding: 20px;
-    background-color: #808080;
+    padding: 0;
+    background-color:transparent;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     overflow: hidden;
+    flex: 1 1 calc(25% - 40px); 
+    max-width: calc(25% - 40px); 
+    border: 1px solid #ffffff;
 }
+
+@media (max-width: 768px) {
+    .product_type .box {
+        flex: 1 1 calc(50% - 40px); 
+        max-width: calc(50% - 40px); 
+    }
+}
+
+@media (max-width: 576px) {
+    .product_type .box {
+        flex: 1 1 calc(100% - 40px);
+        max-width: calc(100% - 40px); 
+    }
+}
+
 
 .product_type .container {
      text-align: center;
@@ -466,19 +485,20 @@ padding-right:5%;
     text-align: center;
     width: 100%;
     margin-bottom: 20px;
-    color:white;
-    font-family: 'Times New Roman', Times, serif;
+    margin-top:20px;
+    color: #ffa500;
+   
 }
 
  .product_type .container .box {
      background-color: transparent;
      border-radius: 10px;
      transition: transform 0.3s ease;
-     box-shadow: 0 10px 20px rgba(247, 242, 242, 0.2);
+     box-shadow: 0 10px 20px rgba(247, 242, 242, 0.3);
      display: inline-block;
      position: relative;
      overflow: hidden;
-     background: radial-gradient(circle, #808080, #000000);
+     background:transparent;
  
 }
 
@@ -490,25 +510,21 @@ padding-right:5%;
  .product_type .container .img_box {
      position: relative;
      height: auto;
-     overflow: hidden;
      padding-top: 10px;
      padding-bottom: 10px;
     
-     
-
+    
  }
  .product_type .box img {
     width: 100%;
-    border: 1px solid #0e0e0e;
-    border-radius: 10px;
+    height: auto;
     cursor: pointer;
 }
 
  .product_type .container .box .img_box img {
      width: 100%;
     transition: transform 0.3s ease-in-out;
-    background-color: white;
-     border: 1px solid #0e0e0e;
+    background-color: transparent;
      margin-bottom: 0px;
      padding: 20px;
      border-radius: 10px;
@@ -528,28 +544,13 @@ padding-right:5%;
 
 .product_type .box .detail p {
     margin-top: 10px;
-    font-family: 'Times New Roman', Times, serif;
+    
 }
 
 .product_type .box .detail p a:hover {
-    color: #ffa500; /* Adjust the hover color as needed */
+    color: orangered; /* Adjust the hover color as needed */
 }
 
- /* .product_type .container .box .detail {
-     position: absolute;
-     bottom: 0;
-     left: 0;
-     width: 100%;
-     background-color: rgba(243, 237, 237, 0.7);
-     padding: 10px;
-     box-sizing: border-box;
-     transform: translateY(100%);
-     transition: transform 0.3s ease-in-out;
-     font-weight: bold;
-     font-size: 20px;
-     color: rgb(10, 10, 11);
-   
-} */
 
  .product_type .container .box:hover .detail {
      transform: translateY(0);
@@ -561,15 +562,15 @@ padding-right:5%;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(243, 237, 237, 0.7);
+    background-color: rgba(243, 237, 237, 0.3);
     padding: 10px;
     box-sizing: border-box;
     transform: translateY(100%);
     transition: transform 0.3s ease-in-out;
     font-weight: bold;
     font-size: 18px;
-    color:ffa500;
-    font-family: 'Times New Roman', Times, serif;
+    
+   
 }
  /* end of product_type  */
 
@@ -580,21 +581,20 @@ padding-right:5%;
      justify-content: center;
      text-align: center;
      display: row;
-     background: radial-gradient(circle, #808080, #000000);
+     background: transparent;
     padding: 50px; 
-    font-family: 'Times New Roman', Times, serif;
+   
    
 
  }
 
  .about .section-title {
      justify-content: center;
-    color:white;
-     background-color: transparent;
-     display: absolute;
+    color: #ffa500;
+   display: absolute;
      text-align: center;
      margin-bottom: 20px;
-     font-family: 'Times New Roman', Times, serif;
+     
  }
 
  
@@ -610,9 +610,8 @@ padding-right:5%;
     width: 100px; /* Adjust the width of each box */
     padding: 20px;
     margin: 20px;
-    background-color: #ffffff;
+    background-color: transparent;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     text-align: center;
     box-shadow: 0 10px 20px rgba(247, 242, 242, 0.3);
@@ -625,7 +624,7 @@ padding-right:5%;
 
  .about .container .boxes .box .icon {
      font-size: 30px;
-     color: #e9e9f0;
+     color: white;
      justify-content: center;
      cursor: pointer;
      transition: all 0.3s ease-in-out;
@@ -635,7 +634,7 @@ padding-right:5%;
 
  .about .container .boxes .box .icon {
      font-size: 35px;
-     color: #010311;
+     color: #ffa500;
      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3) transparent;
  }
 
@@ -648,28 +647,29 @@ padding-right:5%;
      margin-top: 10px;
      text-align: center;
      justify-content: center;
-     font-family: 'Times New Roman', Times, serif;
+     color:white;
  }
 
  .about .detail h3 {
      font-size: 24px;
      margin-bottom: 10px;
-     color: black;
-     font-family: 'Times New Roman', Times, serif;
+     color: white;
+    
  }
 
  .about .container .boxes .box {
     margin-bottom: 20px;
     padding: 20px;
-    border: 1px solid #0e0e0e;
+    border: 1px solid #ffffff;
     border-radius: 10px;
     cursor: pointer;
     width: 70%;
     max-width: 400px;
+    
 }
 
 .about .box:hover {
-    background-color: #f9f9f9;
+    background: radial-gradient(circle, #808080, #000000);
 }
 
  /* Add your existing CSS for styling here */
@@ -684,21 +684,20 @@ padding-right:5%;
      margin: 0 auto;
      justify-content: center;
      padding: 20px;
-     background: radial-gradient(circle, #808080, #000000);
-     font-family: 'Times New Roman', Times, serif;
-     color:white;
+     background:transparent;
+     color:#ffa500;
      padding-left:50px;
      padding-right:50px;
 
     
  }
 
- .top_product h2 {
+ .top_product h3 {
      font-size: 30px;
-     color: 	#ffffff;
+     color: #ffa500;
      margin-bottom: 50px;
  
-     font-style:'Times New Roman', Times, serif;
+    
 
  }
 
@@ -723,7 +722,7 @@ padding-right:5%;
      margin-right: 5px;
      justify-content: center;
      align-items: center;
-     background: radial-gradient(circle, #808080, #000000);
+     background: transparent;
      box-shadow: 0 10px 20px rgba(247, 242, 242, 0.1);
    
 
@@ -774,7 +773,7 @@ padding-right:5%;
  }
 
  .top_product .container .box .img_box .icon li:hover {
-     background: #ffa500;
+     background: navy;
      color: #fff;
  }
 
@@ -798,7 +797,7 @@ padding-right:5%;
  }
 
  .top_product .container .box:hover .detail h3 {
-     color:#ffa500;
+     color:navy;
  }
  .top_product .container .box .detail h4 {
      margin-top: 5px;
@@ -826,6 +825,8 @@ padding-right:5%;
      height: auto;
      /* Maintain aspect ratio */
      width: 300px;
+ 
+    
  }
 
  .banner .container {
@@ -868,14 +869,14 @@ padding-right:5%;
 
  .banner .container .detail .link:hover {
      color: #ffa500;
-     background: hsl(209, 93%, 6%);
+     background: navy;
  }
 
  /* end of banner */
 
 
  /* Product Detail Section */
- .product_detail {
+ /* .product_detail {
      position: fixed;
      top: 0;
      left: 0;
@@ -1066,7 +1067,7 @@ padding-right:5%;
  .product_detail .container .productbox .detail button:hover {
      background: #0989ff;
  }
-
+ */
 
  /* end of product_detail */
 

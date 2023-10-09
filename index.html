@@ -206,7 +206,7 @@
 
             <div class="box">
                 <div class="img_box">
-                    <img src="./img/evocarbon.jpg" alt="helmet" />
+                    <img src="./img/evo04.png" alt="helmet" />
                 </div>
                 <div class="detail">
                     <p><a href="./evoproductpage/evohelmet.html">Evo Helmet</a></p>
@@ -215,7 +215,7 @@
 
             <div class="box">
                 <div class="img_box">
-                    <img src="./img/araimotocross.jpg" alt="helmet" />
+                    <img src="./img/arai.png" alt="helmet" />
                 </div>
                 <div class="detail">
                     <p><a href="./araiproductpage/arai.html">Arai Helmet</a></p>
@@ -242,7 +242,16 @@
 
             <div class="box">
                 <div class="img_box">
-                    <img src="./img/Ls201.jpg" alt="helmet" />
+                    <img src="./img/kythelmet8.png" alt="helmet " />
+                </div>
+                <div class="detail">
+                    <p><a href=".//kytproductpage/kyt.html">Kyt Helmet</a></p>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="img_box">
+                    <img src="./img/Ls202.png" alt="helmet" />
                 </div>
                 <div class="detail">
                     <p><a href=".//Ls2productpage/Ls2.html">Ls2 Helmet</a></p>
@@ -251,16 +260,16 @@
 
             <div class="box">
                 <div class="img_box">
-                    <img src="./img/hjcslider.jpg" alt="helmet" />
+                    <img src="./img/hjc09.png" alt="helmet " />
                 </div>
                 <div class="detail">
-                    <p><a href=".//Hjcproductpage/hjc.html">HJC Helmet</a></p>
+                    <p><a href=".//Hjcproductpage/hjc.html">Hjc Helmet</a></p>
                 </div>
             </div>
 
             <div class="box">
                 <div class="img_box">
-                    <img src="./img/agvslider.jpg" alt="helmet" />
+                    <img src="./img/agv.png" alt="helmet" />
                 </div>
                 <div class="detail">
                     <p><a href=".//agvproductpage/agv.html">Agv Helmet</a></p>
@@ -275,7 +284,7 @@
     <div class="about">
         <div class="container">
             <div class="section-title">
-                <h2>Why Choose Us?</h2>
+                <h3>Why Choose Us?</h3>
                 <p>Discover the reasons to shop with us</p>
             </div>
             <hr>
@@ -338,7 +347,7 @@
 
     <div class="top_product">
 
-        <h2>Top Products</h2>
+        <h3>Top Products</h3>
 
         <div class="container">
 
@@ -726,7 +735,12 @@
     </div>
 
     <!-- Add this section at the end of your HTML -->
+    <div id="fb-root"></div>
 
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+    
 <script>
     // Function to toggle the visibility of the section
     function toggleSectionVisibility() {
@@ -755,7 +769,30 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
+    <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+  chatbox.setAttribute("page_id", "161937536984374");
+  chatbox.setAttribute("attribution", "biz_inbox");
+  chatbox.setAttribute("theme_color", "#YOUR_THEME_COLOR"); // Replace with your theme color
+  chatbox.setAttribute("logged_in_greeting", "Hello! How can we assist you with finding the perfect helmet?");
+  chatbox.setAttribute("logged_out_greeting", "Hello! How can we assist you with finding the perfect helmet?");
+</script>
+    <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            xfbml: true,
+            version: 'v18.0'
+          });
+        };
+    
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
 
 </body>
 
