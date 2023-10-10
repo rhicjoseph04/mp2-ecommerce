@@ -3,7 +3,7 @@
     id:1,
     Title:"TT COURSE – RADIANCE",
     Cat: 'Full-face',
-    Price: '150',
+    Price: '6500',
     Img: './img/kythelmet1.png'
 },
 {

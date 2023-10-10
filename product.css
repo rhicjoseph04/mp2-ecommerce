@@ -1,11 +1,14 @@
-body {
-  font-family: 'Times New Roman', Times, serif;
-  margin: 0;
-  padding: 0;
-  border: none;
-
-
-}
+ /* Base styles */
+ body {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   margin: 0;
+   padding: 0;
+   border: none;
+   background: radial-gradient(circle, #808080, #000000);
+  margin-top:0;
+  height: 100%;
+  color:white;
+ }
 
 .free {
   background: black;
@@ -301,55 +304,6 @@ justify-content: center;
   }
 }
 
-
-
-
-
-/*start of sliding section*/
-
-/* Override Bootstrap container padding */
-.container-fluid {
- padding: 0;
- background:black;
- margin-top:0;
-
-
-}
-
-/* Override Bootstrap column padding */
-.container-fluid .col-md-8,
-.container-fluid .col-md-4 {
- padding: 0;
- padding-left:50px;
- padding-right:50px;
-}
-
-/* Carousel styling */
-#carousel-container {
- width: 100%;
- max-width: 100%;
-}
-
-.carousel-item img {
- height: 350px;
- width: 100%;
-}
-
-
-/* Shop button styling */
-.shop-button {
- background-color: 	#ffa31a; /* Red background color */
- color: #292929;
- padding: 10px 20px;
- border-radius: 5px;
- text-decoration: none;
- font-size: 18px;
-}
-
-.shop-button:hover {
- background-color: 	#ffa31a; /* Darker red on hover */
-}
-
   /* Media queries for responsiveness */
   @media (max-width: 768px) {
     .search {
@@ -379,6 +333,7 @@ justify-content: center;
 {
     padding: 30px 40px;
     width: 100%;
+
 }
 .products h2
 {
@@ -392,6 +347,7 @@ justify-content: center;
 {
     margin-top: 10px;
     color: #9a9a9a;
+ ;
 }
 
 
@@ -406,6 +362,7 @@ justify-content: center;
 /* Styles for filter */
 .products .container .filter {
     padding: 20px 30px;
+ 
 }
 
 /* Styles for categories in filter */
@@ -428,16 +385,18 @@ justify-content: center;
 }
 
 /* Styles for product box */
+/* Styles for product box */
 .products .container .productbox {
-    margin-right: 0%;
+  max-width: 100%; /* Adjust the maximum width as needed */
+  margin-right: 0%;
 }
 
-.products .container .productbox .content
-{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+.products .container .productbox .content {
+display: inline-block;
+
+  justify-content: space-between;
 }
+
 .products .container .productbox .content .box
 {
     padding: 10px 20px;
@@ -520,225 +479,187 @@ justify-content: center;
     letter-spacing: 1px;
 }
 
-/* Styles for product detail */
 .product_detail {
-    margin-top: 30px;
-    padding: 30px 40px;
-    width: 100%;
-    height: 120%;
-    position: fixed;
-    z-index: 2;
-    margin-top: -20%;
-    background: rgba(0, 0, 0, 0.24);
+  padding: 30px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .product_detail .container {
-    margin-top: 7%;
-    margin-left: 8%;
-    width: 1000px;
-    height: 550px;
-    background: #fff;
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  max-width: 100%;
+  width: 100%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
 }
 
 .product_detail .container .closebtn {
-    margin-left: 100%;
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 22px;
-    cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
 }
 
 .product_detail .container .productbox {
-    max-width: 100%;
-    display: flex;
-    padding: 20px 30px;
-    margin-top: 20px;
-    justify-content: space-between;
+  display: flex;
 }
 
 .product_detail .container .productbox .img-box {
-    padding: 20px 30px;
-    width: 400px;
-    height: 350px;
-    background: #f1f1f1;
+  padding: 20px;
+  width: 250px;
+  height: 250px;
+  background: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .product_detail .container .productbox .img-box img {
-    width: 250px;
-    height: 250px;
-}
-.product_detail .container .productbox .detail
-{
-    margin-left: 30px;
-    margin-top: 10px;
-}
-.product_detail .container .productbox .detail h4
-{
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 200;
-    color: #9a9a9a;
-    letter-spacing: 1px;
-}
-.product_detail .container .productbox .detail h2
-{
-    margin-top: 20px;
-    font-size: 32px;
-    color: #010f1c;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-}
-.product_detail .container .productbox .detail p
-{
-    margin-top: 10px;
-    color: #4a4a4a;
-}
-.product_detail .container .productbox .detail h3
-{
-    margin-top: 10px;
-    color: #010f1c;
-    font-size: 32px;
-    letter-spacing: 1px;
-}
-.product_detail .container .productbox .detail button
-{
-    margin-top: 30px;
-    padding: 15px 60px;
-    font-size: 16px;
-    color: #fff;
-    background: #010f1c;
-    transition: 0.5s;
-    border: none;
-    outline: none;
-    cursor: pointer;
-}
-.product_detail .container .productbox .detail button:hover
-{
-    background: #0989ff;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-/* Styles for image box and hover effect */
-.img-box {
-    overflow: hidden;
+.product_detail .container .productbox .detail {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.img-box img {
-    transition: transform 0.3s;
+.product_detail .container .productbox .detail h4 {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 200;
+  color: #9a9a9a;
+  letter-spacing: 1px;
 }
 
-.img-box img:hover {
-    transform: scale(1.2); /* Adjust the zoom level as needed */
+.product_detail .container .productbox .detail h2 {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #010f1c;
+  text-transform: capitalize;
+  letter-spacing: 1px;
 }
-  
-/* Add your existing CSS styles here */
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    .products .container {
-      padding: 0;
-    }
-    
-    .products .filter {
-      display: none; /* Hide the filter on small screens */
-    }
-    
-    .products .productbox {
-      margin-top: 20px;
-    }
-    
-    .products .productbox .product-item {
-      width: 100%; /* Adjust product item width for smaller screens */
-    }
-  }
-  
+.product_detail .container .productbox .detail p {
+  margin-top: 10px;
+  color: #4a4a4a;
+}
+
+.product_detail .container .productbox .detail h3 {
+  margin-top: 10px;
+  color: #010f1c;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.product_detail .container .productbox .detail button {
+  margin-top: 30px;
+  padding: 15px 60px;
+  font-size: 16px;
+  color: #fff;
+  background: #010f1c;
+  transition: 0.5s;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.product_detail .container .productbox .detail button:hover {
+  background: #0989ff;
+}
+
+
+/* start of footer  */
 
 .footer {
-    background: linear-gradient(to right, #0076ff, #00c3ff);
+  background:	#1b1b1b;
   color: white;
-display: flex;
-  justify-content: space-around;
-  position: flex;
-  bottom: 0;
-  width: 100%;
-  padding-top:20px;
- 
+  padding-left:80px;
+  width:100%;
+  margin-left:0;
+  margin-right:0;
+  justify-content:space-between;
+  margin-top:0;
+  padding-top:50px;
+  padding-bottom:50px;
 }
 
-.footer .container {
-  display: flex;
-  justify-content: space-around;
-
+.footer .icon i {
+  background: linear-gradient(90deg, white 50%, #FFA500 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s ease; /* Add a transition for smooth color change */
+  font-size: 50px;
 }
 
-
-.footer .container .about,
-.footer .container .account,
-.footer .container .page,
-.footer .container .payment {
-
-max-width: 25%;
-padding: 0 20px;
-}
-
-
-.footer .container .about .detail .icon {
-  display: flex;
+.footer .icon i:hover {
+  background: linear-gradient(90deg, #FFA500 50%, white 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 
-.footer .container .about .detail .icon {
-  margin-top: 20px;
-  display: flex;
 
+.footer .detail, .account, .page, .payment {
+  margin-bottom: 20px; /* Adjust margin as needed for spacing between sections */
 }
-.footer .container .about .detail .icon li {
-  margin-left: 10px;
+
+.footer  .detail p {
+  margin: 0; /* Remove default margins for <p> */
+}
+
+.footer  .account h5, .page h5, .payment h5 {
+  margin-bottom: 10px; /* Adjust margin as needed */
+  color:	#808080;
+}
+
+.footer .account ul, .page ul {
   list-style: none;
-  padding: 10px;
-  box-shadow: rgb(244, 240, 240) 1.95px 1.95px 2.6px;
-  cursor: pointer;
-  transition: 0.5s;
-  color: gold;
+  padding: 0;
+}
+
+.footer .account li, .page li {
+  margin-bottom: 5px; /* Adjust margin as needed */
+}
+
+.footer  .account li a, .page li a {
+  color:#ffa500;
+  text-decoration: none;
 }
 
 
-.footer .container .about .detail .icon li:hover {
-  background: #0989ff;
-  color: #fff;
-  border-radius: 5px;
-  font-size: 16px;
+.footer .payment-icon {
+  width: 60px; /* Adjust icon size as needed */
+  margin-right: 10px; /* Adjust margin as needed */
 }
 
-.footer .container .account h3,
-.footer .container .page h3,
-.footer .container .payment h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
+/* end of footer  */
 
-.footer .container .account ul li,
-.footer .container .page ul li,
-.footer .container .payment .payment-icon {
-  margin-top: 5px;
-  color: #e5e9ed;
-  font-size: 14px;
-  transition: 0.5s;
-  cursor: pointer;
-}
+/* Styles for normal screens */
 
-.footer .container .account ul li:hover,
-.footer .container .page ul li:hover {
-  color: #0989ff;
-}
-
-.footer .container .payment .payment-icon {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
+/* Example: for tablets and larger screens */
+@media (min-width: 768px) {
+  /* Your CSS styles for tablets and larger screens go here */
+  body {
+      font-size: 16px;
+  }
 }
 
 /* Example: for small laptops and desktops */
@@ -748,6 +669,33 @@ padding: 0 20px;
       font-size: 18px;
   }
 }
+
+/* Example: for larger laptops and desktops */
+@media (min-width: 1200px) {
+  /* Your CSS styles for larger laptops and desktops go here */
+  body {
+      font-size: 20px;
+  }
+}
+
+/* Styles for smaller screens */
+
+/* Example: for smartphones */
+@media (max-width: 767px) {
+  /* Your CSS styles for smartphones go here */
+  body {
+      font-size: 14px;
+  }
+}
+
+/* Example: for smaller tablets and larger smartphones */
+@media (max-width: 991px) {
+  /* Your CSS styles for smaller tablets and larger smartphones go here */
+  body {
+      font-size: 14px;
+  }
+}
+
 
 /* Example: for larger laptops and desktops */
 @media (min-width: 1200px) {

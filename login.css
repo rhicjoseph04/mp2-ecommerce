@@ -1,80 +1,72 @@
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
+ /* Base styles */
+ body {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   margin: 0;
+   padding: 10px 10px;
+   border: none;
+   background: radial-gradient(circle, #808080, #000000);
+  margin-top:0;
   height: 100%;
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4);
-  padding-top: 60px;
+  display:absolute;
+ }
+
+ .input-icon input::placeholder {
+  padding-left: 30px; /* Adjust the padding as needed */
+  color:black;
+ }
+
+ .input-icon input text::placeholder {
+  padding-left: 30px; /* Adjust the padding as needed */
 }
 
 .modal-content {
-  background-color: #e4dbdb;
+  background-color: transparent;
   margin: 5% auto;
   padding: 20px;
-  border: 1px solid #888;
+  border: 1px solid black; 
+  border-radius: 10px;
+  max-width: 400px;
   width: 80%;
+  color:white;
+ 
 }
 
+/* Styling for modal header */
+.modal-header {
+  padding: 15px 20px;
+  background-color:	#ffa31a;
+  color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 24px;
+}
+
+/* Styling for close button */
 .close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
+  color:black;;
+  font-size: 18px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
   color: #000;
-  text-decoration: none;
-  cursor: pointer;
 }
 
-
-.modal-header {
-  padding: 2px 16px;
-  background-color: #5bc0de;
-  color: white;
-}
-
-.modal-body {
-  padding: 10px 20px;
-}
-
-/* Adjust spacing between buttons */
-.d-flex.justify-content-between.mb-3 button {
-  margin-right: 10px;
-}
-
-/* Add styling for the social login buttons */
-.social-login button {
-  margin-right: 10px;
-}
-
-/* Add styling for the 'or' separator */
-.or-separator {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.or-separator span {
-  background-color: #fefefe;
-  padding: 0 10px;
-}
-
-/* Add some space between the form elements */
+/* Styling for form elements */
 .form-group {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-/* Add a bit of padding to the input icons */
 .input-icon {
   position: relative;
-  display: flex;
+  color:#ffa31a;
 }
 
 .input-icon i {
@@ -84,14 +76,54 @@
   transform: translateY(-50%);
 }
 
-/* Style the "Forgot password" link */
-.forgot-password {
-  color: #007bff;
-  cursor: pointer;
+/* Styling for buttons */
+.btn {
+  border-radius: 5px;
+  padding: 10px 20px;
 }
 
-.forgot-password:hover {
-  text-decoration: underline;
+.btn-primary {
+  background-color:navy;
+  color: white;
+  border: 1px solid black;
 }
 
-  
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #bfe917;
+  color: white;
+  border: 1px solid #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #b1ba00;
+}
+
+.btn-orange {
+  background-color: 	#ffa31a;
+  color: white;
+  border: 1px solid 	#ffa31a;
+}
+
+.btn-orange:hover {
+  background-color: #ffa31a;
+}
+
+/* Additional styling for specific elements */
+.social-login button {
+  margin-right: 10px;
+}
+
+.or-separator {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.or-separator span {
+
+  padding: 0 10px;
+}

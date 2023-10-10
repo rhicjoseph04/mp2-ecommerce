@@ -171,36 +171,70 @@ const productDetail = [
 ];
 
 function openProductDetail(product) {
-    // Implement what happens when you click on a product
-    // console.log('Clicked on product:', product);
     const productDetailModal = document.getElementById('productDetailModal');
-  const productDetailContent = document.getElementById('productDetailContent');
-
-    // Clear previous content
-    productDetailContent.innerHTML = '';
-
+    const productDetailContent = document.getElementById('productDetailContent');
     
-  // Render product details
-  const productImage = document.createElement('img');
-  productImage.src = product.Img;
-  productImage.alt = product.Title;
+    // Set up the product detail content based on the selected product
+    // For example:
+    productDetailContent.innerHTML = `<h2>${product.name}</h2><p>${product.description}</p>`;
+  
+    
+    productDetailModal.style.display = 'block';
 
-  const productTitle = document.createElement('h3');
-  productTitle.textContent = product.Title;
+    function closeProductDetail() {
+        const productDetailModal = document.getElementById('productDetailModal');
+        productDetailModal.style.display = 'none';
+      }
+      
+      closeProductDetail();
 
-  const productCategory = document.createElement('p');
-  productCategory.textContent = `Category: ${product.Cat}`;
 
-  const productPrice = document.createElement('h4');
-  productPrice.textContent = `Price: $${product.Price}`;
+// Render product details
+const productImage = document.createElement('img');
+productImage.src = product.Img;
+productImage.alt = product.Title;
 
-  productDetailContent.appendChild(productImage);
-  productDetailContent.appendChild(productTitle);
-  productDetailContent.appendChild(productCategory);
-  productDetailContent.appendChild(productPrice);
+const productTitle = document.createElement('h3');
+productTitle.textContent = product.Title;
 
-  productDetailModal.style.display = 'block';
+const productCategory = document.createElement('p');
+productCategory.textContent = `Category: ${product.Cat}`;
+
+// Convert the price to peso value
+const usdPrice = parseFloat(product.Price);
+const conversionRate = 50.0;  // Replace with your actual conversion rate
+const pesoPrice = usdPrice * conversionRate;
+
+const productPrice = document.createElement('h4');
+productPrice.textContent = `Price: ₱${pesoPrice.toFixed(2)}`;
+
+const addToCartButton = document.createElement('button');
+addToCartButton.textContent = 'Add to Cart';
+
+// Set event listener for "Add to Cart" button
+addToCartButton.addEventListener('click', () => {
+    addToCart(product);
+});
+
+    productDetailContent.appendChild(productImage);
+    productDetailContent.appendChild(productTitle);
+    productDetailContent.appendChild(productCategory);
+    productDetailContent.appendChild(productPrice);
+    productDetailContent.appendChild(addToCartButton);
+
+    // Display the product detail modal
+    openModal();
 }
+
+function addToCart(product) {
+    // Implement your logic to add the product to the cart
+    console.log('Added to cart:', product.Title);
+
+    // Close the product detail modal after adding to cart
+    closeModal();
+}
+
+// ... rest of your code ...
 
 document.addEventListener('DOMContentLoaded', () => {
     const app = document.getElementById('app');
@@ -265,10 +299,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const title = document.createElement('h3');
         title.textContent = product.Title;
-
+        function convertToPeso(usdPrice, conversionRate) {
+            return usdPrice * conversionRate;
+        }
+        
+        const usdPrice = product.Price; // Assuming product.Price is in USD
+        const conversionRate = 50.0; // Example conversion rate, replace with actual rate
+        
+        const pesoPrice = convertToPeso(usdPrice, conversionRate);
+        
         const price = document.createElement('h4');
-        price.textContent = `$${product.Price}`;
-
+        price.textContent = `₱${pesoPrice.toFixed(2)}`; // Display the price in pesos with 2 decimal places
+        
         detail.appendChild(category);
         detail.appendChild(title);
         detail.appendChild(price);
@@ -302,11 +344,11 @@ allProducts();
 
 
 // ... other code ...
-
 function filterProduct(category) {
     const allProductBoxes = document.querySelectorAll('.productbox .box');
     allProductBoxes.forEach(box => {
-        if (category === 'All Products' || category === 'Full-face' || box.getAttribute('data-category') === category) {
+        const boxCategory = box.getAttribute('data-category');
+        if (category === 'All Products' || boxCategory === category) {
             box.style.display = 'inline-block';
         } else {
             box.style.display = 'none';
@@ -314,26 +356,28 @@ function filterProduct(category) {
     });
 }
 
-// ... other code ...
+filterProduct('Full-face'); // Display only Full-face products
+
+
+
 
    function openModal() {
     document.getElementById('productDetailModal').style.display = 'block';
   }
 
-// Function to close product detail modal
+
 function closeModal() {
     const productDetailModal = document.getElementById('productDetailModal');
     productDetailModal.style.display = 'none';
   }
-  
-  // Function to add the product to the cart
+ 
   function addToCart() {
-    // Your logic to add the product to the cart goes here
+   
     console.log('Product added to cart');
   }
 
-    // Show products matching the selected category
-    const category = 'All Products'; // Assuming you want to initially show all products
+   
+    const category = 'All Products'; 
 const filteredProductBoxes = document.querySelectorAll(`.productbox .box[data-category="${category}"]`);
 filteredProductBoxes.forEach(box => {
     box.style.display = 'inline-block';

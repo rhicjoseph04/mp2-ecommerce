@@ -1,12 +1,3 @@
-function toggleLogin() {
-  var loginContent = document.getElementById("loginContent");
-  if (loginContent.style.display === "none" || loginContent.style.display === "") {
-      loginContent.style.display = "block";
-  } else {
-      loginContent.style.display = "none";
-  }
-}
-
 
 function addToCart(productId) {
   alert('Product added to cart. Product ID: ' + productId);

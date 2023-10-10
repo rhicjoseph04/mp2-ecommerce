@@ -1,92 +1,104 @@
-const validUsername = "user123";
-const validPassword = "password123";
+const registeredEmails = ['example@example.com'];
+const registeredUsernames = ['exampleuser'];
+let isSignupSuccessful = false;
 
-function showModal(title, text) {
-  var modal = $("#myModal");
-  var modalTitle = $("#modalTitle");
-  var modalText = $("#modalText");
+$(document).ready(function() {
+  toggleLoginForm();
 
-  modal.modal("show");
-  modalTitle.html("<h2>" + title + "</h2>");
-  modalText.html("<p>" + text + "</p>");
-}
+  $("#forgotPasswordLink").click(function() {
+    $('#resetPasswordModal').modal('show'); // Show reset password modal on link click
+  });
 
-function closeModal() {
-  var modal = $("#myModal");
-  modal.modal("hide");
-}
+  $("#loginForm").submit(function(event) {
+    event.preventDefault();
+    login();
+  });
 
-function toggleModal() {
-  $("#loginModal").modal("toggle");
-}
+  $("#signupForm").submit(function(event) {
+    event.preventDefault();
+    signup();
+  });
+});
 
-function toggleResetPasswordModal() {
-  // Close all open modals
-  $(".modal").modal("hide");
-  $("#resetPasswordModal").modal("toggle");
+function showModal(title, text, alertType) {
+  const alertDiv = $("#alertDiv");
+  alertDiv.html(`
+    <div class="alert alert-${alertType} alert-dismissible fade show" role="alert">
+      <strong>${title}</strong> ${text}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  `);
 }
 
 function toggleLoginForm() {
-  $('#signupModal').modal('hide');
-  $('#loginModal').modal('show');
+  $('#loginSignupModal').modal('show');
 }
 
 function toggleSignupForm() {
-  $('#loginModal').modal('hide');
-  $('#signupModal').modal('show');
+  $('#loginSignupModal').modal('show');
 }
 
-function login(event) {
-  event.preventDefault();  // Prevents the default form submission behavior
+function login() {
+  const email = $("#loginUsername").val();
+  const password = $("#loginPassword").val();
 
-  // Add your login authentication logic here
-  var email = document.getElementById("loginUsername").value;
-  var password = document.getElementById("loginPassword").value;
+  if (!isSignupSuccessful) {
+    showModal("Signup Required", "Please sign up first before logging in.", "danger");
+    return;
+  }
 
-  // Check if email is valid
-  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const loginSuccessful = true;
+
+  if (loginSuccessful) {
+    showModal("Login Successful", "Welcome! You can now freely use the checkout functionalities.", "success");
+    window.location.href = "index.html";
+    $('#loginSignupModal').modal('hide');
+  }
+}
+
+function signup() {
+  const email = $("#signupEmail").val();
+  const username = $("#signupUsername").val();
+  const password = $("#signupPassword").val();
+
+  if (registeredEmails.includes(email)) {
+    showModal("Email Already Registered", "The provided email is already registered.");
+    return;
+  }
+
+  if (registeredUsernames.includes(username)) {
+    showModal("Username Already Taken", "The provided username is already taken.");
+    return;
+  }
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.(gmail\.com|hotmail\.com|rocketmail\.com)$/;
   if (!emailPattern.test(email)) {
     showModal("Invalid Email", "Please enter a valid email address.");
     return;
   }
 
-  // Check if password is valid
-  var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*_?&])[A-Za-z\d@$!%*_?&]{8,}$/;
   if (!passwordPattern.test(password)) {
     showModal("Invalid Password", "Password must be at least 8 characters long and contain at least one lowercase letter, one uppercase letter, one number, and one special character.");
     return;
   }
 
-  // Authentication successful
-  // Add code here to proceed after successful login
-  // For now, let's display a success message
-  showModal("Login Successful", "Welcome! You can now freely use the checkout functionalities.");
+  isSignupSuccessful = true;
+  showModal("Signup Successful", "You can now proceed to login.", "success");
+  $('#signupForm')[0].reset();
+  $('#signupForm').hide();
+  $('#loginForm').show();
 }
 
-function signup(event) {
-  event.preventDefault();  // Prevents the default form submission behavior
-
-  var email = document.getElementById("signupEmail").value;
-  var username = document.getElementById("signupUsername").value;
-  var password = document.getElementById("signupPassword").value;
-
-  // Check if email is valid
-  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailPattern.test(email)) {
-    showModal("Invalid Email", "Please enter a valid email address.");
-    return;
-  }
-
-  // Check if password is valid
-  var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-  if (!passwordPattern.test(password)) {
-    showModal("Invalid Password", "Password must be at least 8 characters long and contain at least one lowercase letter, one uppercase letter, one number, and one special character.");
-    return;
-  }
-
-  // Registration successful
-  toggleSignupModal(); // Close the signup modal
-  // Show a success message for now
-  alert("Registration Successful. Welcome, " + username + "! You can now freely use the checkout functionalities.");
+function sendResetEmail() {
+  const resetEmail = $("#resetPasswordEmail").val();
+  // Implement email sending logic here
+  // For demonstration, we'll just show an alert
+  alert("Reset email sent to: " + resetEmail);
 }
 
+function toggleModal() {
+  $('#loginSignupModal').modal('hide');
+}
