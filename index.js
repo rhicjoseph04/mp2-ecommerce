@@ -1,13 +1,12 @@
 function toggleLogin() {
-
   var loginContent = document.getElementById("loginContent");
-  loginContent.classList.toggle("show");
+  if (loginContent.style.display === "none" || loginContent.style.display === "") {
+      loginContent.style.display = "block";
+  } else {
+      loginContent.style.display = "none";
+  }
 }
 
-
-function redirectToSignUp() {
-  window.location.href = "signup.html"; // Replace with the correct signup page URL
-}
 
 function addToCart(productId) {
   alert('Product added to cart. Product ID: ' + productId);
