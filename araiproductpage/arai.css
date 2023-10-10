@@ -4,38 +4,35 @@ body {
   margin: 0;
   padding: 0;
 }
-
-
 .free {
-  background: linear-gradient(to right, #0076ff, #00c3ff);
-  padding: 10px;
+  background: black;
+  padding: 10px 20px;
   text-align: center;
   color: white;
+  position: sticky;
+  width: 100%;
+ 
+
+
 }
 
 .social-icons {
-  margin-top: 10px;
-}
 
-.social-icons p {
-  margin: 0;
-}
+  align-items: center;
+  background: 	#1b1b1b;
+  color: white;
+  padding-left: 20px;
+  position: sticky;
+  display: flex;
+  width: 100%;
 
-.social-icons a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #fff;
-}
-
-.social-icons a img {
-  width: 30px;
-  height: 30px;
 }
 
 .larger-icon {
   font-size: 24px;
-color: #263238;
-  vertical-align: middle; /* Align with text */
+  color:	#ffa500;
+  vertical-align: middle;
+  /* Align with text */
 }
 
 .journey-text {
@@ -54,39 +51,79 @@ color: #263238;
 
 /* Navbar styles */
 .navbar {
-  background: linear-gradient(to right, #0076ff, #00c3ff);
-  color: white;
-  padding: 10px;
+  background: #1b1b1b;
+  position: flex;
+  margin-bottom: 0;
+  position: flex;
+  max-width: 100%;
+  width: 100%;
+  border: none;
+
+  padding:0;
+  padding-right:0;
+  padding-left:0;
+
 }
 
-.container {
+.navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right:0;
+  padding-left:0;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  color:  #f2f1f5;
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-right: 20px;
+  justify-content:center;
+  background-color: #292929;
+  border-radius: 10px;
+  padding-right:10px;
+  padding-left:10px;
+
 }
 
 .icon img {
   width: 30px;
   height: 30px;
-  border-radius: 50%; /* Make the border-radius circular */
+  border-radius: 50%;
+  /* Make the border-radius circular */
 }
 
-.logo .icon {
-  margin-right: 10px;
-  font-size: 50px;
-  color: #09021f;
+.logo .icon i {
+ background: linear-gradient(90deg, white 50%, #FFA500 50%);
+ -webkit-background-clip: text;
+ background-clip: text;
+ color: transparent;
+ transition: all 0.3s ease;
+ font-size: 50px;
+ padding-right: 10px;
 }
 
+.logo .icon i:hover {
+ background: linear-gradient(90deg, #FFA500 50%, white 50%);
+ -webkit-background-clip: text;
+ background-clip: text;
+ color: transparent;
+}
+
+.logo-text span {
+ color: black;
+ background-color: #FFA31A;
+ padding: 5px 10px; /* Adjust padding as needed */
+ border-radius: 5px; /* Optional: Add rounded corners */
+}
 
 .logo-text {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
+
+  color:white;
+ 
 }
 
 .search {
@@ -99,41 +136,141 @@ color: #263238;
   flex: 1;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 20px;
   font-size: 14px;
+  background-color:#292929;
+  color:#1b1b1b;
+ 
 }
 
 .search button {
   padding: 10px 20px;
-  background-color: #333;
+  margin-left: 10px;
+  background-color:	#ffa500;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  border-radius: 20px;
+
 }
 
-.user-cart-icons a {
-  margin-right: 10px;
-  color: white;
-  text-decoration: none;
+.social-icons .container {
+ display: flex;
+ align-items: center;
+ float:left;
+ padding: 10px; /* Adjust padding as needed */
+ max-width: 1200px; /* Adjust the maximum width as needed */
+ margin: 0 auto; /* Center the container */
+
 }
 
-.user-cart-icons button {
-  padding: 10px 20px;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.social-icons {
+ display: flex;
+ align-items: center;
+ margin-right: 20px; /* Adjust margin between icons and button */
+ padding-top:5px;
+ padding-bottom:5px;
+ background-color:	#1b1b1b;
+justify-content: center;
 }
+
+
+.social-icons a {
+ margin-right: 10px; /* Adjust margin between icons as needed */
+}
+
+.social-icons a img {
+ width: 30px;
+ height: 30px;
+}
+
+.social-icons p {
+ margin: 0;
+ margin-right: 20px;
+}
+
+.user-icon {
+ cursor: pointer;
+ display: flex;
+ align-items: center;
+
+}
+
+.outer-circle {
+ background-color: #292929; /* Outer circle color */
+ border-radius: 50%; /* Make it a circle */
+ width: 50px; /* Adjust size as needed */
+ height: 50px; /* Adjust size as needed */
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.inner-circle {
+ background-color: white; /* Inner white circle */
+ border-radius: 50%; /* Make it a circle */
+ width: 30px; /* Adjust size as needed */
+ height: 30px; /* Adjust size as needed */
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.user-icon i {
+ color: black; /* Black color for the icon */
+}
+
+.login-content {
+ display: none;
+ flex-direction: column;
+ align-items: center;
+ position: absolute;
+ left: 120%; /* Align to the right of the user icon */
+ top: 50%;
+ transform: translateY(-50%);
+ background-color: #fff; /* Background color for the login content */
+ padding: 10px;
+}
+
+/* Show login content when user icon is clicked */
+.user-icon.clicked .login-content {
+ display: flex;
+}
+
+.login-text {
+ display: block;
+ text-align: center;
+ padding: 5px 0;
+ text-decoration: none;
+ color: #000; /* Adjust text color as needed */
+}
+
+.login-content {
+ display: none;
+}
+
+.login-content.show {
+ display: block;
+}
+
+
+.user-cart-icons {
+ display: flex;
+ align-items: center;
+
+
+}
+
+
 
 .nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex;
-  font-size:large;
-  font-weight:bold;
+  font-size: large;
+  font-weight: bold;
 }
 
 .nav li {
@@ -149,24 +286,80 @@ color: #263238;
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
   .search {
-    margin: 10px 0;
+      margin: 10px 0;
   }
 
   .nav {
-    display: none;
+      display: none;
   }
 
   .user-cart-icons {
-    margin-left: auto;
+      margin-left: auto;
   }
 }
 
 @media (max-width: 576px) {
   .logo-text {
-    font-size: 20px;
+      font-size: 20px;
   }
+
+}
+/* Shop button styling */
+.shop-button {
+ background-color: 	#ffa31a; /* Red background color */
+ color: #292929;
+ padding: 10px 20px;
+ border-radius: 5px;
+ text-decoration: none;
+ font-size: 18px;
 }
 
+.shop-button:hover {
+ background-color: 	#ffa31a; /* Darker red on hover */
+}
+
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .search {
+      margin: 10px 0;
+    }
+
+    .nav {
+      display: none;
+    }
+
+    .user-cart-icons {
+      margin-left: auto;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .logo-text {
+      font-size: 20px;
+    }
+  }
+
+
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .search {
+      margin: 10px 0;
+    }
+
+    .nav {
+      display: none;
+    }
+
+    .user-cart-icons {
+      margin-left: auto;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .logo-text {
+      font-size: 20px;
+    }
+  }
 .footer {
   background: linear-gradient(to right, #0076ff, #00c3ff);
   color: white;

@@ -1,13 +1,13 @@
  /* Base styles */
  body {
-  font-family: 'Times New Roman', Times, serif;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color:	#1b1b1b ;
-
-
-
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   margin: 0;
+   padding: 0;
+   border: none;
+   background: radial-gradient(circle, #808080, #000000);
+  margin-top:0;
+  height: 100%;
+color:white;
 }
 
 .free {
@@ -17,8 +17,7 @@
   color: white;
   position: sticky;
   width: 100%;
-  font-family: 'Times New Roman', Times, serif;
-
+ 
 
 }
 
@@ -64,7 +63,7 @@
   max-width: 100%;
   width: 100%;
   border: none;
-  font-family: 'Times New Roman', Times, serif;
+
   padding:0;
   padding-right:0;
   padding-left:0;
@@ -105,7 +104,7 @@
  -webkit-background-clip: text;
  background-clip: text;
  color: transparent;
- transition: all 0.3s ease; /* Add a transition for smooth color change */
+ transition: all 0.3s ease;
  font-size: 50px;
  padding-right: 10px;
 }
@@ -127,7 +126,7 @@
 .logo-text {
   font-size: 28px;
   font-weight: bold;
-  font-family: 'Orbitron', sans-serif;
+
   color:white;
  
 }
@@ -366,61 +365,6 @@ justify-content: center;
       font-size: 20px;
     }
   }
-
-
-  .container .mt-5{
-    display: flex;
-
-
-    background-color:black;
-}
-
-.container .col-lg-6 {
-    background-color: 	#292929;
-    color: white;
-    transition: all 0.3s ease;
-    padding: 20px;
-}
-
-.container.col-lg-6:hover {
-    width: 100%; /* Adjust the width as needed */
-}
-
-.col-lg-6 img {
-    width: 100%;
-}
-
-/* Adjust the styles of your headings, paragraphs, and links if needed */
-.col-lg-6 h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.col-lg-6 p {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-.col-lg-6 ul {
-    margin-bottom: 15px;
-}
-
-.col-lg-6 li {
-    font-size: 16px;
-}
-
-.col-lg-6 a.btn {
-    font-size: 18px;
-    padding: 10px 20px;
-    background-color: white;
-    color:	#1b1b1b;
-}
-
-.col-lg-6 a.btn:hover {
-    background-color: #ffa500;
-    color: black;
-}
-
 
 
 

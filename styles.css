@@ -253,6 +253,7 @@
 
 .user-icon {
     cursor: pointer;
+    padding:10px;
 }
 
 .outer-circle {
@@ -852,9 +853,9 @@ padding-right:5%;
 
  /* end of banner */
 
-
- /* Product Detail Section */
- /* .product_detail {
+/* 
+ Product Detail Section */
+ .product_detail {
      position: fixed;
      top: 0;
      left: 0;
@@ -1047,7 +1048,7 @@ padding-right:5%;
  }
  */
 
- /* end of product_detail */
+ /* end of product_detail
 
 /* start of footer  */
 

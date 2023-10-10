@@ -303,13 +303,13 @@ document.addEventListener('DOMContentLoaded', () => {
             return usdPrice * conversionRate;
         }
         
-        const usdPrice = product.Price; // Assuming product.Price is in USD
-        const conversionRate = 50.0; // Example conversion rate, replace with actual rate
+        const usdPrice = product.Price; 
+        const conversionRate = 50.0; 
         
         const pesoPrice = convertToPeso(usdPrice, conversionRate);
         
         const price = document.createElement('h4');
-        price.textContent = `₱${pesoPrice.toFixed(2)}`; // Display the price in pesos with 2 decimal places
+        price.textContent = `₱${pesoPrice.toFixed(2)}`;
         
         detail.appendChild(category);
         detail.appendChild(title);
@@ -325,7 +325,6 @@ document.addEventListener('DOMContentLoaded', () => {
     productContainer.appendChild(productsContainer);
     app.appendChild(productContainer);
 
-   // Call allProducts() initially to display all products
    allProducts();
 });
 
@@ -336,14 +335,10 @@ function allProducts() {
     });
 }
 
-// Call allProducts() initially to display all products
 allProducts();
 
 
-   // Functions to handle opening/closing modal and filtering products
 
-
-// ... other code ...
 function filterProduct(category) {
     const allProductBoxes = document.querySelectorAll('.productbox .box');
     allProductBoxes.forEach(box => {
@@ -356,7 +351,7 @@ function filterProduct(category) {
     });
 }
 
-filterProduct('Full-face'); // Display only Full-face products
+filterProduct('Full-face'); 
 
 
 
