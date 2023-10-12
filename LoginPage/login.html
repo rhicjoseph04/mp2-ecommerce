@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="icon" href="./img/motocareslogo.jpg">
+    <script src="https://kit.fontawesome.com/0023926e4b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="login.css">
+    <title>Login and Sign Up</title>
+</head>
+
+<body>
+    <div class="free">
+        <p class="journey-text"><i class="fa-solid fa-motorcycle larger-icon"></i>Your Journey Awaits with <span
+                class="free-shipping-text">FREE SHIPPING 🚚</span></p>
+    </div>
+    <div class="navbar">
+        <div class="container">
+
+            <div class="logo">
+
+                <div class="icon"> <a href="../Landingpage/index.html">
+                        <i class="fa-brands fa-shopware"></i></a>
+                </div>
+                <div class="logo-text">Helmet <span>hub</span></div>
+
+            </div>
+
+            <div class="search">
+                <button><i class="fa fa-search"></i></button>
+                <input type="text" placeholder="     Sign up and get 100% off on your first order" autocomplete="off">
+            </div>
+
+            <div class="nav">
+                <ul>
+                    <li><a href="../Landingpage/index.html" class="link">HOME</a></li>
+                    <li><a href="../ProductshopPage/product.html" class="link">PRODUCT</a></li>
+                    <li><a href="/about" class="link">ABOUT</a></li>
+                    <li><a href="/contact" class="link">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="user-icon">
+                <a href="./login.html">
+                    <div class="outer-circle">
+                        <div class="inner-circle">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="login-content">
+                        <button class="btn btn-primary">Login</button>
+                        <button class="btn btn-secondary">Sign Up</button>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="social-icons">
+        <div class="container">
+            <p>FOLLOW US ON:</p>
+            <a href="#"><img src="../img/fblogo.png" alt="Facebook"></a>
+            <a href="#"><img src="../img/instag.png" alt="Instagram"></a>
+            <a href="#"><img src="../img/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="../img/youtube.png" alt="YouTube"></a>
+
+            <div class="user-cart-icons">
+
+                <a href="#" class="link"><i class="fas fa-user"></i></a>
+                <a href="../Cartpage/cart.html" class="link"><i class="fas fa-shopping-bag"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="alertDiv"></div>
+
+    <div id="video-container">
+        <video autoplay muted loop id="video-background">
+            <source src="../img/vecteezy_men-s-silhouette-with-motocross-on-vacation-the-concept-of_10124634_531.mp4"
+                type="video/mp4">
+            Your browser does not support the video tag.
+        </video></div>
+
+  
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <!-- Modal header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Login or Sign Up</h4>
+                    <button type="button" class="close" data-dismiss="modal" onclick="window.location.href = '../Landingpage/index.html'">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="d-flex justify-content-center mb-3">
+                        <button class="btn btn-outline-primary btn-hover" onclick="toggleLoginForm()">
+                            <span>Login</span>
+                        </button>
+                        <button class="btn btn-outline-secondary btn-hover" onclick="toggleSignupForm()">
+                            <span>Sign Up</span>
+                        </button>
+                    </div>
+                    <div class="d-flex justify-content-center mb-3">
+                        <div class="social-login">
+                            <!-- Add class "btn-hover" for hover effect -->
+                            <button type="button" class="btn btn-primary btn-hover" style="width: 320px;">
+                                <i class="fab fa-facebook icon-color"></i> Facebook
+                            </button>
+                            <button type="button" class="btn btn-outline-danger btn-hover" style="width: 320px;">
+                                <i class="fab fa-google icon-color"></i> Google
+                            </button>
+                            <button type="button" class="btn btn-outline-info btn-hover" style="width: 320px;">
+                                <i class="fab fa-microsoft icon-color"></i> Microsoft
+                            </button>
+                        </div>
+                    </div>
+                    <div class="or-separator text-center mb-3">
+                        <span>or</span>
+                    </div>
+                    <!-- Login Form -->
+                    <form id="loginForm" onsubmit="login(event)">
+                        <div class="form-group">
+                            <div class="input-icon">
+                                <i class="fas fa-user"></i>
+                                <input type="text" class="form-control" id="loginUsername" placeholder="Username/Email"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-icon">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" class="form-control" id="loginPassword"
+                                    placeholder="Your Password" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-orange btn-block">Login</button>
+                        <br>
+                        <a href="javascript:void(0);" id="forgotPasswordLink">Did you forget your password?</a>
+                    </form>
+
+
+                    <form id="resetPasswordForm" style="display: none;">
+                        <div class="form-group">
+                            <div class="input-icon">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" class="form-control" id="resetPasswordEmail"
+                                    placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-orange btn-block">Reset Password</button>
+                    </form>
+
+                    <br>
+                    <!-- Signup Form -->
+                    <form id="signupForm" onsubmit="signup(event)">
+                        <div class="form-group">
+                            <div class="input-icon">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" class="form-control" id="signupEmail" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-icon">
+                                <i class="fas fa-user"></i>
+                                <input type="username" class="form-control" id="signupUsername"
+                                    placeholder="Your Username" required autocomplete="current-password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-icon">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" class="form-control" id="signupPassword" placeholder="Password"
+                                    required autocomplete="current-password">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-orange btn-block">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+   
+
+
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+    
+    
+                    <div class="col-md-2 col-sm-12">
+                        <div class="icon">
+                            <!-- Add your logo here -->
+                            <a href="../Landingpage/index.html">
+                                <i class="fab fa-shopware logo" style="font-size: 5rem;"></i>
+                            </a>
+                        </div>
+                    </div>
+    
+    
+                    <div class="col-md-2 col-sm-8">
+                        <div class="detail">
+                            <p>Your Ride, Our Passion!</p>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-2 col-sm-8">
+                        <div class="account">
+                            <h5>Helmet Hub</h5>
+                            <ul>
+                                <li><a href="#">Account</a></li>
+                                <li><a href="#">Order</a></li>
+                                <li><a href="#">Cart</a></li>
+                                <li><a href="#">Shipping</a></li>
+                                <li><a href="#">Return</a></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-2 col-sm-8">
+                        <div class="page">
+                            <h5>Pages</h5>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4 col-sm-8">
+                        <div class="payment">
+                            <h5>Accepted Payments</h5>
+                            <img src='../img/visa.jpg' alt='Visa' class='payment-icon' />
+                            <img src='../img/mastercard.png' alt='Mastercard' class='payment-icon' />
+                            <img src='../img/Western Union.png' alt='Western' class='payment-icon' />
+                            <img src='../img/pinetwork.png' alt='Pinetwork' class='payment-icon' />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/0023926e4b.js" crossorigin="anonymous"></script>
+        <script src="login.js"></script>
+        
+        <script>
+            $(document).ready(function() {
+                // Prevent closing the modal when clicking outside
+                $('#loginSignupModal').modal({
+                    backdrop: 'static',
+                    keyboard: false
+                });
+            });
+        </script>
+
+
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>

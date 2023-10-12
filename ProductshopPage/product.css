@@ -1,0 +1,597 @@
+ /* Base styles */
+ body {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   margin: 0;
+   padding: 0;
+   border: none;
+   background:#1b1b1b;
+  margin-top:0;
+  height: 100%;
+
+}
+
+.free {
+   background: black;
+   padding: 10px 20px;
+   text-align: center;
+   color:	#ffffff;
+   position: sticky;
+   width: 100%;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.social-icons {
+
+   align-items: center;
+   background: 	#ffffff;
+   color: 	#ffffff;
+   padding-left: 20px;
+   position: sticky;
+   display: flex;
+   width: 100%;
+
+}
+
+.larger-icon {
+   font-size: 24px;
+   color:	#ffa31a;
+   vertical-align: middle;
+   /* Align with text */
+}
+
+.journey-text {
+   font-size: 18px;
+   margin: 0;
+}
+
+.free-shipping-text {
+   font-weight: bold;
+}
+
+.icon img {
+   width: 30px;
+   height: 30px;
+}
+
+/* Navbar styles */
+.navbar {
+  background:	#0e0e0e;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top:5px;
+  padding-bottom:0;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  padding:10px;
+}
+
+.navbar .logo .icon {
+  margin-right: 10px;
+}
+
+.navbar .nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar .nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.navbar .nav ul li:last-child {
+  margin-right: 0;
+}
+
+.navbar .nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navbar .nav ul li a:hover {
+  color:#ffa31a;
+}
+.navbar .container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-right:5px;
+   padding-left:5px;
+}
+
+.logo {
+   display: flex;
+   align-items: center;
+   padding-top:5px;
+   padding-bottom:5px;
+   padding-right: 20px;
+   justify-content:center;
+   border-radius: 10px;
+   padding-right:5px;
+   padding-left:5px;
+
+}
+
+.icon img {
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   /* Make the border-radius circular */
+}
+
+.logo .icon i {
+  background: linear-gradient(90deg, white 50%, 	#ffa31a 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s ease; /* Add a transition for smooth color change */
+  font-size: 55px;
+  padding-right: 10px;
+}
+
+.logo .icon i:hover {
+  background: linear-gradient(90deg, 	#ffa31a 50%, white 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.logo-text span {
+  color: black;
+  background-color:#ffa31a;
+  padding: 2px;
+  border-radius: 3px;
+
+font-size:32px;
+}
+
+.logo-text {
+   font-size: 36px;
+   font-weight: bold;
+   font-family: 'Orbitron', sans-serif;
+   color:white;
+
+  
+}
+
+.search {
+  flex: 1;
+  margin: 0 20px;
+  display: flex;
+  position: relative;
+}
+
+.search input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  background-color:	#292929;
+  color: white;
+}
+
+.search button {
+  margin-left: 10px; /* Adjust the margin to position the icon */
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+}
+
+
+
+.social-icons .container {
+  display: flex;
+  align-items: center;
+  float:left;
+  padding: 10px; /* Adjust padding as needed */
+  max-width: 1200px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the container */
+padding-bottom:5px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Adjust margin between icons and button */
+  padding-top:5px;
+  padding-bottom:5px;
+  background:	#0e0e0e;
+ justify-content: center;
+ font-size:15px;
+}
+
+.social-icons:hover{
+  color:#ffa31a;
+}
+
+
+.social-icons a {
+  margin-right: 10px; /* Adjust margin between icons as needed */
+  font-size:20px;
+  color:	#ffffff;
+}
+
+.social-icons a img {
+  width: 23px;
+  height: 23px;
+
+}
+
+.social-icons a:hover {
+  color:#ffa31a;
+}
+
+.social-icons p {
+  margin: 0;
+  margin-right: 20px;
+  font-size:15px;
+}
+
+
+.user-icon {
+  cursor: pointer;
+  padding:10px;
+}
+
+.outer-circle {
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-circle {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-circle i {
+  color: #fff;
+}
+
+.login-content {
+  display: none;
+  text-align: center;
+}
+
+.login-content a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+
+.nav ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   font-size: large;
+   font-weight: bold;
+}
+
+.nav li {
+   margin: 0 10px;
+}
+
+.nav a {
+   color: white;
+   text-decoration: none;
+   font-size: 16px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+   .search {
+       margin: 10px 0;
+   }
+
+   .nav {
+       display: none;
+   }
+
+   .user-cart-icons {
+       margin-left: auto;
+   }
+}
+
+@media (max-width: 576px) {
+   .logo-text {
+       font-size: 20px;
+   }
+}
+  
+/* Styles for the main product container */
+.products {
+  padding: 20px;
+  color:white;
+  background-color: black;
+}
+
+/* Styles for the filter section */
+.categories {
+ padding: 0;
+  margin-bottom: 20px;
+  color:white;
+  display:absolute;
+}
+
+.categories h3 {
+  font-size:30px;
+  margin-bottom: 5px;
+}
+
+.categories ul {
+  list-style-type: none;
+  padding: 0;
+  display: inline-block;
+  align-items: center;
+}
+
+.categories li {
+  cursor: pointer;
+  padding: 5px 0;
+  font-size:25px;
+  display:flex;
+}
+
+.categories li:hover {
+  color: #ffa31a; /* Change color on hover as per your design */
+}
+
+/* Styles for product boxes */
+.container {
+  display: column;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.box {
+  border: 2px solid white;
+  margin: 10px;
+  width: 200px;
+  height:auto;
+  display:flex;
+  position:top;
+  background: radial-gradient(circle, #575656, #000000);
+  padding:10px 10px;
+  display:inline-block;
+}
+
+.box img {
+  max-width: 100%;
+}
+
+/* Styles for product details */
+.detail {
+  padding: 10px;
+}
+
+.detail h3 {
+  font-size: 18px; /* Adjusted font size */
+  margin: 5px 0; /* Adjusted margin */
+}
+
+.detail p {
+  font-size: 20px; /* Adjusted font size */
+  margin: 5px 0; /* Adjusted margin */
+  color:#ffa31a;
+}
+
+.detail h4 {
+  font-size: 14px; /* Adjusted font size */
+  font-weight: bold;
+  margin: 5px 0; /* Adjusted margin */
+}
+
+/* Modal styles */
+#productDetailModal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.modal-dialog {
+  max-width: 80%;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #888;
+  padding: 20px;
+  position: relative;
+}
+
+.modal-product-image {
+  max-width: 100%;
+  height:300px;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.modal-footer {
+  border-top: none;
+}
+
+.add-to-cart-btn {
+  background-color: transparent;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  color: #ff6b6b; /* Change to your desired hover color */
+}
+
+/* start of footer  */
+
+.footer {
+  background:	#1b1b1b;
+  color: white;
+  padding-left:80px;
+  width:100%;
+  margin-left:0;
+  margin-right:0;
+  justify-content:space-between;
+  margin-top:0;
+  padding-top:50px;
+  padding-bottom:50px;
+}
+
+.footer .icon i {
+  background: linear-gradient(90deg, white 50%, #FFA500 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s ease; /* Add a transition for smooth color change */
+  font-size: 50px;
+}
+
+.footer .icon i:hover {
+  background: linear-gradient(90deg, #FFA500 50%, white 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+
+.footer .detail, .account, .page, .payment {
+  margin-bottom: 20px; /* Adjust margin as needed for spacing between sections */
+}
+
+.footer  .detail p {
+  margin: 0; /* Remove default margins for <p> */
+}
+
+.footer  .account h5, .page h5, .payment h5 {
+  margin-bottom: 10px; /* Adjust margin as needed */
+  color:	#808080;
+}
+
+.footer .account ul, .page ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .account li, .page li {
+  margin-bottom: 5px; /* Adjust margin as needed */
+}
+
+.footer  .account li a, .page li a {
+  color:#ffa500;
+  text-decoration: none;
+}
+
+
+.footer .payment-icon {
+  width: 60px; /* Adjust icon size as needed */
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+/* end of footer  */
+
+/* Styles for normal screens */
+
+/* Example: for tablets and larger screens */
+@media (min-width: 768px) {
+  /* Your CSS styles for tablets and larger screens go here */
+  body {
+      font-size: 16px;
+  }
+}
+
+/* Example: for small laptops and desktops */
+@media (min-width: 992px) {
+  /* Your CSS styles for small laptops and desktops go here */
+  body {
+      font-size: 18px;
+  }
+}
+
+/* Example: for larger laptops and desktops */
+@media (min-width: 1200px) {
+  /* Your CSS styles for larger laptops and desktops go here */
+  body {
+      font-size: 20px;
+  }
+}
+
+/* Styles for smaller screens */
+
+/* Example: for smartphones */
+@media (max-width: 767px) {
+  /* Your CSS styles for smartphones go here */
+  body {
+      font-size: 14px;
+  }
+}
+
+/* Example: for smaller tablets and larger smartphones */
+@media (max-width: 991px) {
+  /* Your CSS styles for smaller tablets and larger smartphones go here */
+  body {
+      font-size: 14px;
+  }
+}
+
+
+/* Example: for larger laptops and desktops */
+@media (min-width: 1200px) {
+  /* Your CSS styles for larger laptops and desktops go here */
+  body {
+      font-size: 20px;
+  }
+}
+
+/* Styles for smaller screens */
+
+/* Example: for smartphones */
+@media (max-width: 767px) {
+  /* Your CSS styles for smartphones go here */
+  body {
+      font-size: 14px;
+  }
+}
+
+/* Example: for smaller tablets and larger smartphones */
+@media (max-width: 991px) {
+  /* Your CSS styles for smaller tablets and larger smartphones go here */
+  body {
+      font-size: 14px;
+  }
+}

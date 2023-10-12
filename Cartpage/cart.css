@@ -1,0 +1,604 @@
+body {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   margin: 0;
+   padding: 0;
+   border: none;
+   background:#1b1b1b;
+  margin-top:0;
+  height: 100%;
+
+}
+
+.free {
+   background: black;
+   padding: 10px 20px;
+   text-align: center;
+   color:	#ffffff;
+   position: sticky;
+   width: 100%;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.social-icons {
+
+   align-items: center;
+   background: 	#ffffff;
+   color: 	#ffffff;
+   padding-left: 20px;
+   position: sticky;
+   display: flex;
+   width: 100%;
+
+}
+
+.larger-icon {
+   font-size: 24px;
+   color:	#ffa31a;
+   vertical-align: middle;
+   /* Align with text */
+}
+
+.journey-text {
+   font-size: 18px;
+   margin: 0;
+}
+
+.free-shipping-text {
+   font-weight: bold;
+}
+
+.icon img {
+   width: 30px;
+   height: 30px;
+}
+
+/* Navbar styles */
+.navbar {
+  background:	#0e0e0e;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top:5px;
+  padding-bottom:0;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  padding:10px;
+}
+
+.navbar .logo .icon {
+  margin-right: 10px;
+}
+
+.navbar .nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar .nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.navbar .nav ul li:last-child {
+  margin-right: 0;
+}
+
+.navbar .nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navbar .nav ul li a:hover {
+  color:#ffa31a;
+}
+.navbar .container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-right:5px;
+   padding-left:5px;
+}
+
+.logo {
+   display: flex;
+   align-items: center;
+   padding-top:5px;
+   padding-bottom:5px;
+   padding-right: 20px;
+   justify-content:center;
+   border-radius: 10px;
+   padding-right:5px;
+   padding-left:5px;
+
+}
+
+.icon img {
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   /* Make the border-radius circular */
+}
+
+.logo .icon i {
+  background: linear-gradient(90deg, white 50%, 	#ffa31a 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s ease; /* Add a transition for smooth color change */
+  font-size: 55px;
+  padding-right: 10px;
+}
+
+.logo .icon i:hover {
+  background: linear-gradient(90deg, 	#ffa31a 50%, white 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.logo-text span {
+  color: black;
+  background-color:#ffa31a;
+  padding: 2px;
+  border-radius: 3px;
+
+font-size:32px;
+}
+
+.logo-text {
+   font-size: 36px;
+   font-weight: bold;
+   font-family: 'Orbitron', sans-serif;
+   color:white;
+
+  
+}
+
+.search {
+  flex: 1;
+  margin: 0 20px;
+  display: flex;
+  position: relative;
+}
+
+.search input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  background-color:	#292929;
+  color: white;
+}
+
+.search button {
+  margin-left: 10px; /* Adjust the margin to position the icon */
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+}
+
+
+
+.social-icons .container {
+  display: flex;
+  align-items: center;
+  float:left;
+  padding: 10px; /* Adjust padding as needed */
+  max-width: 1200px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the container */
+padding-bottom:5px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Adjust margin between icons and button */
+  padding-top:5px;
+  padding-bottom:5px;
+  background:	#0e0e0e;
+ justify-content: center;
+ font-size:15px;
+}
+
+.social-icons:hover{
+  color:#ffa31a;
+}
+
+
+.social-icons a {
+  margin-right: 10px; /* Adjust margin between icons as needed */
+  font-size:20px;
+  color:	#ffffff;
+}
+
+.social-icons a img {
+  width: 23px;
+  height: 23px;
+
+}
+
+.social-icons a:hover {
+  color:#ffa31a;
+}
+
+.social-icons p {
+  margin: 0;
+  margin-right: 20px;
+  font-size:15px;
+}
+
+
+.user-icon {
+  cursor: pointer;
+  padding:10px;
+}
+
+.outer-circle {
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-circle {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-circle i {
+  color: #fff;
+}
+
+.login-content {
+  display: none;
+  text-align: center;
+}
+
+.login-content a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+
+.nav ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   font-size: large;
+   font-weight: bold;
+}
+
+.nav li {
+   margin: 0 10px;
+}
+
+.nav a {
+   color: white;
+   text-decoration: none;
+   font-size: 16px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+   .search {
+       margin: 10px 0;
+   }
+
+   .nav {
+       display: none;
+   }
+
+   .user-cart-icons {
+       margin-left: auto;
+   }
+}
+
+@media (max-width: 576px) {
+   .logo-text {
+       font-size: 20px;
+   }
+}
+
+.cartcontainer
+{
+    padding: 40px 50px;
+    width: 100%;
+    background: radial-gradient(circle, #575656, #000000);
+    border-bottom: 1px solid #9a9a9a;
+    color:white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.cartcontainer .emptycart
+{
+    margin-top: 30px;
+    margin-left: 40%;
+}
+.cartcontainer .emptycart h2
+{
+    font-size: 32px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+.cartcontainer .emptycart .emptycartbtn
+{
+    margin-left: 70px;
+    text-decoration: none;
+    color:#1b1b1b;
+    padding: 10px 20px;
+    background: 	#ffa31a;
+} 
+.cartcontainer .contant
+{
+    max-width: 100%;
+    padding: 20px 30px;
+}
+.cartcontainer .contant .cart_item
+{
+    padding: 20px 30px;
+    display: flex;
+    background: transparent;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color:white;
+}
+.cartcontainer .contant .cart_item .img_box
+{
+    padding: 20px 20px;
+    background: transparent;
+}
+.cartcontainer .contant .cart_item .img_box img
+{
+    width: 250px;
+    height: 250px;
+}
+.cartcontainer .contant .cart_item  .detail
+{
+    margin-left: 60px;
+    display: flex;
+    margin-top: 30px;
+    padding: 20px 30px;
+}
+.cartcontainer .contant .cart_item  .detail .info h4
+{
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 100;
+    letter-spacing: 1.5px;
+    font-size:30px;
+}
+.cartcontainer .contant .cart_item  .detail .info h3
+{
+    margin-top: 20px;
+    color: white;
+    font-size: 22px;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+.cartcontainer .contant .cart_item  .detail .info p
+{
+    margin-top: 10px;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+.cartcontainer .contant .cart_item  .detail .info .qty
+{
+    margin-top: 10px;
+    display: flex;
+}
+.cartcontainer .contant .cart_item  .detail .info .qty .incqty
+{
+    padding: 10px 10px;
+    background: none;
+    outline: none;
+    border: none;
+    color: #0989ff;
+    font-size: 32px;
+    cursor: pointer;
+}
+.cartcontainer .contant .cart_item  .detail .info .qty .decqty
+{
+    padding: 10px 10px;
+    background: none;
+    outline: none;
+    border: none;
+    color: #0989ff;
+    font-size: 32px;
+    cursor: pointer;
+}
+.cartcontainer .contant .cart_item  .detail .info .qty input
+{
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 22px;
+    color: #ffff;
+    width: 50px;
+    margin-left: 20px;
+}
+.cartcontainer .contant .cart_item  .detail .info .subtotal
+{
+  color: 	#ffa31a;
+    font-size: 22px;
+    margin-top: 10px;
+}
+.cartcontainer .contant .cart_item  .detail .close
+{
+    margin-top: 30px;
+    margin-left: 50px;
+}
+.cartcontainer .contant .cart_item  .detail .close button
+{
+    border: none;
+    outline: none;
+    border: none;
+    font-size: 22px;
+    background-color: #ffa31a;
+    cursor: pointer;
+    color:white;
+}
+.cartcontainer .totalprice
+{
+    margin-top: 30px;
+    margin-left: 50%;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.cartcontainer .checkout
+{
+    margin-top: 40px;
+    margin-left: 53%;
+    padding: 10px 20px;
+    color: black;
+    border: none;
+    outline: none;
+    background: 	#ffa31a;
+    cursor: pointer;
+}
+/* start of footer  */
+
+ .footer {
+  background:	#1b1b1b;
+  color: white;
+  padding-left:80px;
+  width:100%;
+  margin-left:0;
+  margin-right:0;
+  justify-content:space-between;
+  margin-top:0;
+  padding-top:50px;
+  padding-bottom:50px;
+  display: fixed;
+ 
+}
+
+.footer .icon i {
+  background: linear-gradient(90deg, white 50%, #FFA500 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s ease; /* Add a transition for smooth color change */
+  font-size: 50px;
+}
+
+.footer .icon i:hover {
+  background: linear-gradient(90deg, #FFA500 50%, white 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+
+.footer .detail, .account, .page, .payment {
+  margin-bottom: 20px; /* Adjust margin as needed for spacing between sections */
+}
+
+.footer  .detail p {
+  margin: 0; /* Remove default margins for <p> */
+}
+
+.footer  .account h5, .page h5, .payment h5 {
+  margin-bottom: 10px; /* Adjust margin as needed */
+  color:	#808080;
+}
+
+.footer .account ul, .page ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .account li, .page li {
+  margin-bottom: 5px; /* Adjust margin as needed */
+}
+
+.footer  .account li a, .page li a {
+  color:#ffa500;
+  text-decoration: none;
+}
+
+
+.footer .payment-icon {
+  width: 60px; /* Adjust icon size as needed */
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+/* end of footer  */
+
+/* Styles for normal screens */
+
+/* Example: for tablets and larger screens */
+@media (min-width: 768px) {
+  /* Your CSS styles for tablets and larger screens go here */
+  body {
+      font-size: 16px;
+  }
+}
+
+/* Example: for small laptops and desktops */
+@media (min-width: 992px) {
+  /* Your CSS styles for small laptops and desktops go here */
+  body {
+      font-size: 18px;
+  }
+}
+
+/* Example: for larger laptops and desktops */
+@media (min-width: 1200px) {
+  /* Your CSS styles for larger laptops and desktops go here */
+  body {
+      font-size: 20px;
+  }
+}
+
+/* Styles for smaller screens */
+
+/* Example: for smartphones */
+@media (max-width: 767px) {
+  /* Your CSS styles for smartphones go here */
+  body {
+      font-size: 14px;
+  }
+}
+
+/* Example: for smaller tablets and larger smartphones */
+@media (max-width: 991px) {
+  /* Your CSS styles for smaller tablets and larger smartphones go here */
+  body {
+      font-size: 14px;
+  }
+}
