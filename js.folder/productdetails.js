@@ -12,7 +12,7 @@
         Title:"NF-R – Hyper Fluo Yellow",
         Cat: 'Full-face',
         Price: '185',
-        Img: './img/kythelmet6.jpg'
+        Img: './img/kythyperfluo.png'
     },
     {
         id:3,
@@ -26,7 +26,7 @@
         Title:"KR-1 – Plain Matt Black",
         Cat: 'Full-face',
         Price: '280',
-        Img: './img/kythelmet8.JPG'
+        Img: './img/kytplainmatt.png'
     },
     {
         id:5,
@@ -54,7 +54,7 @@
         Title:"NF-J – JAUME MASIA REPLICA",
         Cat: 'Half-face',
         Price: '135',
-        Img: './img/kythelmet12.PNG'
+        Img: './img/kytJAUME-MASIA-REPLICA1.png'
     },
     {
         id:9,
@@ -68,7 +68,7 @@
         Title:"Strike Eagle – Potion Yellow",
         Cat: 'Off-Road',
         Price: '225',
-        Img: './img/kythelmet14.JPG'
+        Img: './img/kytpotion.png'
     },
     {
         id:11,
