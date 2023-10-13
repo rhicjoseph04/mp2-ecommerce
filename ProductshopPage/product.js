@@ -167,6 +167,106 @@ const productDetail = [
             Price: '40',
             Img: '../img/kythelmetaccesso2.jpeg'
         },
+           
+        {
+            id:1,
+            Title:"TT COURSE – RADIANCE",
+            Cat: 'Full-face',
+            Price: '150',
+            Img: '../img/kythelmet1.png'
+        },
+        {
+            id:2,
+            Title:"NF-R – Hyper Fluo Yellow",
+            Cat: 'Full-face',
+            Price: '185',
+            Img: '../img/kythelmet6.jpg'
+        },
+        {
+            id:3,
+            Title:"NF-R STEEL FLOWER RED",
+            Cat: 'Full-face',
+            Price: '150',
+            Img: '../img/kythelmet7.png'
+        },
+        {
+            id:4,
+            Title:"KR-1 – Plain Matt Black",
+            Cat: 'Full-face',
+            Price: '280',
+            Img: '../img/kythelmet8.JPG'
+        },
+        {
+            id:5,
+            Title:"NF-J – BROC PARKES REPLICA",
+            Cat: 'Half-face',
+            Price: '135',
+            Img: '../img/kythelmet9.png'
+        },
+        {
+            id:6,
+            Title:"NF-J – DENNIS FOGGIA LEOPARD REPLICA",
+            Cat: 'Half-face',
+            Price: '135',
+            Img: '../img/kythelmet10.png'
+        },
+        {
+            id:7,
+            Title:"NF-J – ESPARGARO REPLICA 2020",
+            Cat: 'Half-face',
+            Price: '135',
+            Img: '../img/kythelmet11.png'
+        },
+        {
+            id:8,
+            Title:"NF-J – JAUME MASIA REPLICA",
+            Cat: 'Half-face',
+            Price: '135',
+            Img: '../img/kythelmet12.PNG'
+        },
+        {
+            id:9,
+            Title:"NF-J – RADAR AQUA BLUE",
+            Cat: 'Half-face',
+            Price: '135',
+            Img: '../img/kythelmet13.png'
+        },
+        {
+            id:10,
+            Title:"Strike Eagle – Potion Yellow",
+            Cat: 'Off-Road',
+            Price: '225',
+            Img: '../img/kythelmet14.JPG'
+        },
+        {
+            id:11,
+            Title:"Strike Eagle – Simpson Replica Orange",
+            Cat: 'Off-Road',
+            Price: '225',
+            Img: '../img/kythelmet15.png'
+        },
+        {
+            id:12,
+            Title:"Strike Eagle – Web Matt White/Blue",
+            Cat: 'Off-Road',
+            Price: '225',
+            Img: '../img/kythelmet16.png'
+        },
+        {
+            id:13,
+            Title:"TT COURSE – Photochromic Visor",
+            Cat: 'Accessories',
+            Price: '45',
+            Img: '../img/kytacceso.png'
+        },
+        {
+            id:14,
+            Title:"YG DESIGN – Wireless Charging Phone Mount",
+            Cat: 'Accessories',
+            Price: '40',
+            Img: '../img/kythelmetaccesso2.jpeg'
+        },
+    
     
 ];
 
@@ -441,7 +541,17 @@ function allProducts() {
 
 allProducts();
 
-
+function filterBrandMain(brand) {
+    const allProductBoxes = document.querySelectorAll('.productbox .box');
+    allProductBoxes.forEach(box => {
+        const boxBrand = box.getAttribute('data-brand');
+        if (brand === 'All Brands' || boxBrand === brand) {
+            box.style.display = 'inline-block';
+        } else {
+            box.style.display = 'none';
+        }
+    });
+}
 
 function filterProduct(category) {
     const allProductBoxes = document.querySelectorAll('.productbox .box');
@@ -484,3 +594,97 @@ filteredProductBoxes.forEach(box => {
     filteredProductBoxes.forEach(box => {
         box.style.display = 'inline-block';
       });
+
+
+
+      const itemsPerPage = 4; // Number of items to display per page
+      let currentPage = 1;
+      
+      function paginateProductBoxes() {
+          const startIndex = (currentPage - 1) * itemsPerPage;
+          const endIndex = startIndex + itemsPerPage;
+          const productsToDisplay = productDetail.slice(startIndex, endIndex);
+      
+          const productBox = document.getElementById('productBox');
+          productBox.innerHTML = ''; // Clear previous content
+      
+          productsToDisplay.forEach(product => {
+              const productBoxItem = document.createElement('div');
+              productBoxItem.classList.add('box');
+              productBoxItem.setAttribute('data-category', product.Cat);
+      
+              // Create elements for product details (image, title, category, price)
+              const imgBox = document.createElement('div');
+              imgBox.classList.add('img_box');
+      
+              const productImage = document.createElement('img');
+              productImage.src = product.Img;
+              productImage.alt = product.Title;
+      
+              imgBox.appendChild(productImage);
+      
+              const icon = document.createElement('div');
+              icon.classList.add('icon');
+      
+              const cartIcon = document.createElement('li');
+              cartIcon.innerHTML = '<i class="fas fa-shopping-cart"></i>';
+      
+              // Add event listener for cart icon
+              cartIcon.addEventListener('click', () => {
+                  console.log('Clicked cart icon for product:', product);
+              });
+      
+              icon.appendChild(cartIcon);
+              imgBox.appendChild(icon);
+              productBoxItem.appendChild(imgBox);
+      
+              const detail = document.createElement('div');
+              detail.classList.add('detail');
+      
+              const category = document.createElement('p');
+              category.textContent = product.Cat;
+      
+              const title = document.createElement('h3');
+              title.textContent = product.Title;
+      
+              const price = document.createElement('h4');
+              price.textContent = `₱${parseFloat(product.Price) * 50.0}`;
+      
+              detail.appendChild(category);
+              detail.appendChild(title);
+              detail.appendChild(price);
+              productBoxItem.appendChild(detail);
+      
+              productBox.appendChild(productBoxItem);
+          });
+      }
+
+            // Get the pagination buttons
+const prevButton = document.getElementById('prevButton');
+const nextButton = document.getElementById('nextButton');
+
+// Add event listeners to the pagination buttons
+prevButton.addEventListener('click', prevPage);
+nextButton.addEventListener('click', nextPage);
+      
+      function nextPage() {
+          const maxPages = Math.ceil(productDetail.length / itemsPerPage);
+          if (currentPage < maxPages) {
+              currentPage++;
+              paginateProductBoxes();
+          }
+      }
+      
+      function prevPage() {
+          if (currentPage > 1) {
+              currentPage--;
+              paginateProductBoxes();
+          }
+      }
+      
+      // Call this function initially to display the first page of items
+      paginateProductBoxes();
+
+
+
+      

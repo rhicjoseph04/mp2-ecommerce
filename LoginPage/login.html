@@ -6,17 +6,40 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="icon" href="./img/motocareslogo.jpg">
+    <link rel="icon" href="../img/motocareslogo.jpg">
     <script src="https://kit.fontawesome.com/0023926e4b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="login.css">
     <title>Login and Sign Up</title>
 </head>
 
 <body>
+    <!-- Your SDK code -->
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v18.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
     <div class="free">
         <p class="journey-text"><i class="fa-solid fa-motorcycle larger-icon"></i>Your Journey Awaits with <span
                 class="free-shipping-text">FREE SHIPPING 🚚</span></p>
     </div>
+
+
+
     <div class="navbar">
         <div class="container">
 
@@ -34,17 +57,18 @@
                 <input type="text" placeholder="     Sign up and get 100% off on your first order" autocomplete="off">
             </div>
 
+
             <div class="nav">
                 <ul>
                     <li><a href="../Landingpage/index.html" class="link">HOME</a></li>
                     <li><a href="../ProductshopPage/product.html" class="link">PRODUCT</a></li>
-                    <li><a href="/about" class="link">ABOUT</a></li>
-                    <li><a href="/contact" class="link">CONTACT</a></li>
+                    <li><a href="../about" class="link">ABOUT</a></li>
+                    <li><a href="../contact" class="link">CONTACT</a></li>
                 </ul>
             </div>
 
             <div class="user-icon">
-                <a href="./login.html">
+                <a href="../LoginPage/login.html">
                     <div class="outer-circle">
                         <div class="inner-circle">
                             <i class="fas fa-user"></i>
@@ -59,13 +83,15 @@
         </div>
     </div>
 
+
+
     <div class="social-icons">
         <div class="container">
             <p>FOLLOW US ON:</p>
             <a href="#"><img src="../img/fblogo.png" alt="Facebook"></a>
-            <a href="#"><img src="../img/instag.png" alt="Instagram"></a>
-            <a href="#"><img src="../img/twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="../img/youtube.png" alt="YouTube"></a>
+            <a href="#"><img src="..//img/instag.png" alt="Instagram"></a>
+            <a href="#"><img src="..//img/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="..//img/youtube.png" alt="YouTube"></a>
 
             <div class="user-cart-icons">
 
@@ -74,6 +100,7 @@
             </div>
         </div>
     </div>
+
 
 
     <div id="alertDiv"></div>

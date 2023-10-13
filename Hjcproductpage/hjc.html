@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="icon" href="./img/motocareslogo.jpg">
+    <link rel="icon" href="../img/motocareslogo.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000">
     <meta name="description" content="">
@@ -20,56 +20,101 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
     <script src="https://kit.fontawesome.com/0023926e4b.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.auth0.com/js/auth0/9.14/auth0.min.js"></script>
-
     <title>Hjc-helmet</title>
 
 
 </head>
 
 <body>
+ <!-- Your SDK code -->
+ <script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: 'v18.0'
+        });
+    };
 
-    <div class="free">
-        <div class="social-icons">
-            <p>Follow Us On:</p>
-            <a href="#"><img src="../img/fblogo.png" alt="Facebook"></a>
-            <a href="#"><img src="../img/instag.png" alt="Instagram"></a>
-            <a href="#"><img src="../img/twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="../img/youtube.png" alt="YouTube"></a>
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 
 
-            <p class="journey-text"><i class="fa-solid fa-motorcycle larger-icon"></i>Your Journey Awaits with <span
-                    class="free-shipping-text">FREE Shipping! 🚚</span></p>
+<div class="free">
+    <p class="journey-text"><i class="fa-solid fa-motorcycle larger-icon"></i>Your Journey Awaits with <span
+            class="free-shipping-text">FREE SHIPPING 🚚</span></p>
+</div>
+
+
+
+<div class="navbar">
+    <div class="container">
+
+        <div class="logo">
+
+            <div class="icon"> <a href="../Landingpage/index.html">
+                    <i class="fa-brands fa-shopware"></i></a>
+            </div>
+            <div class="logo-text">Helmet <span>hub</span></div>
+
         </div>
-    </div>
 
-    <div class="navbar">
-        <div class="container">
-            <div class="logo">
-                <div class="icon">
-                    <i class="fa-brands fa-shopware"></i>
+        <div class="search">
+            <button><i class="fa fa-search"></i></button>
+            <input type="text" placeholder="     Sign up and get 100% off on your first order" autocomplete="off">
+        </div>
+
+
+        <div class="nav">
+            <ul>
+                <li><a href="../Landingpage/index.html" class="link">HOME</a></li>
+                <li><a href="../ProductshopPage/product.html" class="link">PRODUCT</a></li>
+                <li><a href="../about" class="link">ABOUT</a></li>
+                <li><a href="../contact" class="link">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <div class="user-icon">
+            <a href="../LoginPage/login.html">
+                <div class="outer-circle">
+                    <div class="inner-circle">
+                        <i class="fas fa-user"></i>
+                    </div>
                 </div>
-                <div class="logo-text">Helmet Hub</div>
-            </div>
-            <div class="search">
-                <input type="text" placeholder="Sign up and get 100% off on your first order" autocomplete="off">
-                <button><i class="fa fa-search"></i></button>
-            </div>
-            <div class="user-cart-icons">
-                <a href="#" class="link"><i class="fas fa-user"></i></a>
-                <a href="#" class="link"><i class="fas fa-shopping-bag"></i></a>
-                <button class="login-button" onclick="toggleModal()">Login / Sign Up</button>
-            </div>
-            <div class="nav">
-                <ul>
-                    <li><a href="../index.html" class="link">Home</a></li>
-                    <li><a href="../product.html" class="link">Product</a></li>
-                    <li><a href="/about" class="link">About</a></li>
-                    <li><a href="/contact" class="link">Contact</a></li>
-                </ul>
-            </div>
+                <div class="login-content">
+                    <button class="btn btn-primary">Login</button>
+                    <button class="btn btn-secondary">Sign Up</button>
+                </div>
+            </a>
         </div>
     </div>
+</div>
+
+
+
+<div class="social-icons">
+    <div class="container">
+        <p>FOLLOW US ON:</p>
+        <a href="#"><img src="../img/fblogo.png" alt="Facebook"></a>
+        <a href="#"><img src="..//img/instag.png" alt="Instagram"></a>
+        <a href="#"><img src="..//img/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="..//img/youtube.png" alt="YouTube"></a>
+
+        <div class="user-cart-icons">
+
+            <a href="#" class="link"><i class="fas fa-user"></i></a>
+            <a href="../Cartpage/cart.html" class="link"><i class="fas fa-shopping-bag"></i></a>
+        </div>
+    </div>
+</div>
+
+
 
     <!DOCTYPE html>
     <html lang="en">
@@ -95,7 +140,7 @@
                         <li>Durability and Longevity: HJC Helmets are crafted using high-quality materials for a durable and long-lasting performance.</li>
                     </ul>
                     <p>Ride confidently and comfortably with an HJC Helmet. Experience the perfect blend of style and safety. Choose HJC for an extraordinary riding adventure.</p>
-                    <a href="../product.html" class="btn btn-primary">Shop HJC Helmets</a>
+                    <a href="../ProductshopPage/product.html" class="btn btn-primary">Shop HJC Helmets</a>
                 </div>
             </div>
         </div>
@@ -105,44 +150,58 @@
     
 
 <br>
-    <div class="footer">
-        <div class='container'>
+<div class="footer">
+    <div class="row">
+        <div class="col-md-2 col-sm-12">
+            <div class="icon">
+                <a href="../Landingpage/index.html">
+                    <i class="fab fa-shopware logo" style="font-size: 5rem;"></i>
+                </a>
+            </div>
+        </div>
 
-            <div class='detail'>
+        <div class="col-md-2 col-sm-8">
+            <div class="detail">
                 <p>Your Ride, Our Passion!</p>
-
             </div>
+        </div>
 
-            <div class='account'>
-                <h3>My Account</h3>
+        <div class="col-md-2 col-sm-8">
+            <div class="account">
+                <h5>Helmet Hub</h5>
                 <ul>
-                    <li>Account</li>
-                    <li>Order</li>
-                    <li>Cart</li>
-                    <li>Shipping</li>
-                    <li>Return</li>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Order</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Return</a></li>
                 </ul>
             </div>
-            <div class='page'>
-                <h3>Pages</h3>
+        </div>
+
+        <div class="col-md-2 col-sm-8">
+            <div class="page">
+                <h5>Pages</h5>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                    <li>Terms & Conditions</li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
                 </ul>
             </div>
+        </div>
 
-            <div class='payment'>
-
-                <h3>Accepted Payments</h3>
+        <div class="col-md-4 col-sm-8">
+            <div class="payment">
+                <h5>Accepted Payments</h5>
                 <img src='../img/visa.jpg' alt='Visa' class='payment-icon' />
-                <img src='../img/mastercard.jpg' alt='Mastercard' class='payment-icon' />
-                <img src='../img/western.jpg' alt='Western' class='payment-icon' />
-                <img src='./img/pinetwork.png' alt='Pinetwork' class='payment-icon' />
+                <img src='../img/mastercard.png' alt='Mastercard' class='payment-icon' />
+                <img src='../img/Western Union.png' alt='Western' class='payment-icon' />
+                <img src='../img/pinetwork.png' alt='Pinetwork' class='payment-icon' />
             </div>
         </div>
     </div>
+</div>
 
     <script src="hj.js"></script>
 

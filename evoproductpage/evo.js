@@ -1,3 +1,39 @@
+// start carousel
+let currentIndex = 0;
+const slides = document.querySelectorAll('.carousel-slide');
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    if (i === index) {
+      slide.classList.add('active');
+    } else {
+      slide.classList.remove('active');
+    }
+  });
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  showSlide(currentIndex);
+}
+
+// Change slide every 5 seconds
+setInterval(nextSlide, 5000);
+
+// Initial display
+showSlide(currentIndex);
+
+
+
+
+
+
+
+
+// end carousel
+
+
+
 function showModal(title, text) {
     var modal = document.getElementById("myModal");
     var modalTitle = document.getElementById("modalTitle");

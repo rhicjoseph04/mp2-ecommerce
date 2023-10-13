@@ -1,9 +1,10 @@
+/* Base styles */
 body {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    margin: 0;
    padding: 0;
    border: none;
-   background:#1b1b1b;
+   background: radial-gradient(circle, #808080, #000000);
   margin-top:0;
   height: 100%;
 
@@ -16,7 +17,7 @@ body {
    color:	#ffffff;
    position: sticky;
    width: 100%;
-   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
 
 }
 
@@ -59,6 +60,7 @@ body {
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+
 .navbar .container {
   display: flex;
   justify-content: space-between;
@@ -83,6 +85,7 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
+  font-style: italic;
 }
 
 .navbar .nav ul li {
@@ -126,46 +129,46 @@ body {
 }
 
 .icon img {
-   width: 30px;
-   height: 30px;
+   width: 35px;
+   height: 35px;
    border-radius: 50%;
    /* Make the border-radius circular */
 }
 
 .logo .icon i {
-  background: linear-gradient(90deg, white 50%, 	#ffa31a 50%);
+  background: linear-gradient(90deg, white 50%, #FFA500 50%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  transition: all 0.3s ease; /* Add a transition for smooth color change */
-  font-size: 55px;
+  transition: all 0.3s ease;
+  font-size: 60px;
   padding-right: 10px;
-}
-
-.logo .icon i:hover {
-  background: linear-gradient(90deg, 	#ffa31a 50%, white 50%);
+  font-size: 2.5rem;
+  margin-right: 1rem;
+ }
+ 
+ .logo .icon i:hover {
+  background: linear-gradient(90deg, #FFA500 50%, white 50%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-}
-
-.logo-text span {
+ }
+ 
+ .logo-text span {
   color: black;
-  background-color:#ffa31a;
-  padding: 2px;
-  border-radius: 3px;
-
-font-size:32px;
-}
-
-.logo-text {
-   font-size: 36px;
+  background-color: #FFA31A;
+  padding: 5px 10px; /* Adjust padding as needed */
+  border-radius: 5px; /* Optional: Add rounded corners */
+ }
+ 
+ .logo-text {
+   font-size: 2rem;
    font-weight: bold;
-   font-family: 'Orbitron', sans-serif;
+ 
    color:white;
-
   
-}
+ }
+ 
 
 .search {
   flex: 1;
@@ -206,7 +209,7 @@ font-size:32px;
   padding: 10px; /* Adjust padding as needed */
   max-width: 1200px; /* Adjust the maximum width as needed */
   margin: 0 auto; /* Center the container */
-padding-bottom:5px;
+  padding-bottom:5px;
 }
 
 .social-icons {
@@ -288,7 +291,6 @@ padding-bottom:5px;
 }
 
 
-
 .nav ul {
    list-style-type: none;
    padding: 0;
@@ -328,6 +330,9 @@ padding-bottom:5px;
        font-size: 20px;
    }
 }
+
+
+
 
 .cartcontainer
 {

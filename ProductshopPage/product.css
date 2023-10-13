@@ -1,10 +1,9 @@
- /* Base styles */
- body {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    margin: 0;
    padding: 0;
    border: none;
-   background:#1b1b1b;
+   background: radial-gradient(circle, #808080, #000000);
   margin-top:0;
   height: 100%;
 
@@ -17,7 +16,7 @@
    color:	#ffffff;
    position: sticky;
    width: 100%;
-   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
 
 }
 
@@ -60,6 +59,7 @@
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+
 .navbar .container {
   display: flex;
   justify-content: space-between;
@@ -84,6 +84,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  font-style: italic;
 }
 
 .navbar .nav ul li {
@@ -127,46 +128,46 @@
 }
 
 .icon img {
-   width: 30px;
-   height: 30px;
+   width: 35px;
+   height: 35px;
    border-radius: 50%;
    /* Make the border-radius circular */
 }
 
 .logo .icon i {
-  background: linear-gradient(90deg, white 50%, 	#ffa31a 50%);
+  background: linear-gradient(90deg, white 50%, #FFA500 50%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  transition: all 0.3s ease; /* Add a transition for smooth color change */
-  font-size: 55px;
+  transition: all 0.3s ease;
+  font-size: 60px;
   padding-right: 10px;
-}
-
-.logo .icon i:hover {
-  background: linear-gradient(90deg, 	#ffa31a 50%, white 50%);
+  font-size: 2.5rem;
+  margin-right: 1rem;
+ }
+ 
+ .logo .icon i:hover {
+  background: linear-gradient(90deg, #FFA500 50%, white 50%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-}
-
-.logo-text span {
+ }
+ 
+ .logo-text span {
   color: black;
-  background-color:#ffa31a;
-  padding: 2px;
-  border-radius: 3px;
-
-font-size:32px;
-}
-
-.logo-text {
-   font-size: 36px;
+  background-color: #FFA31A;
+  padding: 5px 10px; /* Adjust padding as needed */
+  border-radius: 5px; /* Optional: Add rounded corners */
+ }
+ 
+ .logo-text {
+   font-size: 2rem;
    font-weight: bold;
-   font-family: 'Orbitron', sans-serif;
+ 
    color:white;
-
   
-}
+ }
+ 
 
 .search {
   flex: 1;
@@ -207,7 +208,7 @@ font-size:32px;
   padding: 10px; /* Adjust padding as needed */
   max-width: 1200px; /* Adjust the maximum width as needed */
   margin: 0 auto; /* Center the container */
-padding-bottom:5px;
+  padding-bottom:5px;
 }
 
 .social-icons {
@@ -289,7 +290,6 @@ padding-bottom:5px;
 }
 
 
-
 .nav ul {
    list-style-type: none;
    padding: 0;
@@ -329,53 +329,84 @@ padding-bottom:5px;
        font-size: 20px;
    }
 }
+
+
+
   
 /* Styles for the main product container */
 .products {
   padding: 20px;
   color:white;
-  background-color: black;
+  background: radial-gradient(circle, #808080, #000000);
+  text-align: center;
+
 }
 
 /* Styles for the filter section */
-.categories {
+.products .categories {
  padding: 0;
   margin-bottom: 20px;
   color:white;
   display:absolute;
+  justify-content: center;
+  text-align:center;
 }
 
-.categories h3 {
+.products h1 {
   font-size:30px;
   margin-bottom: 5px;
+  text-align: center;
+  background: linear-gradient(45deg, #ffa31a, #ff523b);
+  width: 50%;
+  transform: skewX(-10deg); /* Add a skew effect */
+  justify-content: center;
+  align-items: center;
+  display:inline-block;
+
 }
 
-.categories ul {
+.main-categories li {
+  cursor: pointer;
+  padding: 10px 10px;
+  font-size:25px;
+  display:flex;
+  display:inline-block;
+  justify-content: space-between;
+}
+
+.main-categories li:hover {
+  color: #ffa31a; /* Change color on hover as per your design */
+}
+
+
+.products  .categories ul {
   list-style-type: none;
   padding: 0;
   display: inline-block;
   align-items: center;
 }
 
-.categories li {
+.products .categories li {
   cursor: pointer;
-  padding: 5px 0;
+  padding: 10px 10px;
   font-size:25px;
   display:flex;
+  display:inline-block;
+  justify-content: space-between;
 }
 
-.categories li:hover {
+.products .categories li:hover {
   color: #ffa31a; /* Change color on hover as per your design */
 }
 
 /* Styles for product boxes */
-.container {
+
+.productsbox  .container {
   display: column;
   flex-wrap: wrap;
   position: relative;
 }
-
-.box {
+.products  .box {
   border: 2px solid white;
   margin: 10px;
   width: 200px;
@@ -387,22 +418,21 @@ padding-bottom:5px;
   display:inline-block;
 }
 
-.box img {
+.products .box img {
   max-width: 100%;
 }
 
 /* Styles for product details */
-.detail {
+.modal-content .detail {
   padding: 10px;
 }
-
-.detail h3 {
+ .detail h3 {
   font-size: 18px; /* Adjusted font size */
   margin: 5px 0; /* Adjusted margin */
 }
 
 .detail p {
-  font-size: 20px; /* Adjusted font size */
+  font-size: 18px; /* Adjusted font size */
   margin: 5px 0; /* Adjusted margin */
   color:#ffa31a;
 }
@@ -421,24 +451,72 @@ padding-bottom:5px;
   overflow: auto;
 }
 
-.modal-dialog {
-  max-width: 80%;
+#productDetailModal .modal-dialog {
+  max-width: 60%;
 }
 
-.modal-content {
-  background-color: #fefefe;
-  border: 1px solid #888;
+#productDetailModal .modal-content {
+  background: radial-gradient(circle, #808080, #000000);
+  border: 3px solid white;
   padding: 20px;
   position: relative;
+  color:	#ffa31a;
 }
+
+#productDetailModal .modal-header{
+   color:yellow;
+  transform: skewX(-10deg); /* Add a skew effect */
+  width:60%;
+  padding-top:5px;
+  padding-bottom:0px;
+}
+
+
+#productDetailModal .modal-content::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 99%;
+  margin: 0 auto;
+  margin-top: 10px;
+  transform: skewX(-10deg);
+  background: yellow;
+
+ 
+}
+
+#productDetailModal .modal-content span {
+  background-color:none;
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+#productDetailModal .modal-content::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  top: 0;
+  left: 50%;
+  background: linear-gradient(45deg, #f7ff1a, #ff523b);
+  z-index: -1;
+  transform: skewX(-10deg); 
+}
+
+
 
 .modal-product-image {
   max-width: 100%;
-  height:300px;
+  height:280px;
 }
 
 .modal-header {
   border-bottom: none;
+  color:	yellow;
+  font-size:50px;
 }
 
 .modal-footer {
@@ -457,141 +535,115 @@ padding-bottom:5px;
   color: #ff6b6b; /* Change to your desired hover color */
 }
 
-/* start of footer  */
 
-.footer {
-  background:	#1b1b1b;
-  color: white;
-  padding-left:80px;
-  width:100%;
-  margin-left:0;
-  margin-right:0;
-  justify-content:space-between;
-  margin-top:0;
-  padding-top:50px;
-  padding-bottom:50px;
-}
+  /* start of footer  */
 
-.footer .icon i {
-  background: linear-gradient(90deg, white 50%, #FFA500 50%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  transition: all 0.3s ease; /* Add a transition for smooth color change */
-  font-size: 50px;
-}
-
-.footer .icon i:hover {
-  background: linear-gradient(90deg, #FFA500 50%, white 50%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-
-
-.footer .detail, .account, .page, .payment {
-  margin-bottom: 20px; /* Adjust margin as needed for spacing between sections */
-}
-
-.footer  .detail p {
-  margin: 0; /* Remove default margins for <p> */
-}
-
-.footer  .account h5, .page h5, .payment h5 {
-  margin-bottom: 10px; /* Adjust margin as needed */
-  color:	#808080;
-}
-
-.footer .account ul, .page ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer .account li, .page li {
-  margin-bottom: 5px; /* Adjust margin as needed */
-}
-
-.footer  .account li a, .page li a {
-  color:#ffa500;
-  text-decoration: none;
-}
-
-
-.footer .payment-icon {
-  width: 60px; /* Adjust icon size as needed */
-  margin-right: 10px; /* Adjust margin as needed */
-}
-
-/* end of footer  */
-
-/* Styles for normal screens */
-
-/* Example: for tablets and larger screens */
-@media (min-width: 768px) {
-  /* Your CSS styles for tablets and larger screens go here */
-  body {
-      font-size: 16px;
+  .footer {
+    background:	#1b1b1b;
+    color: white;
+    padding-left:80px;
+    width:100%;
+    margin-left:0;
+    margin-right:0;
+    justify-content:space-between;
+    margin-top:0;
+    padding-top:50px;
+    padding-bottom:50px;
   }
-}
-
-/* Example: for small laptops and desktops */
-@media (min-width: 992px) {
-  /* Your CSS styles for small laptops and desktops go here */
-  body {
-      font-size: 18px;
+  
+  .footer .icon i {
+    background: linear-gradient(90deg, white 50%, #FFA500 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.3s ease; /* Add a transition for smooth color change */
+    font-size: 50px;
   }
-}
-
-/* Example: for larger laptops and desktops */
-@media (min-width: 1200px) {
-  /* Your CSS styles for larger laptops and desktops go here */
-  body {
-      font-size: 20px;
+  
+  .footer .icon i:hover {
+    background: linear-gradient(90deg, #FFA500 50%, white 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
-}
-
-/* Styles for smaller screens */
-
-/* Example: for smartphones */
-@media (max-width: 767px) {
-  /* Your CSS styles for smartphones go here */
-  body {
-      font-size: 14px;
+  
+  
+  
+  .footer .detail, .account, .page, .payment {
+    margin-bottom: 20px; /* Adjust margin as needed for spacing between sections */
   }
-}
-
-/* Example: for smaller tablets and larger smartphones */
-@media (max-width: 991px) {
-  /* Your CSS styles for smaller tablets and larger smartphones go here */
-  body {
-      font-size: 14px;
+  
+  .footer  .detail p {
+    margin: 0; /* Remove default margins for <p> */
   }
-}
-
-
-/* Example: for larger laptops and desktops */
-@media (min-width: 1200px) {
-  /* Your CSS styles for larger laptops and desktops go here */
-  body {
-      font-size: 20px;
+  
+  .footer  .account h5, .page h5, .payment h5 {
+    margin-bottom: 10px; /* Adjust margin as needed */
+    color:	#808080;
   }
-}
-
-/* Styles for smaller screens */
-
-/* Example: for smartphones */
-@media (max-width: 767px) {
-  /* Your CSS styles for smartphones go here */
-  body {
-      font-size: 14px;
+  
+  .footer .account ul, .page ul {
+    list-style: none;
+    padding: 0;
   }
-}
-
-/* Example: for smaller tablets and larger smartphones */
-@media (max-width: 991px) {
-  /* Your CSS styles for smaller tablets and larger smartphones go here */
-  body {
-      font-size: 14px;
+  
+  .footer .account li, .page li {
+    margin-bottom: 5px; /* Adjust margin as needed */
   }
-}
+  
+  .footer  .account li a, .page li a {
+    color:#ffa500;
+    text-decoration: none;
+  }
+  
+  
+  .footer .payment-icon {
+    width: 60px; /* Adjust icon size as needed */
+    margin-right: 10px; /* Adjust margin as needed */
+  }
+  
+  /* end of footer  */
+  
+  /* Styles for normal screens */
+  
+  /* Example: for tablets and larger screens */
+  @media (min-width: 768px) {
+    /* Your CSS styles for tablets and larger screens go here */
+    body {
+        font-size: 16px;
+    }
+  }
+  
+  /* Example: for small laptops and desktops */
+  @media (min-width: 992px) {
+    /* Your CSS styles for small laptops and desktops go here */
+    body {
+        font-size: 18px;
+    }
+  }
+  
+  /* Example: for larger laptops and desktops */
+  @media (min-width: 1200px) {
+    /* Your CSS styles for larger laptops and desktops go here */
+    body {
+        font-size: 20px;
+    }
+  }
+  
+  /* Styles for smaller screens */
+  
+  /* Example: for smartphones */
+  @media (max-width: 767px) {
+    /* Your CSS styles for smartphones go here */
+    body {
+        font-size: 14px;
+    }
+  }
+  
+  /* Example: for smaller tablets and larger smartphones */
+  @media (max-width: 991px) {
+    /* Your CSS styles for smaller tablets and larger smartphones go here */
+    body {
+        font-size: 14px;
+    }
+  }

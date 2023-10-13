@@ -1,254 +1,446 @@
 /* Base styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   margin: 0;
+   padding: 0;
+   border: none;
+   background: radial-gradient(circle, #808080, #000000);
+  margin-top:0;
+  height: 100%;
+
+}
+
+.free {
+   background: black;
+   padding: 10px 20px;
+   text-align: center;
+   color:	#ffffff;
+   position: sticky;
+   width: 100%;
+   
+
+}
+
+.social-icons {
+
+   align-items: center;
+   background: 	#ffffff;
+   color: 	#ffffff;
+   padding-left: 20px;
+   position: sticky;
+   display: flex;
+   width: 100%;
+
+}
+
+.larger-icon {
+   font-size: 24px;
+   color:	#ffa31a;
+   vertical-align: middle;
+   /* Align with text */
+}
+
+.journey-text {
+   font-size: 18px;
+   margin: 0;
+}
+
+.free-shipping-text {
+   font-weight: bold;
+}
+
+.icon img {
+   width: 30px;
+   height: 30px;
+}
+
+/* Navbar styles */
+.navbar {
+  background:	#0e0e0e;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
 
-  .free {
-    background: linear-gradient(to right, #0076ff, #00c3ff);
-    padding: 10px;
-    text-align: center;
-    color: white;
-  }
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top:5px;
+  padding-bottom:0;
+}
 
-  .social-icons {
-    margin-top: 10px;
-  }
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  padding:10px;
+}
 
-  .social-icons p {
-    margin: 0;
-  }
+.navbar .logo .icon {
+  margin-right: 10px;
+}
 
-  .social-icons a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #fff;
-  }
+.navbar .nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+}
 
-  .social-icons a img {
-    width: 30px;
-    height: 30px;
-  }
+.navbar .nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 14px;
+}
 
-  .larger-icon {
-    font-size: 24px;
-  color: #263238;
-    vertical-align: middle; /* Align with text */
-  }
+.navbar .nav ul li:last-child {
+  margin-right: 0;
+}
 
-  .journey-text {
-    font-size: 18px;
-    margin: 0;
-  }
+.navbar .nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
 
-  .free-shipping-text {
-    font-weight: bold;
-  }
+.navbar .nav ul li a:hover {
+  color:#ffa31a;
+}
+.navbar .container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-right:5px;
+   padding-left:5px;
+}
 
-  .icon img {
-    width: 30px;
-    height: 30px;
-  }
+.logo {
+   display: flex;
+   align-items: center;
+   padding-top:5px;
+   padding-bottom:5px;
+   padding-right: 20px;
+   justify-content:center;
+   border-radius: 10px;
+   padding-right:5px;
+   padding-left:5px;
 
-  /* Navbar styles */
-  .navbar {
-    background: linear-gradient(to right, #0076ff, #00c3ff);
-    color: white;
-    padding: 10px;
-  }
+}
 
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.icon img {
+   width: 35px;
+   height: 35px;
+   border-radius: 50%;
+   /* Make the border-radius circular */
+}
 
-  .logo {
-    display: flex;
-    align-items: center;
-    color:  #f2f1f5;
-  }
-
-  .icon img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%; /* Make the border-radius circular */
-  }
-
-  .logo .icon {
-    margin-right: 10px;
-    font-size: 50px;
-    color: #09021f;
-  }
+.logo .icon i {
+  background: linear-gradient(90deg, white 50%, #FFA500 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s ease;
+  font-size: 60px;
+  padding-right: 10px;
+  font-size: 2.5rem;
+  margin-right: 1rem;
+ }
+ 
+ .logo .icon i:hover {
+  background: linear-gradient(90deg, #FFA500 50%, white 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+ }
+ 
+ .logo-text span {
+  color: black;
+  background-color: #FFA31A;
+  padding: 5px 10px; /* Adjust padding as needed */
+  border-radius: 5px; /* Optional: Add rounded corners */
+ }
+ 
+ .logo-text {
+   font-size: 2rem;
+   font-weight: bold;
+ 
+   color:white;
   
+ }
+ 
 
-  .logo-text {
-    font-size: 24px;
-    font-weight: bold;
+.search {
+  flex: 1;
+  margin: 0 20px;
+  display: flex;
+  position: relative;
+}
+
+.search input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+  background-color:	#292929;
+  color: white;
+}
+
+.search button {
+  margin-left: 10px; /* Adjust the margin to position the icon */
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+}
+
+
+
+.social-icons .container {
+  display: flex;
+  align-items: center;
+  float:left;
+  padding: 10px; /* Adjust padding as needed */
+  max-width: 1200px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the container */
+  padding-bottom:5px;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Adjust margin between icons and button */
+  padding-top:5px;
+  padding-bottom:5px;
+  background:	#0e0e0e;
+ justify-content: center;
+ font-size:15px;
+}
+
+.social-icons:hover{
+  color:#ffa31a;
+}
+
+
+.social-icons a {
+  margin-right: 10px; /* Adjust margin between icons as needed */
+  font-size:20px;
+  color:	#ffffff;
+}
+
+.social-icons a img {
+  width: 23px;
+  height: 23px;
+
+}
+
+.social-icons a:hover {
+  color:#ffa31a;
+}
+
+.social-icons p {
+  margin: 0;
+  margin-right: 20px;
+  font-size:15px;
+}
+
+
+.user-icon {
+  cursor: pointer;
+  padding:10px;
+}
+
+.outer-circle {
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-circle {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-circle i {
+  color: #fff;
+}
+
+.login-content {
+  display: none;
+  text-align: center;
+}
+
+.login-content a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+.nav ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   font-size: large;
+   font-weight: bold;
+}
+
+.nav li {
+   margin: 0 10px;
+}
+
+.nav a {
+   color: white;
+   text-decoration: none;
+   font-size: 16px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+   .search {
+       margin: 10px 0;
+   }
+
+   .nav {
+       display: none;
+   }
+
+   .user-cart-icons {
+       margin-left: auto;
+   }
+}
+
+@media (max-width: 576px) {
+   .logo-text {
+       font-size: 20px;
+   }
+}
+
+
+
+  /* start of footer  */
+
+.footer {
+  background:	#1b1b1b;
+  color: white;
+  padding-left:80px;
+  width:100%;
+  margin-left:0;
+  margin-right:0;
+  justify-content:space-between;
+  margin-top:0;
+  padding-top:50px;
+  padding-bottom:50px;
+}
+
+.footer .icon i {
+  background: linear-gradient(90deg, white 50%, #FFA500 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s ease; /* Add a transition for smooth color change */
+  font-size: 50px;
+}
+
+.footer .icon i:hover {
+  background: linear-gradient(90deg, #FFA500 50%, white 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+
+.footer .detail, .account, .page, .payment {
+  margin-bottom: 20px; /* Adjust margin as needed for spacing between sections */
+}
+
+.footer  .detail p {
+  margin: 0; /* Remove default margins for <p> */
+}
+
+.footer  .account h5, .page h5, .payment h5 {
+  margin-bottom: 10px; /* Adjust margin as needed */
+  color:	#808080;
+}
+
+.footer .account ul, .page ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .account li, .page li {
+  margin-bottom: 5px; /* Adjust margin as needed */
+}
+
+.footer  .account li a, .page li a {
+  color:#ffa500;
+  text-decoration: none;
+}
+
+
+.footer .payment-icon {
+  width: 60px; /* Adjust icon size as needed */
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+/* end of footer  */
+
+/* Styles for normal screens */
+
+/* Example: for tablets and larger screens */
+@media (min-width: 768px) {
+  /* Your CSS styles for tablets and larger screens go here */
+  body {
+      font-size: 16px;
   }
+}
 
-  .search {
-    flex: 1;
-    margin: 0 20px;
-    display: flex;
+/* Example: for small laptops and desktops */
+@media (min-width: 992px) {
+  /* Your CSS styles for small laptops and desktops go here */
+  body {
+      font-size: 18px;
   }
+}
 
-  .search input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-
-  .search button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .user-cart-icons a {
-    margin-right: 10px;
-    color: white;
-    text-decoration: none;
-  }
-
-  .user-cart-icons button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    font-size:large;
-    font-weight:bold;
-  }
-
-  .nav li {
-    margin: 0 10px;
-  }
-
-  .nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-  }
-
-  /* Media queries for responsiveness */
-  @media (max-width: 768px) {
-    .search {
-      margin: 10px 0;
-    }
-
-    .nav {
-      display: none;
-    }
-
-    .user-cart-icons {
-      margin-left: auto;
-    }
-  }
-
-  @media (max-width: 576px) {
-    .logo-text {
+/* Example: for larger laptops and desktops */
+@media (min-width: 1200px) {
+  /* Your CSS styles for larger laptops and desktops go here */
+  body {
       font-size: 20px;
-    }
   }
-
-  .footer {
-    background: linear-gradient(to right, #0076ff, #00c3ff);
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    position: flex;
-    bottom: 0;
-    width: 100%;
-    padding-top: 20px;
-
 }
 
-.footer .container {
-    display: flex;
-    justify-content: space-around;
+/* Styles for smaller screens */
 
+/* Example: for smartphones */
+@media (max-width: 767px) {
+  /* Your CSS styles for smartphones go here */
+  body {
+      font-size: 14px;
+  }
 }
 
-
-.footer .container .about,
-.footer .container .account,
-.footer .container .page,
-.footer .container .payment {
-
-    max-width: 25%;
-    padding: 0 20px;
-}
-
-
-.footer .container .about .detail .icon {
-    display: flex;
-}
-
-
-.footer .container .about .detail .icon {
-    margin-top: 20px;
-    display: flex;
-
-}
-
-.footer .container .about .detail .icon li {
-    margin-left: 10px;
-    list-style: none;
-    padding: 10px;
-    box-shadow: rgb(244, 240, 240) 1.95px 1.95px 2.6px;
-    cursor: pointer;
-    transition: 0.5s;
-    color: gold;
-}
-
-
-.footer .container .about .detail .icon li:hover {
-    background: #0989ff;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.footer .container .account h3,
-.footer .container .page h3,
-.footer .container .payment h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.footer .container .account ul li,
-.footer .container .page ul li,
-.footer .container .payment .payment-icon {
-    margin-top: 5px;
-    color: #e5e9ed;
-    font-size: 14px;
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-.footer .container .account ul li:hover,
-.footer .container .page ul li:hover {
-    color: #0989ff;
-}
-
-.footer .container .payment .payment-icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+/* Example: for smaller tablets and larger smartphones */
+@media (max-width: 991px) {
+  /* Your CSS styles for smaller tablets and larger smartphones go here */
+  body {
+      font-size: 14px;
+  }
 }
