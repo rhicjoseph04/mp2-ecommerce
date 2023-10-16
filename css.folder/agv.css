@@ -6,6 +6,7 @@ body {
   background: radial-gradient(circle, #808080, #000000);
   margin: 0;
   padding: 0;
+  color:white;
 
 }
 
@@ -17,6 +18,8 @@ body {
   padding-right:10px;
   padding-left:10px;
   box-sizing: border-box; 
+  color:white;
+  font-size: large;
 }
 .free {
    background: black;
@@ -319,6 +322,22 @@ body {
    text-decoration: none;
    font-size: 16px;
 }
+
+
+.custom-button{
+  background-color: #FFA31A;
+  border-color: #FFA31A;
+  font-size:20px;
+  color:white;
+  border-radius:5px;
+  padding:5px 5px;
+}
+
+.custom-button:hover {
+  background: linear-gradient(45deg, #f7ff1a, #ff523b); 
+  border-color: 1px solid black; 
+}
+
 
 
 

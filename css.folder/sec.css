@@ -320,6 +320,30 @@ body {
 }
 
 
+.col-lg-6{
+  color:white;
+}
+
+.mb-4 {
+  background: linear-gradient(45deg, #ffa31a, #ff523b);
+  width: 100%;
+  transform: skewX(-10deg); /* Add a skew effect */
+  text-align: center;
+}
+
+.custom-button{
+  background-color: #FFA31A;
+  border-color: #FFA31A;
+  font-size:20px;
+  color:white;
+  border-radius:5px;
+  padding:5px 5px;
+}
+
+.custom-button:hover {
+  background: linear-gradient(45deg, #f7ff1a, #ff523b); 
+  border-color: 1px solid black; 
+}
 
 
 

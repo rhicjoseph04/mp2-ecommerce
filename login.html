@@ -7,6 +7,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <link rel="icon" href="../img/motocareslogo.jpg">
     <script src="https://kit.fontawesome.com/0023926e4b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css.folder/login.css">
@@ -107,20 +108,19 @@
 
     <div id="alertDiv"></div>
 
-    <div id="video-container">
+    <!-- <div id="video-container">
         <video autoplay muted loop id="video-background">
             <source src="./img/vecteezy_men-s-silhouette-with-motocross-on-vacation-the-concept-of_10124634_531.mp4"
                 type="video/mp4">
             Your browser does not support the video tag.
-        </video></div>
+        </video></div> -->
 
   
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <!-- Modal header -->
                 <div class="modal-header">
                     <h4 class="modal-title">Login or Sign Up</h4>
-                    <button type="button" class="close" data-dismiss="modal" onclick="window.location.href = '../Landingpage/index.html'">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal" onclick="window.location.href = './index.html'">&times;</button>
                 </div>
 
                 <!-- Modal body -->
@@ -135,16 +135,18 @@
                     </div>
                     <div class="d-flex justify-content-center mb-3">
                         <div class="social-login">
-                            <!-- Add class "btn-hover" for hover effect -->
-                            <button type="button" class="btn btn-primary btn-hover" style="width: 320px;">
+                            
+                            <button type="button" class="btn btn-primary btn-hover custom-button" style="width: 100%;">
                                 <i class="fab fa-facebook icon-color"></i> Facebook
                             </button>
-                            <button type="button" class="btn btn-outline-danger btn-hover" style="width: 320px;">
+                            <button type="button" class="btn btn-outline-danger btn-hover custom-button" style="width: 100%;">
                                 <i class="fab fa-google icon-color"></i> Google
                             </button>
-                            <button type="button" class="btn btn-outline-info btn-hover" style="width: 320px;">
+                            <button type="button" class="btn btn-outline-info btn-hover custom-button" style="width: 100%;">
                                 <i class="fab fa-microsoft icon-color"></i> Microsoft
                             </button>
+                            
+                            
                         </div>
                     </div>
                     <div class="or-separator text-center mb-3">
@@ -168,20 +170,21 @@
                         </div>
                         <button type="submit" class="btn btn-orange btn-block">Login</button>
                         <br>
-                        <a href="javascript:void(0);" id="forgotPasswordLink">Did you forget your password?</a>
-                    </form>
+                        <a href="#" id="forgotPasswordLink" onclick="toggleResetPasswordForm()">Did you forget your password?</a>
+                        </form>
+                        
 
 
-                    <form id="resetPasswordForm" style="display: none;">
+                    <form id="resetPasswordForm" style="display: none;" onsubmit="resetPassword(event)">
                         <div class="form-group">
-                            <div class="input-icon">
-                                <i class="fas fa-envelope"></i>
-                                <input type="email" class="form-control" id="resetPasswordEmail"
-                                    placeholder="Enter your email" required>
-                            </div>
+                          <div class="input-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" class="form-control" id="resetPasswordEmail" placeholder="Enter your email" required>
+                          </div>
                         </div>
                         <button type="submit" class="btn btn-orange btn-block">Reset Password</button>
-                    </form>
+                      </form>
+                      
 
                     <br>
                     <!-- Signup Form -->
@@ -278,10 +281,13 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="https://kit.fontawesome.com/0023926e4b.js" crossorigin="anonymous"></script>
         <script src="login.js"></script>
-        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
         <script>
             $(document).ready(function() {
-                // Prevent closing the modal when clicking outside
+             
                 $('#loginSignupModal').modal({
                     backdrop: 'static',
                     keyboard: false

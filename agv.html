@@ -29,33 +29,41 @@
 </head>
 
 <body>
-    
-    <div id="fb-root"></div>
+<!-- Messenger Chat Plugin Code -->
+<div id="fb-root"></div>
 
-    <div id="fb-customer-chat" class="fb-customerchat"></div>
+<!-- Your Chat Plugin code -->
+<div id="fb-customer-chat" class="fb-customerchat"></div>
 
-    <script>
-        var chatbox = document.getElementById('fb-customer-chat');
-        chatbox.setAttribute("page_id", "161937536984374");
-        chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
-   <!-- Your SDK code -->
-   <script>
-    window.fbAsyncInit = function () {
-        FB.init({
-            xfbml: true,
-            version: 'v18.0'
-        });
-    };
+<script>
+  var chatbox = document.getElementById('fb-customer-chat');
+  chatbox.setAttribute("page_id", "161937536984374");
+  chatbox.setAttribute("attribution", "biz_inbox");
+  chatbox.setAttribute("theme_color", "#ffa31a"); // Replace with your desired color
+  chatbox.setAttribute("greeting_dialog_display", "show");
+  chatbox.setAttribute("greeting_dialog_delay", "5000"); // 5 seconds delay before showing the greeting
+</script>
 
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+<!-- Your SDK code -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml: true,
+      version: 'v18.0'
+    });
+    FB.CustomerChat.showDialog();
+    FB.CustomerChat.update({
+      logged_in_greeting: 'Welcome to our helmet shop! How can we assist you today?' 
+    });// Modify this message
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
 </script>
 
 <div class="free">
@@ -128,27 +136,33 @@
 </div>
 
 
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6">
+            <img src="./img/agv.png" alt="AGV Helmet" class="img-fluid">
+        </div>
+        <div class="col-lg-6">
+            <div class="product-info">
+                <h2 class="mb-4">AGV Helmets</h2>
+                <p class="lead">Discover the epitome of safety and style with AGV Helmets.</p>
+                <div class="feature-list">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Advanced Safety Technology: AGV Helmets integrate advanced safety features for superior protection on the road.</li>
+                        <li>Optimal Comfort: Crafted with premium materials, AGV Helmets offer exceptional comfort and fit.</li>
+                        <li>Aerodynamic Design: The helmets are designed to reduce air resistance, providing a smoother riding experience.</li>
+                        <li>Distinctive Styles: AGV Helmets are available in various styles and graphics, catering to different rider preferences.</li>
+                        <li>Reliable Durability: AGV Helmets are built to last and endure the rigors of regular use.</li>
+                    </ul>
+                </div>
+                <p class="product-description">Experience unmatched safety and style with AGV Helmets. Ride confidently and in style with AGV.</p>
+                <a href="./cart.html" class="custom-button">Shop AGV Helmets</a>
+            </div>
+        </div>
+    </div>
+</div>
 
-    <div class="container mt-5">
-        <div class="row">
-               <div class="col-lg-6">
-                <img src="./img/agvslider.jpg" alt="AGV Helmet" class="img-fluid">
-               </div>
-               <div class="col-lg-6">
-                   <h2 class="mb-4">AGV Helmets</h2>
-                   <p class="lead">AGV Helmets are renowned for their cutting-edge technology and high-performance features. Here's why AGV Helmets stand out:</p>
-                   <ul>
-                       <li>Advanced Safety Technology: AGV Helmets integrate advanced safety features for superior protection on the road.</li>
-                       <li>Optimal Comfort: Crafted with premium materials, AGV Helmets offer exceptional comfort and fit.</li>
-                       <li>Aerodynamic Design: The helmets are designed to reduce air resistance, providing a smoother riding experience.</li>
-                       <li>Distinctive Styles: AGV Helmets are available in various styles and graphics, catering to different rider preferences.</li>
-                       <li>Reliable Durability: AGV Helmets are built to last and endure the rigors of regular use.</li>
-                   </ul>
-                   <p>Experience unmatched safety and style with AGV Helmets. Ride confidently and in style with AGV.</p>
-                   <a href="./product.html" class="btn btn-primary">Shop AGV Helmets</a>
-               </div>
-           </div>
-           </div>
+
 
 <br>
 <div class="footer">

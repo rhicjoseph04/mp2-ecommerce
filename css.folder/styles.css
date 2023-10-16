@@ -369,7 +369,7 @@ margin-left:0;
 
 /* Shop button styling */
 .shop-button {
-    background-color: 	yellow;
+    background-color: 	#ffa31a;
     color: #292929;
     padding: 10px 20px;
     border-radius: 5px;
@@ -635,23 +635,21 @@ margin-left:0;
 
 @media (min-width: 576px) {
     .about .boxes .box {
-        width: calc(50% - 20px); /* Adjust the width for two boxes in a row on smaller screens */
-        max-width: 400px; /* Limit the maximum width of the box */
+        width: calc(50% - 20px); 
+        max-width: 400px; 
     }
 }
 
-/* Adjust the box width for even smaller screens */
 @media (min-width: 768px) {
     .about .boxes .box {
-        width: calc(33.33% - 20px); /* Adjust the width for three boxes in a row on larger screens */
+        width: calc(33.33% - 20px); 
     }
 }
 
-/* Additional adjustments for 320px screen size */
 @media (max-width: 320px) {
     .about .boxes .box {
         padding: 10px;
-        font-size: 12px; /* Adjusted font size for better fit */
+        font-size: 12px; 
     }
 }
 
@@ -693,8 +691,7 @@ margin-left:0;
      font-size: 24px;
      margin-bottom: 10px;
      color: white;
-     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
+     
  }
 
  .about .container .boxes .box {
@@ -736,13 +733,13 @@ margin-left:0;
 } 
 
 .top_product .top_products{
-   
-    color:black;
-    transform: skewX(-10deg); /* Add a skew effect */
+    color:white;
+    transform:skewX(-10deg);
     width:60%;
     padding-top:5px;
     padding-bottom:0px;
-   
+
+ 
 }
 
  .top_products::after {
@@ -753,7 +750,8 @@ margin-left:0;
     margin: 0 0;
     margin-top: 10px;
     transform: skewX(-10deg);
-    background: yellow;
+    background: #ffa31a;
+    color:white;
   
    
   }
@@ -774,9 +772,10 @@ margin-left:0;
     width: 50%;
     top: 0;
     left: 50%;
-    background: linear-gradient(45deg, #f7ff1a, #ff523b);
+    background: linear-gradient(45deg, #db7e15, #ff523b);
     z-index: -1;
     transform: skewX(-10deg); 
+    
   }
 
 

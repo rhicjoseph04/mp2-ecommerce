@@ -1,21 +1,7 @@
-/* Base styles */
 body {
-  font-family: Arial, sans-serif;
-  border: none;
-  background: radial-gradient(circle, #808080, #000000);
-  margin: 0;
-  padding: 0;
-
-}
-
-.container {
-  max-width: 1200px;
-  width: 100%;
-  margin: auto;
-  transition: 0.5s;
-  padding-right:10px;
-  padding-left:10px;
-  box-sizing: border-box; 
+  background: url('../img/helmet3.webp') no-repeat center center fixed;
+  background-size: cover; 
+  color: #fff;
 }
 .free {
    background: black;
@@ -319,11 +305,24 @@ body {
    font-size: 16px;
 }
 
+.custom-button {
+  width: 320px;
+  background-color: #FFA31A;
+  border-color:#ffa31a;
+  color:white;
+  margin-bottom:10px;
+
+}
+
+.custom-button:hover {
+background-color: #ffa31a;
+border-color:#FFA31A
+}
+
+ 
 
 
-
-
-#video-container {
+/* #video-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -336,90 +335,30 @@ body {
 #video-background {
   width: 100%;
   height:1000px;
-}
-
-.modal {
-  border-radius: 10px;
-  justify-content: center;
-
- 
-}
+} */
 
 .modal-content {
-  border-radius: 10px;
-  width:350px;
-  background: rgba(0, 0, 0, 0.5);
-  justify-content: center; 
-  align-items: center;
-
-
- 
-}
-
-.modal-header {
-  background-color: #ffa31a;
-  color:black;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  width:350px;
-  height:50px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #ffa31a; /* Set border color */
+  width:100%;
 }
 
 .modal-title {
-font-size:20px;
+  color: #ffa31a; /* Set title color */
 }
 
-.btn-outline-primary.btn-hover span,
-.btn-outline-secondary.btn-hover span {
-    font-size: 16px; /* Adjust the font size as needed */
+.btn-orange {
+  background-color: #ffa31a; /* Set button background color */
+  border-color: #ffa31a; /* Set button border color */
+  color: #1b1b1b; /* Set button text color */
+  width:100%;
 }
 
-.close {
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
+.btn-orange:hover {
+  background-color: #808080; /* Set button hover background color */
+  border-color: #808080; /* Set button hover border color */
 }
-
-.close:hover,
-.close:focus {
-  color: black;
-}
-
-.btn {
-  border-radius: 5px;
-  padding: 10px 20px;
-  color:white;
-  background-color: #1b1b1b;
-}
-
-.or-separator {
-  text-align: center;
-  margin-bottom: 10px;
-  margin-top:15px;
-  font-weight: bold;
-  color:white;
-  font-size:15px;
-}
-
-.or-separator span {
-  padding: 0 10px;
-}
-
-/* Add hover effect to buttons */
-.btn-hover:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
-/* Add color to icons for better visibility */
-.icon-color {
-  color: #ffa31a;
-}
-
-.input-icon {
-  color: #ffa31a;
-}
-
 
 
 /* start of footer  */

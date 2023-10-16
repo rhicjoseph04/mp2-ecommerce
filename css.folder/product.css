@@ -1,26 +1,30 @@
-body,html {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   padding: 0;
-   border: none;
-   background: radial-gradient(circle, #808080, #000000);
-  margin-top:0;
-  height: 100%;
-  margin-right:0;
-  margin-left:0;
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  border: none;
+  background: radial-gradient(circle, #808080, #000000);
+  margin: 0;
+  padding: 0;
 
 }
 
-
-
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  transition: 0.5s;
+  padding-right:10px;
+  padding-left:10px;
+  box-sizing: border-box; 
+}
 .free {
    background: black;
-   padding: 10px 20px;
+   padding: 10px;
    text-align: center;
    color:	#ffffff;
    position: sticky;
-   width: 100%;
+   font-family: Arial, sans-serif;
    
-
 }
 
 .social-icons {
@@ -32,14 +36,16 @@ body,html {
    position: sticky;
    display: flex;
    width: 100%;
-
+   padding-left :0;
+  justify-content:center;
+  align-items:center;
 }
 
 .larger-icon {
    font-size: 24px;
    color:	#ffa31a;
    vertical-align: middle;
-   /* Align with text */
+   
 }
 
 .journey-text {
@@ -56,10 +62,13 @@ body,html {
    height: 30px;
 }
 
-/* Navbar styles */
+
 .navbar {
   background:	#0e0e0e;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: Arial, sans-serif;
+  justify-content: center;
+  align-items:center;
+ text-align:center;
 }
 
 
@@ -69,18 +78,17 @@ body,html {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top:5px;
-  padding-bottom:0;
+   
 }
 
 .navbar .logo {
   display: flex;
   align-items: center;
-  padding:10px;
+  
 }
 
 .navbar .logo .icon {
-  margin-right: 10px;
+  padding-right: 5px;
 }
 
 .navbar .nav ul {
@@ -92,7 +100,7 @@ body,html {
 
 .navbar .nav ul li {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 10px;
   font-size: 14px;
 }
 
@@ -114,7 +122,7 @@ body,html {
    justify-content: space-between;
    align-items: center;
    padding-right:5px;
-   padding-left:5px;
+ 
 }
 
 .logo {
@@ -122,7 +130,6 @@ body,html {
    align-items: center;
    padding-top:5px;
    padding-bottom:5px;
-   padding-right: 20px;
    justify-content:center;
    border-radius: 10px;
    padding-right:5px;
@@ -134,7 +141,7 @@ body,html {
    width: 35px;
    height: 35px;
    border-radius: 50%;
-   /* Make the border-radius circular */
+
 }
 
 .logo .icon i {
@@ -159,14 +166,13 @@ body,html {
  .logo-text span {
   color: black;
   background-color: #FFA31A;
-  padding: 5px 10px; /* Adjust padding as needed */
-  border-radius: 5px; /* Optional: Add rounded corners */
+  padding: 5px 10px; 
+  border-radius: 5px;
  }
  
  .logo-text {
    font-size: 2rem;
    font-weight: bold;
- 
    color:white;
   
  }
@@ -190,7 +196,7 @@ body,html {
 }
 
 .search button {
-  margin-left: 10px; /* Adjust the margin to position the icon */
+  margin-left: 10px; 
   background: none;
   border: none;
   color: white;
@@ -203,26 +209,27 @@ body,html {
 }
 
 
-
 .social-icons .container {
   display: flex;
   align-items: center;
   float:left;
-  padding: 10px; /* Adjust padding as needed */
-  max-width: 1200px; /* Adjust the maximum width as needed */
-  margin: 0 auto; /* Center the container */
+  padding: 10px;
+  max-width: 1200px; 
+  margin: 0 auto;
   padding-bottom:5px;
+  font-family: Arial, sans-serif;
 }
 
 .social-icons {
   display: flex;
   align-items: center;
-  margin-right: 20px; /* Adjust margin between icons and button */
+  margin-right: 20px; 
   padding-top:5px;
   padding-bottom:5px;
   background:	#0e0e0e;
  justify-content: center;
  font-size:15px;
+
 }
 
 .social-icons:hover{
@@ -231,7 +238,7 @@ body,html {
 
 
 .social-icons a {
-  margin-right: 10px; /* Adjust margin between icons as needed */
+  margin-right: 10px;
   font-size:20px;
   color:	#ffffff;
 }
@@ -239,8 +246,6 @@ body,html {
 .social-icons a img {
   width: 23px;
   height: 23px;
-  padding:10px;
-
 
 }
 
@@ -251,17 +256,17 @@ body,html {
 .social-icons p {
   margin: 0;
   margin-right: 20px;
-  font-size:15px;
+  font-size:16px;
+  font-weight:bold;
 }
-
 
 .user-icon {
   cursor: pointer;
-  padding:10px;
+  padding:20px;
 }
 
 .outer-circle {
-  border: 2px solid #000;
+  border: 2px solid #FFA31A;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -314,26 +319,6 @@ body,html {
    font-size: 16px;
 }
 
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-   .search {
-       margin: 10px 0;
-   }
-
-   .nav {
-       display: none;
-   }
-
-   .user-cart-icons {
-       margin-left: auto;
-   }
-}
-
-@media (max-width: 576px) {
-   .logo-text {
-       font-size: 20px;
-   }
-}
 
   
 /* Styles for the main product container */
@@ -372,18 +357,6 @@ body,html {
   display: inline-block;
 }
 
-.main-categories li {
-  cursor: pointer;
-  padding: 10px;
-  font-size: 20px;
-  list-style: none;
-  margin: 5px 0;
-}
-
-.main-categories li:hover {
-  color: #ffa31a;
-}
-
 .products .categories ul {
   list-style-type: none;
   padding: 0;
@@ -394,43 +367,52 @@ body,html {
   cursor: pointer;
 }
 
-.products .categories li:hover {
-  color: #ffa31a;
-  font-size: 20px;
+.products {
+  padding: 20px;
+  color: white;
+  background: radial-gradient(circle, #808080, #000000);
+  text-align: center;
+  margin-right: 0;
+  margin-left: 0;
+  margin-top:0;
+
 }
 
-/* Styles for product boxes */
-
-.productsbox  .container {
-  display: column;
-  flex-wrap: wrap;
-  position: relative;
-}
-.products  .box {
-  border: 2px solid white;
+.products .box {
+  border: 1px solid white;
   margin: 10px;
   width: 200px;
   height:auto;
-  display:flex;
-  position:top;
-  background: radial-gradient(circle, #575656, #000000);
-  padding:10px 10px;
-  display:inline-block;
-  margin-right:0;
-  margin-left:0;
+  display: inline-block;
+background: radial-gradient(circle, #575656, #000000);
+  padding: 10px;
+  align-items: center; 
+  justify-content: center;
+  flex-direction: row-reverse;
 }
+
 
 .products .box img {
   max-width: 100%;
-  margin-right:0;
-  margin-left:0;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background: radial-gradient(circle, #575656, #000000);
+
+}
+@media (max-width: 768px) {
+  .products .box {
+    width: calc(50% - 40px); /* Adjust for 2 items in a row */
+  }
 }
 
-
 .products .container {
-  display: flex;
+  display:center;
   margin-right:0;
   margin-left:0;
+  align-items:center;
+  justify-content:center;
+  
 }
 
 /* Sidebar styles */
@@ -440,7 +422,9 @@ body,html {
   width: 150px;
   margin-right:0;
   margin-left:0;
-  display:absolute;
+  display:inline-block;
+  flex-direction: left;
+  text-align: center;
 }
 
 .sidebar h4 {
@@ -460,24 +444,19 @@ body,html {
 }
 
 .sidebar ul li:hover {
-  color: #3498db;
+  color: #ffa31a;
   font-weight: bold;
 }
 
-/* Product images layout */
-.product-images {
-  flex-grow: 1;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column; /* Change to column for 4 boxes in a column */
-}
 
-.product-images .productbox {
-  width: 100%; /* Adjust the width as needed */
-  margin: 10px 0; /* Adjust the margin as needed */
-}
 
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .product-images .productbox {
+    width: 100%; /* Full width on smaller screens */
+  }
+}
 
 /* Add custom CSS to style the product boxes, icons, and buttons */
 
@@ -513,10 +492,6 @@ body,html {
 }
 
 /* Additional hover effect for the box image */
-.box .img_box img {
-  transition: opacity 0.3s;
-
-}
 
 .box:hover .img_box img {
   opacity: 0.8;
@@ -653,11 +628,10 @@ body,html {
 
 
   /* start of footer  */
-
   .footer {
     background:	#1b1b1b;
     color: white;
-    padding-left:80px;
+   padding: 80px;
     width:100%;
     margin-left:0;
     margin-right:0;
@@ -715,51 +689,72 @@ body,html {
   
   .footer .payment-icon {
     width: 60px; /* Adjust icon size as needed */
-    margin-right: 10px; /* Adjust margin as needed */
+   padding:10px 10px;
   }
   
   /* end of footer  */
-  
+
   /* Styles for normal screens */
-  
-  /* Example: for tablets and larger screens */
-  @media (min-width: 768px) {
+
+/* Example: for tablets and larger screens */
+@media (min-width: 768px) {
     /* Your CSS styles for tablets and larger screens go here */
     body {
         font-size: 16px;
+        margin-right:0;
+        margin-left:0;
     }
-  }
-  
-  /* Example: for small laptops and desktops */
-  @media (min-width: 992px) {
+}
+
+/* Example: for small laptops and desktops */
+@media (min-width: 992px) {
     /* Your CSS styles for small laptops and desktops go here */
     body {
         font-size: 18px;
+        margin-right:0;
+        margin-left:0;
     }
-  }
-  
-  /* Example: for larger laptops and desktops */
-  @media (min-width: 1200px) {
+}
+
+/* Example: for larger laptops and desktops */
+@media (min-width: 1200px) {
     /* Your CSS styles for larger laptops and desktops go here */
     body {
         font-size: 20px;
+
     }
-  }
-  
-  /* Styles for smaller screens */
-  
-  /* Example: for smartphones */
-  @media (max-width: 767px) {
+}
+
+/* Styles for smaller screens */
+
+/* Example: for smartphones */
+@media (max-width: 767px) {
     /* Your CSS styles for smartphones go here */
     body {
         font-size: 14px;
+        margin-right:0;
+        margin-left:0;
     }
-  }
-  
-  /* Example: for smaller tablets and larger smartphones */
-  @media (max-width: 991px) {
+}
+
+/* Example: for smaller tablets and larger smartphones */
+@media (max-width: 991px) {
     /* Your CSS styles for smaller tablets and larger smartphones go here */
     body {
         font-size: 14px;
+        margin-right:0;
+        margin-left:0;
+    }
+}
+
+/* Media query for screens up to 320px */
+@media (max-width: 320px) {
+    body {
+      font-size: 12px; /* Adjust font size for screens up to 320px */
+      /* Additional styles for screens up to 320px */
+      justify-content: center;
+      margin-right:0;
+      margin-left:0;
     }
   }
+  

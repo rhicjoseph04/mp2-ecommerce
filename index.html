@@ -28,112 +28,113 @@
 </head>
 
 <body>
-<!-- Messenger Chat Plugin Code -->
-<div id="fb-root"></div>
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
 
-<!-- Your Chat Plugin code -->
-<div id="fb-customer-chat" class="fb-customerchat"></div>
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
 
-<script>
-  var chatbox = document.getElementById('fb-customer-chat');
-  chatbox.setAttribute("page_id", "161937536984374");
-  chatbox.setAttribute("attribution", "biz_inbox");
-  chatbox.setAttribute("theme_color", "#ffa31a"); // Replace with your desired color
-  chatbox.setAttribute("greeting_dialog_display", "show");
-  chatbox.setAttribute("greeting_dialog_delay", "5000"); // 5 seconds delay before showing the greeting
-</script>
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "161937536984374");
+        chatbox.setAttribute("attribution", "biz_inbox");
+        chatbox.setAttribute("theme_color", "#ffa31a"); // Replace with your desired color
+        chatbox.setAttribute("greeting_dialog_display", "show");
+        chatbox.setAttribute("greeting_dialog_delay", "5000"); // 5 seconds delay before showing the greeting
+    </script>
 
-<!-- Your SDK code -->
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      xfbml: true,
-      version: 'v18.0'
-    });
-    FB.CustomerChat.showDialog();
-    FB.CustomerChat.update({
-      logged_in_greeting: 'Welcome to our helmet shop! How can we assist you today?' 
-    });// Modify this message
-  };
+    <!-- Your SDK code -->
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v18.0'
+            });
+            FB.CustomerChat.showDialog();
+            FB.CustomerChat.update({
+                logged_in_greeting: 'Welcome to our helmet shop! How can we assist you today?'
+            }); // Modify this message
+        };
 
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
-
-
-<div class="free">
-    <p class="journey-text"><i class="fa-solid fa-motorcycle larger-icon"></i>Your Journey Awaits with <span
-            class="free-shipping-text">FREE SHIPPING 🚚</span></p>
-</div>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 
 
+    <div class="free">
+        <p class="journey-text"><i class="fa-solid fa-motorcycle larger-icon"></i>Your Journey Awaits with <span
+                class="free-shipping-text">FREE SHIPPING 🚚</span></p>
+    </div>
 
-<div class="navbar">
-    <div class="container">
 
-        <div class="logo">
 
-            <div class="icon"> <a href="./index.html">
-                    <i class="fa-brands fa-shopware"></i></a>
+    <div class="navbar">
+        <div class="container">
+
+            <div class="logo">
+
+                <div class="icon"> <a href="./index.html">
+                        <i class="fa-brands fa-shopware"></i></a>
+                </div>
+                <div class="logo-text">Helmet <span>hub</span></div>
+
             </div>
-            <div class="logo-text">Helmet <span>hub</span></div>
 
-        </div>
-
-        <div class="search">
-            <button><i class="fa fa-search"></i></button>
-            <input type="text" placeholder="     Sign up and get 100% off on your first order" autocomplete="off">
-        </div>
+            <div class="search">
+                <button><i class="fa fa-search"></i></button>
+                <input type="text" placeholder="     Sign up and get 100% off on your first order" autocomplete="off">
+            </div>
 
 
-        <div class="nav">
-            <ul>
-                <li><a href="./index.html" class="link">HOME</a></li>
-                <li><a href="./product.html" class="link">PRODUCT</a></li>
-                <li><a href="../about" class="link">ABOUT</a></li>
-                <li><a href="../contact" class="link">CONTACT</a></li>
-            </ul>
-        </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="./index.html" class="link">HOME</a></li>
+                    <li><a href="./product.html" class="link">PRODUCT</a></li>
+                    <li><a href="../about" class="link">ABOUT</a></li>
+                    <li><a href="../contact" class="link">CONTACT</a></li>
+                </ul>
+            </div>
 
-        <div class="user-icon">
-            <a href="./login.html">
-                <div class="outer-circle">
-                    <div class="inner-circle">
-                        <i class="fas fa-user"></i>
+            <div class="user-icon">
+                <a href="./login.html">
+                    <div class="outer-circle">
+                        <div class="inner-circle">
+                            <i class="fas fa-user"></i>
+                        </div>
                     </div>
-                </div>
 
-                <div class="login-content">
-                    <button class="btn btn-primary">Login</button>
-                    <button class="btn btn-secondary">Sign Up</button>
-                </div>
-            </a>
+                    <div class="login-content">
+                        <button class="btn btn-primary">Login</button>
+                        <button class="btn btn-secondary">Sign Up</button>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
-</div>
 
 
 
-<div class="social-icons">
-    <div class="container">
-        <p>FOLLOW US ON:</p>
-        <a href="#"><img src="./img/fblogo.png" alt="Facebook"></a>
-        <a href="#"><img src="./img/instag.png" alt="Instagram"></a>
-        <a href="#"><img src="./img/twitter.png" alt="Twitter"></a>
-        <a href="#"><img src="./img/youtube.png" alt="YouTube"></a>
+    <div class="social-icons">
+        <div class="container">
+            <p>FOLLOW US ON:</p>
+            <a href="#"><img src="./img/fblogo.png" alt="Facebook"></a>
+            <a href="#"><img src="./img/instag.png" alt="Instagram"></a>
+            <a href="#"><img src="./img/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="./img/youtube.png" alt="YouTube"></a>
 
-        <div class="user-cart-icons">
+            <div class="user-cart-icons">
 
-            <a href="#" class="link"><i class="fas fa-user"></i></a>
-            <a href="./cart.html" class="link"><i class="fas fa-shopping-bag"></i></a>
+                <a href="#" class="link"><i class="fas fa-user"></i></a>
+                <a href="./cart.html" class="link"><i class="fas fa-shopping-bag"></i></a>
+            </div>
         </div>
     </div>
-</div>
 
 
 
@@ -157,42 +158,42 @@
                             <div class="carousel-item active">
                                 <img src="./img/rjmoto1.jpg" alt="Image 1" class="d-block w-100 carousel-image">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <a href="./product.html" class="shop-button">Shop Now <i
+                                    <a href="./cart.html" class="shop-button">Shop Now <i
                                             class="fas fa-shopping-cart"></i></a>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <img src="./img/helmethublogo.png" alt="Image 2" class="d-block w-100 carousel-image">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <a href="./product.html" class="shop-button">Shop Now <i
+                                    <a href="./cart.html" class="shop-button">Shop Now <i
                                             class="fas fa-shopping-cart"></i></a>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <img src="./img/vagv.jpg" alt="Image 2" class="d-block w-100 carousel-image">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <a href="./product.html" class="shop-button">Shop Now <i
+                                    <a href="./cart.html" class="shop-button">Shop Now <i
                                             class="fas fa-shopping-cart"></i></a>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <img src="./img/valentinoagv.jpg" alt="Image 2" class="d-block w-100 carousel-image">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <a href="./product.html" class="shop-button">Shop Now <i
+                                    <a href="./cart.html" class="shop-button">Shop Now <i
                                             class="fas fa-shopping-cart"></i></a>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <img src="./img/agv-helmets.jpg" alt="Image 2" class="d-block w-100 carousel-image">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <a href="./product.html" class="shop-button">Shop Now <i
+                                    <a href="./cart.html" class="shop-button">Shop Now <i
                                             class="fas fa-shopping-cart"></i></a>
                                 </div>
                             </div>
-                            <!-- Add more carousel items with the same structure -->
+
                         </div>
 
-                        <!-- Left and right controls -->
+
                         <a class="carousel-control-prev" href="#carousel" data-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </a>
@@ -231,9 +232,6 @@
         </div>
     </div>
 
-
-
-    <!-- Your product_type section -->
 
     <div class="product_type">
         <div class="container">
@@ -312,9 +310,6 @@
             </div>
         </div>
     </div>
-    <!-- end of product_type section -->
-
-    <!-- start of Your about section -->
 
     <div class="about">
         <div class="container">
@@ -374,219 +369,169 @@
     </div>
 
 
-
-
-    <!-- end of Your about section -->
-
-    <!-- start of top_product -->
-
     <div class="top_product">
 
         <h1 class="top_products"><span>Top</span> Products</h1>
 
-        <div class="cart-section">
-            <div id="cart-icon">
-                <i class="fas fa-shopping-bag"></i>
-                <span id="cart-length">0</span> items
-            </div>
 
+        <div id="cart-items">
+            <div class="container">
 
-            <div id="cart-items">
-                <div class="container">
-
-                    <div class="box" key="${curElm.id}">
-
-                        <div class="img_box">
-                            <img src="./img/kythelmettop1.png" alt="${curElm.Title}">
-                            <div class="icon">
-                                <li onclick="addToCart('${JSON.stringify(curElm)}')">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </li>
-                                <li onclick="viewProduct('${JSON.stringify(curElm)}')">
-                                    <i class="fas fa-eye"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-heart"></i>
-                                </li>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <p>Fullface Helmet</p>
-                            <h3>TT Course Radiance[S-XL].</h3>
-                            <h4>7,500</h4>
+                <div class="box" key="${curElm.id}">
+                    <div class="img_box">
+                        <img src="./img/kythelmettop1.png" alt="${curElm.Title}">
+                        <div class="icon">
+                            <button class="view-product"
+                                data-product='{"title": "Product 1", "category": "Category 1", "description": "Description 1", "price": 100}'><i
+                                    class="fas fa-eye"></i></button>
+                            <button class="add-to-cart"
+                                data-product='{"title": "Product 1", "category": "Category 1", "description": "Description 1", "price": 100}'><i
+                                    class="fas fa-cart-plus"></i></button>
                         </div>
                     </div>
+                    <div class="detail">
+                        <p>Fullface Helmet</p>
+                        <h3>TT Course Radiance[S-XL].</h3>
+                        <h4>7,500</h4>
+                    </div>
+                </div>
 
-                    <div class="box" key="${curElm.id}">
-                        <div class="img_box">
-                            <img src="./img/kythelmetstop2.png" alt="${curElm.Title}">
-                            <div class="icon">
-                                <li onclick="addToCart({
-                            'id': 'product1',
-                            'title': 'Product 1',
-                            'category': 'Fullface Helmet',
-                            'price': 14000.00
-                          })">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </li>
 
-                                <li onclick="viewProduct('${JSON.stringify(curElm)}')">
-                                    <i class="fas fa-eye"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-heart"></i>
-                                </li>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <p>Fullface Helmet</p>
-                            <h3>KR-1 – Espargaro Replica 2017</h3>
-                            <h4>14,000</h4>
+
+                <div class="box" key="${curElm.id}">
+                    <div class="img_box">
+                        <img src="./img/kythelmetstop2.png" alt="${curElm.Title}">
+                        <div class="icon">
+                            <button class="view-product"
+                                data-product='{"title": "Product 1", "category": "Category 1", "description": "Description 1", "price": 100}'><i
+                                    class="fas fa-eye"></i></button>
+                            <button class="add-to-cart"
+                                data-product='{"title": "Product 1", "category": "Category 1", "description": "Description 1", "price": 100}'><i
+                                    class="fas fa-cart-plus"></i></button>
                         </div>
                     </div>
+                    <div class="detail">
+                        <p>Fullface Helmet</p>
+                        <h3>KR-1 – Espargaro Replica 2017</h3>
+                        <h4>14,000</h4>
+                    </div>
+                </div>
 
-                    <div class="box" key="${curElm.id}">
-                        <div class="img_box">
-                            <img src="./img/kythelmettop4.webp" alt="${curElm.Title}">
-                            <div class="icon">
-                                <li onclick="addToCart('${JSON.stringify(curElm)}')">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </li>
-                                <li onclick="viewProduct('${JSON.stringify(curElm)}')">
-                                    <i class="fas fa-eye"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-heart"></i>
-                                </li>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <p>Off-Road</p>
-                            <h3>KYT Strike Eagle – NEW YORK YELLOW FLUO.</h3>
-                            <h4>11,250</h4>
+                <div class="box" key="${curElm.id}">
+                    <div class="img_box">
+                        <img src="./img/kythelmettop4.webp" alt="${curElm.Title}">
+                        <div class="icon">
+                            <button class="view-product"
+                                data-product='{"title": "Product 1", "category": "Category 1", "description": "Description 1", "price": 100}'><i
+                                    class="fas fa-eye"></i></button>
+                            <button class="add-to-cart"
+                                data-product='{"title": "Product 1", "category": "Category 1", "description": "Description 1", "price": 100}'><i
+                                    class="fas fa-cart-plus"></i></button>
                         </div>
                     </div>
+                    <div class="detail">
+                        <p>Off-Road</p>
+                        <h3>KYT Strike Eagle – NEW YORK YELLOW FLUO.</h3>
+                        <h4>11,250</h4>
+                    </div>
+                </div>
 
-                    <div class="box" key="${curElm.id}">
-                        <div class="img_box">
-                            <img src="./img/kyttp5.png" alt="${curElm.Title}">
-                            <div class="icon">
-                                <li onclick="addToCart('${JSON.stringify(curElm)}')">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </li>
-                                <li onclick="viewProduct('${JSON.stringify(curElm)}')">
-                                    <i class="fas fa-eye"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-heart"></i>
-                                </li>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <p>Half-face</p>
-                            <h3>NF-J – BROC PARKES REPLICA</h3>
-                            <h4>6,500</h4>
+                <div class="box" key="${curElm.id}">
+                    <div class="img_box">
+                        <img src="./img/kyttp5.png" alt="${curElm.Title}">
+                        <div class="icon">
+                            <button class="view-product"
+                                data-product='{"title": "Product 1", "category": "Category 1", "description": "Description 1", "price": 100}'><i
+                                    class="fas fa-eye"></i></button>
+                            <button class="add-to-cart"
+                                data-product='{"title": "Product 1", "category": "Category 1", "description": "Description 1", "price": 100}'><i
+                                    class="fas fa-cart-plus"></i></button>
+
                         </div>
                     </div>
+                    <div class="detail">
+                        <p>Half-face</p>
+                        <h3>NF-J – BROC PARKES REPLICA</h3>
+                        <h4>6,500</h4>
+                    </div>
+                </div>
 
-                    <div class="box" key="${curElm.id}">
-                        <div class="img_box">
-                            <img src="./img/kyttp6.png" alt="${curElm.Title}">
-                            <div class="icon">
-                                <li onclick="addToCart('${JSON.stringify(curElm)}')">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </li>
-                                <li onclick="viewProduct('${JSON.stringify(curElm)}')">
-                                    <i class="fas fa-eye"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-heart"></i>
-                                </li>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <p>Half-face</p>
-                            <h3>NF-J – Motion Matt Yellow Fluo</h3>
-                            <h4>6,500</h4>
+                <div class="box" key="${curElm.id}">
+                    <div class="img_box">
+                        <img src="./img/kyttp6.png" alt="${curElm.Title}">
+                        <div class="icon">
+                            <button class="view-product" data-product='${JSON.stringify(curElm)}'><i class="fas fa-eye"></i></button>
+                            <button class="add-to-cart" data-product='${JSON.stringify(curElm)}'><i class="fas fa-cart-plus"></i></button>
                         </div>
                     </div>
+                    <div class="detail">
+                        <p>Half-face</p>
+                        <h3>NF-J – Motion Matt Yellow Fluo</h3>
+                        <h4>6,500</h4>
+                    </div>
+                </div>
 
-                    <div class="box" key="${curElm.id}">
-                        <div class="img_box">
-                            <img src="./img/kyttp7.png" alt="${curElm.Title}">
-                            <div class="icon">
-                                <li onclick="addToCart('${JSON.stringify(curElm)}')">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </li>
-                                <li onclick="viewProduct('${JSON.stringify(curElm)}')">
-                                    <i class="fas fa-eye"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-heart"></i>
-                                </li>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <p>Off-Road</p>
-                            <h3>Strike Eagle – Plain White</h3>
-                            <h4>11,250</h4>
+                <div class="box" key="${curElm.id}">
+                    <div class="img_box">
+                        <img src="./img/kyttp7.png" alt="${curElm.Title}">
+                        <div class="icon">
+                            <button class="view-product"
+                                data-product='{"title": "Product 1", "category": "Category 1", "description": "Description 1", "price": 100}'><i
+                                    class="fas fa-eye"></i></button>
+                            <button class="add-to-cart"
+                                data-product='{"title": "Product 1", "category": "Category 1", "description": "Description 1", "price": 100}'><i
+                                    class="fas fa-cart-plus"></i></button>
                         </div>
                     </div>
+                    <div class="detail">
+                        <p>Off-Road</p>
+                        <h3>Strike Eagle – Plain White</h3>
+                        <h4>11,250</h4>
+                    </div>
+                </div>
 
-                    <div class="box" key="${curElm.id}">
-                        <div class="img_box">
-                            <img src="./img/kyttp8.png" alt="${curElm.Title}">
-                            <div class="icon">
-                                <li onclick="addToCart('${JSON.stringify(curElm)}')">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </li>
-                                <li onclick="viewProduct('${JSON.stringify(curElm)}')">
-                                    <i class="fas fa-eye"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-heart"></i>
-                                </li>
-                            </div>
-                        </div>
-                        <div class="detail">
-                            <p>Off-Road</p>
-                            <h3>Strike Eagle – American Star</h3>
-                            <h4>11,750</h4>
+                <div class="box" key="${curElm.id}">
+                    <div class="img_box">
+                        <img src="./img/kyttp8.png" alt="${curElm.Title}">
+                        <div class="icon">
+                            <button class="view-product"
+                                data-product='{"title": "Product 1", "category": "Category 1", "description": "Description 1", "price": 100}'><i
+                                    class="fas fa-eye"></i></button>
+                            <button class="add-to-cart"
+                                data-product='{"title": "Product 1", "category": "Category 1", "description": "Description 1", "price": 100}'><i
+                                    class="fas fa-cart-plus"></i></button>
                         </div>
                     </div>
+                    <div class="detail">
+                        <p>Off-Road</p>
+                        <h3>Strike Eagle – American Star</h3>
+                        <h4>11,750</h4>
+                    </div>
+                </div>
 
-                    <div class="box" key="${curElm.id}">
-                        <div class="img_box">
-                            <img src="./img/kyttp9.png" alt="${curElm.Title}">
-                            <div class="icon">
-                                <li onclick="addToCart('${JSON.stringify(curElm)}')">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </li>
-                                <li onclick="viewProduct('${JSON.stringify(curElm)}')">
-                                    <i class="fas fa-eye"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-heart"></i>
-                                </li>
-                            </div>
+                <div class="box" key="${curElm.id}">
+                    <div class="img_box">
+                        <img src="./img/kyttp9.png" alt="${curElm.Title}">
+                        <div class="icon">
+                            <button class="view-product"
+                                data-product='{"title": "Product 1", "category": "Category 1", "description": "Description 1", "price": 100}'><i
+                                    class="fas fa-eye"></i></button>
+                            <button class="add-to-cart"
+                                data-product='{"title": "Product 1", "category": "Category 1", "description": "Description 1", "price": 100}'><i
+                                    class="fas fa-cart-plus"></i></button>
                         </div>
-                        <div class="detail">
-                            <p>Off-Road</p>
-                            <h3>KR-1 – Espargaro Replica 2017</h3>
-                            <h4>11,250</h4>
-                        </div>
+                    </div>
+                    <div class="detail">
+                        <p>Off-Road</p>
+                        <h3>KR-1 – Espargaro Replica 2017</h3>
+                        <h4>11,250</h4>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div id="order-summary">
-            <h3>Order Summary</h3>
-            <div id="order-summary-items">
-                <!-- Order summary items will be displayed here -->
-            </div>
-        </div>
     </div>
+
+
     <!-- end of top_product -->
 
     <!--start of Product Detail Section -->
@@ -612,16 +557,7 @@
         </div>
     </div>
 
-
-    <!-- Add to Cart Modal -->
-    <div id="addToCartModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeAddToCartModal()">&times;</span>
-            <div class="modalTitle">Product Added to Cart</div>
-            <div class="modalText" id="addToCartText"></div>
-        </div>
-    </div>
-
+    <!-- Modals -->
     <div id="productModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -657,35 +593,10 @@
             modal.style.display = 'none';
         }
 
-
-        function addToCart(product) {
-            // Parse the product JSON if it's a string
-            if (typeof product === 'string') {
-                product = JSON.parse(product);
-            }
-
-            // Implement your "Add to Cart" functionality here using the product object
-            alert(`Product added to cart: ${product.Title}`);
-
-            // Update cart length and order summary
-            cart.push(product.Title);
-            cartLength = cart.length;
-
-            // Update cart length in the cart icon
-            document.getElementById('cart-length').innerText = cartLength;
-
-            // Update cart items display
-            updateCartDisplay();
-
-            // Update order summary
-            updateOrderSummary();
-        }
-
-        // ... Rest of your JavaScript ...
+  
     </script>
 
-    <!--end of  Product Detail Section -->
-
+ 
 
     <div class='banner'>
         <div class='container'>
@@ -695,8 +606,7 @@
                 <p class='product-price'>
                     <h4><span class="peso-icon">&#8369;</span>19,300</h4>
                 </p>
-                <a href="./product.html" class="shop-button">Shop Now <i
-                    class="fas fa-shopping-cart"></i></a>
+                <a href="./cart.html" class="shop-button">Shop Now <i class="fas fa-shopping-cart"></i></a>
             </div>
             <div class='img_box'>
                 <img src='./img/kytpu.png' alt='sliderimg' class='banner-image' />
@@ -757,20 +667,13 @@
         </div>
     </div>
 
-    <!-- Add this section at the end of your HTML -->
-    <div id="fb-root"></div>
-
-    <!-- Your Chat Plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
-
+ 
     <script>
-        // Function to toggle the visibility of the section
+   
         function toggleSectionVisibility() {
             var section = document.getElementById(
-                'productDetailSection'); // Replace 'yourSectionId' with the actual ID of your section
-
-            // Toggle the visibility
+                'productDetailSection');
+            
             if (section.style.display === 'none' || section.style.display === '') {
                 section.style.display = 'block';
             } else {
@@ -778,17 +681,17 @@
             }
         }
 
-        // Add event listeners for the "View" and "Add to Cart" buttons for each product
+      
         document.getElementById('viewButton1').addEventListener('click', toggleSectionVisibility);
         document.getElementById('addToCartButton1').addEventListener('click', toggleSectionVisibility);
 
-        // Repeat the above two lines for each product's buttons, replacing '1' with the appropriate product number.
+      
     </script>
 
 
 
     <script src="./js.folder/index.js"></script>
-
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>

@@ -131,10 +131,19 @@ let products =
         pricePHP: 40 * 50, // Assuming 1 USD = 50 PHP
         image: '../img/kythelmetaccesso2.jpeg'
     },
-    
+    {
+        id:14,
+        Title:"Espargo Replica 2017",
+        Cat: 'Full-Face',
+        price: '280',
+        pricePHP: 40 * 50, // Assuming 1 USD = 50 PHP
+        image: '../img/kytespargo2017.png'
+    },
 
        
 ]
+
+
 
 // Function to calculate the total price in PHP
 function calculateTotalPHP() {
@@ -184,9 +193,34 @@ function cancelOrder() {
 
 
 initApp();
-
+let isLoggedIn = false;  // Set this to true if the user is logged in
 
 function addToCart(key) {
+    console.log('isLoggedIn:', isLoggedIn);
+
+    // Check if the user is logged in
+    if (!isLoggedIn) {
+        // Use SweetAlert for the message
+        Swal.fire({
+            icon: 'info',
+            title: 'You need to log in before proceeding to checkout.',
+            showConfirmButton: false,
+            timer: 5000,  // 5 seconds delay
+            customClass: {
+                popup: 'custom-swal-popup',
+                title: 'custom-swal-title'
+            }
+        });
+
+        // Redirect to the login page after 5 seconds
+        setTimeout(() => {
+            window.location.href = 'login.html';
+        }, 5000);
+
+        return;
+    }
+
+    // User is logged in, proceed with adding to cart
     const product = products.find(item => item.id === key);
     if (!listCards[product.id]) {
         listCards[product.id] = { ...product, quantity: 1 };
@@ -206,6 +240,10 @@ function addToCart(key) {
         }
     });
 }
+
+
+
+
 
 
 function removeFromCart(key) {
@@ -231,12 +269,10 @@ function removeFromCart(key) {
 }
 
 
-// ... Rest of your code ...
 
 function reloadCart() {
     listCard.innerHTML = '';
 
-    // Check if the cart is empty
     if (Object.keys(listCards).length === 0) {
         let emptyCartMessage = document.createElement('div');
         emptyCartMessage.classList.add('empty-cart-message');
@@ -272,19 +308,25 @@ function reloadCart() {
         quantity.innerText = totalCount;
         saveCartToSessionStorage();
 
-        // Make the cart list scrollable
+      
         listCard.style.overflowY = 'auto';
-        listCard.style.maxHeight = '400px';  // Adjust the max height as needed
+        listCard.style.maxHeight = '400px';  
     }
 }
 
 
 function proceedToCheckout() {
-    // Check if the cart is empty before proceeding to checkout
+
+    if (!isLoggedIn) {
+        alert('You need to log in before proceeding to checkout.');
+        window.location.href = '../login.html';  
+        return;
+    }
+    
     if (Object.keys(listCards).length === 0) {
         alert('Cart is empty. Please add items to your cart before proceeding to checkout.');
     } else {
-        // Display a message indicating proceeding to checkout
+       
         Swal.fire({
             icon: 'info',
             title: 'Proceeding to checkout. Please choose your payment method.',
@@ -298,12 +340,13 @@ function proceedToCheckout() {
     }
 }
 
-// Function to save the cart to session storage
+
+
+
 function saveCartToSessionStorage() {
     sessionStorage.setItem('cart', JSON.stringify(listCards));
 }
 
-// Function to load the cart from session storage
 function loadCartFromSessionStorage() {
     const savedCart = sessionStorage.getItem('cart');
     if (savedCart) {
@@ -312,17 +355,15 @@ function loadCartFromSessionStorage() {
     }
 }
 
-// Function to delete the cart from session storage
 function clearCartFromSessionStorage() {
     sessionStorage.removeItem('cart');
     listCards = [];
     reloadCart();
 }
 
-// Call loadCartFromSessionStorage to load any existing cart from session storage
 loadCartFromSessionStorage();
 
-// Add an event listener to the window unload event to save the cart to session storage when the page is refreshed or closed
+
 window.addEventListener('unload', saveCartToSessionStorage);
 
 

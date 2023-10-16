@@ -319,7 +319,16 @@ body {
    font-size: 16px;
 }
 
+.col-lg-6{
+  color:white;
+}
 
+.mb-4 {
+  background: linear-gradient(45deg, #ffa31a, #ff523b);
+  width: 100%;
+  transform: skewX(-10deg); /* Add a skew effect */
+  text-align: center;
+}
 
 
 

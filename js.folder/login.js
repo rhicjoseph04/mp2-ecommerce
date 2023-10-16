@@ -3,21 +3,28 @@ const registeredUsernames = ['exampleuser'];
 let isSignupSuccessful = false;
 let isResetPasswordVisible = false;
 
-$(document).ready(function() {
+$(document).ready(function () {
   toggleLoginForm();
+    
+  
+    $("#resetPasswordForm").submit(function (event) {
+      event.preventDefault();
+      resetPassword(event);
+    });
+  
 
-  $("#forgotPasswordLink").click(function() {
-      toggleResetPasswordForm();
+  $("#forgotPasswordLink").click(function () {
+    toggleResetPasswordForm();
   });
 
-  $("#loginForm").submit(function(event) {
-      event.preventDefault();
-      login();
+  $("#loginForm").submit(function (event) {
+    event.preventDefault();
+    login();
   });
 
-  $("#signupForm").submit(function(event) {
-      event.preventDefault();
-      signup();
+  $("#signupForm").submit(function (event) {
+    event.preventDefault();
+    signup();
   });
 });
 
@@ -26,7 +33,7 @@ function toggleLoginForm() {
   $('#loginForm').show();
   isResetPasswordVisible = false;
   $('#resetPasswordForm').hide();
-  $('#forgotPasswordLink').show(); // Show the link in the login form
+  $('#forgotPasswordLink').show();
   $('#loginSignupModal').modal('show');
 }
 
@@ -35,7 +42,7 @@ function toggleSignupForm() {
   $('#signupForm').show();
   isResetPasswordVisible = false;
   $('#resetPasswordForm').hide();
-  $('#forgotPasswordLink').hide(); // Hide the link in the signup form
+  $('#forgotPasswordLink').hide();
   $('#loginSignupModal').modal('show');
 }
 
@@ -43,50 +50,51 @@ function toggleResetPasswordForm() {
   $('#loginForm').hide();
   $('#signupForm').hide();
   $('#resetPasswordForm').show();
-  $('#forgotPasswordLink').hide(); // Hide the "Did you forget your password?" link
+  $('#forgotPasswordLink').hide();
 }
 
-// Handle the password reset form submission
+
 function resetPassword(event) {
   event.preventDefault();
 
   const resetEmail = $("#resetPasswordEmail").val();
-  // Implement password reset logic here
 
-  // For demonstration, we'll just show an alert
-  alert("Password reset email sent to: " + resetEmail);
+  Swal.fire({
+    title: "Password Reset Email Sent",
+    text: "Password reset email sent to: " + resetEmail,
+    icon: "success",
+    timer: 3000,
+    showConfirmButton: false
+  });
 }
-  function login(event) {
-    event.preventDefault();
-    const email = $("#loginUsername").val();
-    const loginPassword = $("#loginPassword").val();
-  
-    // Check if the user has signed up
-    if (!isSignupSuccessful) {
-      showModal("Signup Required", "Please sign up first before logging in.", "danger");
-      return;
-    }
-  
-    // Validate email and password
-    if (!validateEmail(email) || !validatePassword(loginPassword)) {
-      showModal("Invalid Email or Password", "Please enter valid email and password.", "danger");
-      return;
-    }
-  
-    // Check if the login password matches the signup password
-    const signupPassword = $("#signupPassword").val();
-    if (loginPassword !== signupPassword) {
-      showModal("Password Mismatch", "The entered password does not match the password used during signup.", "danger");
-      return;
-    }
-  
-    // Implement login logic here
-  
-    // Redirect to index.html upon successful login
-    window.location.href = '..//Landingpage/index.html';
-  
-    showModal("Login Successful", "Welcome! You can now freely use the checkout functionalities.", "success");
+
+function login(event) {
+  event.preventDefault();
+  const email = $("#loginUsername").val();
+  const loginPassword = $("#loginPassword").val();
+
+
+  if (!isSignupSuccessful) {
+    showModal("Signup Required", "Please sign up first before logging in.", "danger");
+    return;
   }
+
+  if (!validateEmail(email) || !validatePassword(loginPassword)) {
+    showModal("Invalid Email or Password", "Please enter valid email and password.", "danger");
+    return;
+  }
+
+  const signupPassword = $("#signupPassword").val();
+  if (loginPassword !== signupPassword) {
+    showModal("Password Mismatch", "The entered password does not match the password used during signup.", "danger");
+    return;
+  }
+
+
+  window.location.href = '../index.html';
+
+  showModal("Login Successful", "Welcome! You can now freely use the checkout functionalities.", "success");
+}
 
 
 function signup(event) {
@@ -95,17 +103,16 @@ function signup(event) {
   const username = $("#signupUsername").val();
   const password = $("#signupPassword").val();
 
-  // Validate email, username, and password
   if (!validateEmail(email) || !validateUsername(username) || !validatePassword(password)) {
     showModal("Invalid Information", "Please enter valid email, username, and password.", "danger");
     return;
   }
 
   if (isResetPasswordVisible) {
-    // If reset password form is visible, handle reset password functionality
+
     sendResetEmail();
   } else {
-    // If reset password form is not visible, handle signup functionality
+
     if (registeredEmails.includes(email)) {
       showModal("Email Already Registered", "The provided email is already registered.", "danger");
       return;
@@ -116,45 +123,50 @@ function signup(event) {
       return;
     }
 
-    // Signup logic
+   
     isSignupSuccessful = true;
 
-    // Reset the login form with the signup information
     $("#loginUsername").val(email);
     $("#loginPassword").val(password);
 
     showModal("Signup Successful", "You can now proceed to login.", "success");
 
-    // Automatically switch to login form after successful signup
+
     toggleLoginForm();
   }
 }
 
 
-// Validate username (at least 3 characters)
-function validateUsername(username) {
- return username.length >= 3;
+function showModal(title, text, alertType) {
+  Swal.fire({
+    title: `<span class="modal-title">${title}</span>`,
+    html: `<div class="modal-text">${text}</div>`,
+    icon: alertType,
+    width: 'auto', 
+    showConfirmButton: false,
+    timer: 5000 
+  });
 }
 
-// Validate email format
+
+function validateUsername(username) {
+  return username.length >= 3;
+}
+
 function validateEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
 
-// Validate password length (at least 6 characters)
 function validatePassword(password) {
   return password.length >= 6;
 }
 
 function sendResetEmail() {
   const resetEmail = $("#resetPasswordEmail").val();
-  // Implement email sending logic here
-  // For demonstration, we'll just show an alert
   alert("Reset email sent to: " + resetEmail);
 }
 
-// Redirect to login form after successful signup
 function toggleLoginForm() {
   $('#signupForm').hide();
   $('#loginForm').show();
@@ -163,6 +175,7 @@ function toggleLoginForm() {
   $('#forgotPasswordLink').show();
   $('#loginSignupModal').modal('show');
 }
+
 function showModal(title, text, alertType) {
   const alertDiv = $("#alertDiv");
   alertDiv.html(`

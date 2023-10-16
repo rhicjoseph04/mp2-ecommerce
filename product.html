@@ -18,93 +18,114 @@
 </head>
 
 <body>
- <!-- Your SDK code -->
- <script>
-  window.fbAsyncInit = function () {
-      FB.init({
-          xfbml: true,
-          version: 'v18.0'
-      });
-  };
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
 
-  (function (d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s);
-      js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
 
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "161937536984374");
+        chatbox.setAttribute("attribution", "biz_inbox");
+        chatbox.setAttribute("theme_color", "#ffa31a"); // Replace with your desired color
+        chatbox.setAttribute("greeting_dialog_display", "show");
+        chatbox.setAttribute("greeting_dialog_delay", "5000"); // 5 seconds delay before showing the greeting
+    </script>
 
-<div class="free">
-  <p class="journey-text"><i class="fa-solid fa-motorcycle larger-icon"></i>Your Journey Awaits with <span
-          class="free-shipping-text">FREE SHIPPING 🚚</span></p>
-</div>
+    <!-- Your SDK code -->
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v18.0'
+            });
+            FB.CustomerChat.showDialog();
+            FB.CustomerChat.update({
+                logged_in_greeting: 'Welcome to our helmet shop! How can we assist you today?'
+            }); // Modify this message
+        };
 
-
-
-<div class="navbar">
-  <div class="container">
-
-      <div class="logo">
-
-          <div class="icon"> <a href="./index.html">
-                  <i class="fa-brands fa-shopware"></i></a>
-          </div>
-          <div class="logo-text">Helmet <span>hub</span></div>
-
-      </div>
-
-      <div class="search">
-          <button><i class="fa fa-search"></i></button>
-          <input type="text" placeholder="     Sign up and get 100% off on your first order" autocomplete="off">
-      </div>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 
 
-      <div class="nav">
-          <ul>
-              <li><a href="./index.html" class="link">HOME</a></li>
-              <li><a href="./product.html" class="link">PRODUCT</a></li>
-              <li><a href="./about" class="link">ABOUT</a></li>
-              <li><a href="../contact" class="link">CONTACT</a></li>
-          </ul>
-      </div>
-
-      <div class="user-icon">
-          <a href="./login.html">
-              <div class="outer-circle">
-                  <div class="inner-circle">
-                      <i class="fas fa-user"></i>
-                  </div>
-              </div>
-              <div class="login-content">
-                  <button class="btn btn-primary">Login</button>
-                  <button class="btn btn-secondary">Sign Up</button>
-              </div>
-          </a>
-      </div>
-  </div>
-</div>
+    <div class="free">
+        <p class="journey-text"><i class="fa-solid fa-motorcycle larger-icon"></i>Your Journey Awaits with <span
+                class="free-shipping-text">FREE SHIPPING 🚚</span></p>
+    </div>
 
 
 
-<div class="social-icons">
-  <div class="container">
-      <p>FOLLOW US ON:</p>
-      <a href="#"><img src="./img/fblogo.png" alt="Facebook"></a>
-      <a href="#"><img src="./img/instag.png" alt="Instagram"></a>
-      <a href="#"><img src="./img/twitter.png" alt="Twitter"></a>
-      <a href="#"><img src="./img/youtube.png" alt="YouTube"></a>
+    <div class="navbar">
+        <div class="container">
 
-      <div class="user-cart-icons">
+            <div class="logo">
 
-          <a href="#" class="link"><i class="fas fa-user"></i></a>
-          <a href="./cart.html" class="link"><i class="fas fa-shopping-bag"></i></a>
-      </div>
-  </div>
-</div>
+                <div class="icon"> <a href="./index.html">
+                        <i class="fa-brands fa-shopware"></i></a>
+                </div>
+                <div class="logo-text">Helmet <span>hub</span></div>
+
+            </div>
+
+            <div class="search">
+                <button><i class="fa fa-search"></i></button>
+                <input type="text" placeholder="     Sign up and get 100% off on your first order" autocomplete="off">
+            </div>
+
+
+            <div class="nav">
+                <ul>
+                    <li><a href="./index.html" class="link">HOME</a></li>
+                    <li><a href="./product.html" class="link">PRODUCT</a></li>
+                    <li><a href="../about" class="link">ABOUT</a></li>
+                    <li><a href="../contact" class="link">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="user-icon">
+                <a href="./login.html">
+                    <div class="outer-circle">
+                        <div class="inner-circle">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+
+                    <div class="login-content">
+                        <button class="btn btn-primary">Login</button>
+                        <button class="btn btn-secondary">Sign Up</button>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="social-icons">
+        <div class="container">
+            <p>FOLLOW US ON:</p>
+            <a href="#"><img src="./img/fblogo.png" alt="Facebook"></a>
+            <a href="#"><img src="./img/instag.png" alt="Instagram"></a>
+            <a href="#"><img src="./img/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="./img/youtube.png" alt="YouTube"></a>
+
+            <div class="user-cart-icons">
+
+                <a href="#" class="link"><i class="fas fa-user"></i></a>
+                <a href="./cart.html" class="link"><i class="fas fa-shopping-bag"></i></a>
+            </div>
+        </div>
+    </div>
+
 
 
 
@@ -114,20 +135,10 @@
     <div class="container">
       <div class="sidebar">
         <div class="filter">
-          <div class="main-categories">
-            <h5>Main Categories</h5   >
-            <ul>
-              <li onclick="filterBrand('Evo')">Evo</li>
-              <li onclick="filterBrand('Arai')">Arai</li>
-              <li onclick="filterBrand('Sec')">Sec</li>
-              <li onclick="filterBrand('Kyt')">Kyt</li>
-              <li onclick="filterBrand('Ls2')">Ls2</li>
-              <li onclick="filterBrand('Hjc')">Hjc</li>
-              <li onclick="filterBrand('Agv')">Agv</li>
-            </ul>
-          </div>
+        
+       
           <div class="categories">
-            <h5>Product Categories</h5>
+          
             <ul>
               <li onclick="allProducts()">All Products</li>
               <li onclick="filterProduct('Full-face')">Full-Face Helmet</li>
@@ -145,7 +156,7 @@
             <div id="app"></div>
           </div>
         </div>
-        <!-- Add more product boxes as needed -->
+       
       </div>
     </div>
     
@@ -172,59 +183,53 @@
   
 
   <div class="footer">
-    <div class="container">
-        <div class="row">
-
-
-            <div class="col-md-2 col-sm-12">
-                <div class="icon">
-                    <!-- Add your logo here -->
-                    <a href="./index.html">
-                        <i class="fab fa-shopware logo" style="font-size: 5rem;"></i>
-                    </a>
-                </div>
+    <div class="row">
+        <div class="col-md-2 col-sm-12">
+            <div class="icon">
+                <a href="./index.html">
+                    <i class="fab fa-shopware logo" style="font-size: 5rem;"></i>
+                </a>
             </div>
+        </div>
 
-
-            <div class="col-md-2 col-sm-8">
-                <div class="detail">
-                    <p>Your Ride, Our Passion!</p>
-                </div>
+        <div class="col-md-2 col-sm-8">
+            <div class="detail">
+                <p>Your Ride, Our Passion!</p>
             </div>
+        </div>
 
-            <div class="col-md-2 col-sm-8">
-                <div class="account">
-                    <h5>Helmet Hub</h5>
-                    <ul>
-                        <li><a href="#">Account</a></li>
-                        <li><a href="#">Order</a></li>
-                        <li><a href="#">Cart</a></li>
-                        <li><a href="#">Shipping</a></li>
-                        <li><a href="#">Return</a></li>
-                    </ul>
-                </div>
+        <div class="col-md-2 col-sm-8">
+            <div class="account">
+                <h5>Helmet Hub</h5>
+                <ul>
+                    <li><a href="#">Account</a></li>
+                    <li><a href="#">Order</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Return</a></li>
+                </ul>
             </div>
+        </div>
 
-            <div class="col-md-2 col-sm-8">
-                <div class="page">
-                    <h5>Pages</h5>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                    </ul>
-                </div>
+        <div class="col-md-2 col-sm-8">
+            <div class="page">
+                <h5>Pages</h5>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
             </div>
+        </div>
 
-            <div class="col-md-4 col-sm-8">
-                <div class="payment">
-                    <h5>Accepted Payments</h5>
-                    <img src='./img/visa.jpg' alt='Visa' class='payment-icon' />
-                    <img src='./img/mastercard.png' alt='Mastercard' class='payment-icon' />
-                    <img src='./img/Western Union.png' alt='Western' class='payment-icon' />
-                    <img src='./img/pinetwork.png' alt='Pinetwork' class='payment-icon' />
-                </div>
+        <div class="col-md-4 col-sm-8">
+            <div class="payment">
+                <h5>Accepted Payments</h5>
+                <img src='./img/visa.jpg' alt='Visa' class='payment-icon' />
+                <img src='./img/mastercard.png' alt='Mastercard' class='payment-icon' />
+                <img src='./img/Western Union.png' alt='Western' class='payment-icon' />
+                <img src='./img/pinetwork.png' alt='Pinetwork' class='payment-icon' />
             </div>
         </div>
     </div>
