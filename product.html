@@ -93,7 +93,7 @@
 <div class="social-icons">
   <div class="container">
       <p>FOLLOW US ON:</p>
-      <a href="#"><img src="../img/fblogo.png" alt="Facebook"></a>
+      <a href="#"><img src="./img/fblogo.png" alt="Facebook"></a>
       <a href="#"><img src="./img/instag.png" alt="Instagram"></a>
       <a href="#"><img src="./img/twitter.png" alt="Twitter"></a>
       <a href="#"><img src="./img/youtube.png" alt="YouTube"></a>
@@ -111,11 +111,12 @@
   <!-- Products Section -->
   <div class="products">
     <h1>Products</h1>
-
     <div class="container">
-      <div class="filter">
-        <div class="main-categories">
-          <ul>
+      <div class="sidebar">
+        <div class="filter">
+          <div class="main-categories">
+            <h5>Main Categories</h5   >
+            <ul>
               <li onclick="filterBrand('Evo')">Evo</li>
               <li onclick="filterBrand('Arai')">Arai</li>
               <li onclick="filterBrand('Sec')">Sec</li>
@@ -123,33 +124,33 @@
               <li onclick="filterBrand('Ls2')">Ls2</li>
               <li onclick="filterBrand('Hjc')">Hjc</li>
               <li onclick="filterBrand('Agv')">Agv</li>
-          </ul>
-      </div>
-        <div class="categories">
-          <ul>
-            <li onclick="allProducts()">All Products/</li>
-            <li onclick="filterProduct('Full-face')">Full-Face Helmet/</li>
-            <li onclick="filterProduct('Half-face')">Half-face helmet/</li>
-            <li onclick="filterProduct('Off-Road')">Off-Road Helmet/</li>
-            <li onclick="filterProduct('Accessories')">Accessories</li>
-          </ul>
+            </ul>
+          </div>
+          <div class="categories">
+            <h5>Product Categories</h5>
+            <ul>
+              <li onclick="allProducts()">All Products</li>
+              <li onclick="filterProduct('Full-face')">Full-Face Helmet</li>
+              <li onclick="filterProduct('Half-face')">Half-face helmet</li>
+              <li onclick="filterProduct('Off-Road')">Off-Road Helmet</li>
+              <li onclick="filterProduct('Accessories')">Accessories</li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <div id="productBox" class="productbox">
-        <div class="box" data-category="Full-face" data-brand="Evo"></div>
-        <div class="content">
-
-          <div id="app"></div>
-
+    
+      <div class="product-images">
+        <div id="productBox" class="productbox">
+          <div class="content">
+            <div id="app"></div>
+          </div>
         </div>
-        </div>
+        <!-- Add more product boxes as needed -->
       </div>
     </div>
-  </div>
+    
 
-  <button onclick="prevPage()">Previous</button>
-<button onclick="nextPage()">Next</button>
+  
 
   <div class="modal fade" id="productDetailModal" tabindex="-1" aria-labelledby="productDetailModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

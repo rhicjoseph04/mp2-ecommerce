@@ -26,76 +26,38 @@ function updateOrderSummary() {
     });
 }
 
+// Function to add a product to the cart
 function addToCart(product) {
-  // Parse the product JSON if it's a string
-  if (typeof product === 'string') {
-    product = JSON.parse(product);
-  }
-
-  // Check if the product is already in the cart
-  const existingProduct = cart.find((item) => item.id === product.id);
-
-  if (existingProduct) {
-    // If the product is already in the cart, increase its quantity
-    existingProduct.qty += 1;
-  } else {
-    // If the product is not in the cart, add it
-    product.qty = 1;
-    cart.push(product);
-  }
-
-  // Update cart length
-  cartLength = cart.reduce((total, item) => total + item.qty, 0);
-
-  // Update the cart length in the HTML
-  document.getElementById('cart-length').innerText = cartLength;
-
-  // Update the cart UI
-  updateCartDisplay();
-
-  // Show a modal or message to confirm that the product was added to the cart
-  showModal('Product Added to Cart', `${product.Title} has been added to your cart.`);
+  // Implement your logic to add the product to the cart
+  // For now, let's just log a message
+  console.log('Product added to cart:', product);
 }
 
-
-// Other functions like calculateTotalPrice, incQty, decQty, and removeProduct remain the same.
-
-
-
-function viewProduct(productId) {
-  alert('View product details. Product ID: ' + productId);
-}
-
-// Sample product data (replace with your actual data)
-const productData = {
-  title: "Product 1",
-  category: "Category 1",
-  price: "$100",
-  image: "product1.jpg"
-};
+// Function to view product details
 function viewProduct(product) {
-  // Parse the product JSON if it's a string
-  if (typeof product === 'string') {
-      product = JSON.parse(product);
-  }
-
-  const modalImage = document.getElementById('modalImage');
-  const modalDetail = document.getElementById('modalDetail');
-
-  // Set the modal image and details based on the clicked product
-  modalImage.src = product.Img;
-  modalImage.alt = product.Title;
-
-  modalDetail.innerHTML = `
-      <p>${product.Cat}</p>
-      <h3>${product.Title}</h3>
-      <h4>${product.Price}</h4>
-  `;
-
-  // Show the modal
-  const productModal = document.getElementById('productModal');
-  productModal.style.display = 'block';
+  // Implement your logic to view the product details
+  // For now, let's just log a message
+  console.log('Viewing product:', product);
 }
+
+// Event listener for adding to cart
+document.querySelectorAll('.add-to-cart').forEach(button => {
+  button.addEventListener('click', () => {
+      const product = JSON.parse(button.dataset.product);
+      addToCart(product);
+  });
+});
+
+// Event listener for viewing product
+document.querySelectorAll('.view-product').forEach(button => {
+  button.addEventListener('click', () => {
+      const product = JSON.parse(button.dataset.product);
+      viewProduct(product);
+  });
+});
+
+
+
 
 function closeModal() {
   const modal = document.getElementById("productModal");

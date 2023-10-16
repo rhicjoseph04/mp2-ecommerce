@@ -29,7 +29,16 @@
 </head>
 
 <body>
+    
+    <div id="fb-root"></div>
 
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "161937536984374");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
    <!-- Your SDK code -->
    <script>
     window.fbAsyncInit = function () {
@@ -48,7 +57,6 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 </script>
-
 
 <div class="free">
     <p class="journey-text"><i class="fa-solid fa-motorcycle larger-icon"></i>Your Journey Awaits with <span
@@ -91,6 +99,7 @@
                         <i class="fas fa-user"></i>
                     </div>
                 </div>
+
                 <div class="login-content">
                     <button class="btn btn-primary">Login</button>
                     <button class="btn btn-secondary">Sign Up</button>

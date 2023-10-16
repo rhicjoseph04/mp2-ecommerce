@@ -1,13 +1,16 @@
-body {
+body,html {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   margin: 0;
    padding: 0;
    border: none;
    background: radial-gradient(circle, #808080, #000000);
   margin-top:0;
   height: 100%;
+  margin-right:0;
+  margin-left:0;
 
 }
+
+
 
 .free {
    background: black;
@@ -236,6 +239,8 @@ body {
 .social-icons a img {
   width: 23px;
   height: 23px;
+  padding:10px;
+
 
 }
 
@@ -330,8 +335,6 @@ body {
    }
 }
 
-
-
   
 /* Styles for the main product container */
 .products {
@@ -339,21 +342,26 @@ body {
   color:white;
   background: radial-gradient(circle, #808080, #000000);
   text-align: center;
+  margin-right:0;
+  margin-left:0;
 
 }
 
 /* Styles for the filter section */
 .products .categories {
- padding: 0;
+  padding: 0;
   margin-bottom: 20px;
-  color:white;
-  display:absolute;
+  color: white;
+  display: flex;
   justify-content: center;
-  text-align:center;
+  text-align: center;
+  font-size: 30px;
+  margin-right:0;
+  margin-left:0;
 }
 
 .products h1 {
-  font-size:30px;
+  font-size: 30px;
   margin-bottom: 5px;
   text-align: center;
   background: linear-gradient(45deg, #ffa31a, #ff523b);
@@ -361,42 +369,34 @@ body {
   transform: skewX(-10deg); /* Add a skew effect */
   justify-content: center;
   align-items: center;
-  display:inline-block;
-
+  display: inline-block;
 }
 
 .main-categories li {
   cursor: pointer;
-  padding: 10px 10px;
-  font-size:25px;
-  display:flex;
-  display:inline-block;
-  justify-content: space-between;
+  padding: 10px;
+  font-size: 20px;
+  list-style: none;
+  margin: 5px 0;
 }
 
 .main-categories li:hover {
-  color: #ffa31a; /* Change color on hover as per your design */
+  color: #ffa31a;
 }
 
-
-.products  .categories ul {
+.products .categories ul {
   list-style-type: none;
   padding: 0;
-  display: inline-block;
-  align-items: center;
+  margin: 0;
 }
 
 .products .categories li {
   cursor: pointer;
-  padding: 10px 10px;
-  font-size:25px;
-  display:flex;
-  display:inline-block;
-  justify-content: space-between;
 }
 
 .products .categories li:hover {
-  color: #ffa31a; /* Change color on hover as per your design */
+  color: #ffa31a;
+  font-size: 20px;
 }
 
 /* Styles for product boxes */
@@ -416,11 +416,127 @@ body {
   background: radial-gradient(circle, #575656, #000000);
   padding:10px 10px;
   display:inline-block;
+  margin-right:0;
+  margin-left:0;
 }
 
 .products .box img {
   max-width: 100%;
+  margin-right:0;
+  margin-left:0;
 }
+
+
+.products .container {
+  display: flex;
+  margin-right:0;
+  margin-left:0;
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: transparent;
+  padding: 5px 5px;
+  width: 150px;
+  margin-right:0;
+  margin-left:0;
+  display:absolute;
+}
+
+.sidebar h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.sidebar ul li:hover {
+  color: #3498db;
+  font-weight: bold;
+}
+
+/* Product images layout */
+.product-images {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column; /* Change to column for 4 boxes in a column */
+}
+
+.product-images .productbox {
+  width: 100%; /* Adjust the width as needed */
+  margin: 10px 0; /* Adjust the margin as needed */
+}
+
+
+/* Add custom CSS to style the product boxes, icons, and buttons */
+
+/* Style for the icons and buttons */
+/* Style for the View button */
+.view-icon {
+  color:  #FFA31A; /* Change the color as needed */
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s ease;
+  background-color: transparent;
+  padding:5px 5px;
+}
+
+/* Style for the Add to Cart button */
+.cart-icon {
+  color:  #FFA31A; /* Change the color as needed */
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s ease;
+  background-color: transparent;
+  padding:5px 5px;
+}
+
+/* Style for the Heart button */
+.heart-icon {
+  color:  #FFA31A;; /* Change the color as needed */
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s ease;
+  background-color: transparent;
+  padding:5px 5px;
+}
+
+/* Additional hover effect for the box image */
+.box .img_box img {
+  transition: opacity 0.3s;
+
+}
+
+.box:hover .img_box img {
+  opacity: 0.8;
+}
+
+/* Show the icons when hovering over the box */
+.box:hover .icons .view-icon,
+.box:hover .icons .cart-icon,
+.box:hover .icons .heart-icon {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* Bootstrap Modal custom styling */
+.modal-content {
+  background-color: #f8f9fa; /* Change the modal content background color as needed */
+  border: 1px solid #ccc;
+}
+
 
 /* Styles for product details */
 .modal-content .detail {
