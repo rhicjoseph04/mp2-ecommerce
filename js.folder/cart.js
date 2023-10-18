@@ -13,7 +13,6 @@ closeShopping.addEventListener('click', () => {
     body.classList.remove('active');
 });
 
-
 let products = 
 
 
@@ -144,7 +143,6 @@ let products =
 ]
 
 
-
 // Function to calculate the total price in PHP
 function calculateTotalPHP() {
     let totalPHP = 0;
@@ -243,9 +241,6 @@ function addToCart(key) {
 
 
 
-
-
-
 function removeFromCart(key) {
     const product = products.find(item => item.id === key);
     if (listCards[product.id]) {
@@ -267,7 +262,6 @@ function removeFromCart(key) {
         }
     });
 }
-
 
 
 function reloadCart() {
@@ -340,9 +334,6 @@ function proceedToCheckout() {
     }
 }
 
-
-
-
 function saveCartToSessionStorage() {
     sessionStorage.setItem('cart', JSON.stringify(listCards));
 }
@@ -365,5 +356,4 @@ loadCartFromSessionStorage();
 
 
 window.addEventListener('unload', saveCartToSessionStorage);
-
 

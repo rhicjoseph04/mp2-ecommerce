@@ -5,18 +5,8 @@ body {
   background: radial-gradient(circle, #808080, #000000);
   margin: 0;
   padding: 0;
-
 }
 
-.container {
-  max-width: 1200px;
-  width: 100%;
-  margin: auto;
-  transition: 0.5s;
-  padding-right:10px;
-  padding-left:10px;
-  box-sizing: border-box; 
-}
 .free {
    background: black;
    padding: 10px;
@@ -100,7 +90,7 @@ body {
 
 .navbar .nav ul li {
   display: inline-block;
-  margin-right: 10px;
+
   font-size: 14px;
 }
 
@@ -325,17 +315,14 @@ body {
 }
 
 .mb-4 {
-  background: linear-gradient(45deg, #ffa31a, #ff523b);
+  background: #FFA31A;
   width: 100%;
-  transform: skewX(-10deg); /* Add a skew effect */
-  text-align: center;
+  transform: skewX(-10deg); 
 }
-
 #carousel-container {
-  width: 100%; /* Adjust the width as needed */
-  max-width: auto; /* Maximum width */
-  margin: auto; /* Center the carousel */
-  height: 80vh; /* Adjust the maximum height as needed */
+  width: 100%; 
+  margin: auto; 
+  height: 80vh; 
   overflow: hidden;
   position: relative;
   display: flex;
@@ -359,11 +346,11 @@ body {
 
 .carousel-slide img {
   width: 100%;
-  height: 800px;; /* Maintain aspect ratio */
-  max-height: 100%; /* Adjust image height */
-  object-fit: cover; /* Maintain aspect ratio and cover container */
-  filter: blur(10px); /* Initially blurred */
-  transition: filter 0.8s ease-in-out; /* Transition for the blur effect */
+  height: 800px; 
+  max-height: 100%; 
+  object-fit: cover; 
+  filter: blur(10px); 
+  transition: filter 0.8s ease-in-out; 
  padding-top:20px;
 }
 
@@ -375,22 +362,20 @@ body {
   font-size: 26px;
   font-weight: bold;
   padding: 10px;
-  background: linear-gradient(45deg, #ffa31a, #ff523b);
+  background: #FFA31A;
   width: 100%;
   text-align: center;
   transition: filter 0.8s ease-in-out; /* Transition for the blur effect */
   position: absolute;
   bottom: 0;
   color: white;
-  z-index: 1; /* Set a higher z-index to display the caption in front */
-  transform: skewX(-10deg); /* Add a skew effect */
+  z-index: 1; 
+  transform: skewX(-10deg); 
 }
 
 .caption:hover {
-  filter: blur(0); /* Remove blur on hover */
+  filter: blur(0); 
 }
-
-
 
 @media (max-width: 768px) {
   .caption {
@@ -398,30 +383,38 @@ body {
   }
 }
 
-.container-fluid {
+.card-slider-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
 }
 
-.row {
+.card-slider {
   display: flex;
-  justify-content: center;
+  flex-wrap: nowrap;
+  scroll-snap-type: x mandatory;
 }
 
 .card {
-  width: 600px;
-  max-width: 400px;
-  margin: 0 10px; /* Adjust the margin to control the space between cards */
-  display:inline-block;
-  margin-left:20px;
-  margin-right:20px;
+  min-width: 300px;
+  scroll-snap-align: start;
+  border: 1px solid #ccc; /* Add border for better visibility */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: filter 0.5s ease-in-out;
+  padding:10px 10px;
 }
 
-.card-img-top {
-  width: 400px;
-  height: 300px; /* Set the desired height */
-  border: 2px solid #ddd; /* Add a border to separate images */
+.card img {
+  width: 100%;
+  height: auto;
+  transition: filter 0.5s ease-in-out;
+  filter: blur(5px); /* Initially blurred */
+}
+
+.card:hover {
+  filter: blur(0); /* Sharp on hover */
 }
 
 .advertising-title {
@@ -439,7 +432,7 @@ body {
   display: block;
   height: 2px;
   width: 50%;
-  background: yellow;
+  background: #FFA31A;
   margin: 0 auto;
   margin-top: 10px;
 }
@@ -457,10 +450,10 @@ body {
   display: block;
   position: absolute;
   height: 100%;
-  width: 50%;
+  width: 30%;
   top: 0;
   left: 50%;
-  background: yellow;
+  background: #FFA31A;
   z-index: -1;
   transform: skewX(-10deg);
 

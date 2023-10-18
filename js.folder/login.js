@@ -59,6 +59,7 @@ function resetPassword(event) {
 
   const resetEmail = $("#resetPasswordEmail").val();
 
+
   Swal.fire({
     title: "Password Reset Email Sent",
     text: "Password reset email sent to: " + resetEmail,
@@ -144,7 +145,7 @@ function showModal(title, text, alertType) {
     icon: alertType,
     width: 'auto', 
     showConfirmButton: false,
-    timer: 5000 
+    timer: 5000
   });
 }
 

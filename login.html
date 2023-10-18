@@ -135,20 +135,18 @@
                     </div>
                     <div class="d-flex justify-content-center mb-3">
                         <div class="social-login">
-                            
-                            <button type="button" class="btn btn-primary btn-hover custom-button" style="width: 100%;">
+                            <button onclick="loginWithFacebook()" class="btn btn-primary btn-hover custom-button" style="width: 100%;">
                                 <i class="fab fa-facebook icon-color"></i> Facebook
                             </button>
-                            <button type="button" class="btn btn-outline-danger btn-hover custom-button" style="width: 100%;">
+                            <button onclick="loginWithGoogle()" class="btn btn-outline-danger btn-hover custom-button" style="width: 100%;">
                                 <i class="fab fa-google icon-color"></i> Google
                             </button>
-                            <button type="button" class="btn btn-outline-info btn-hover custom-button" style="width: 100%;">
+                            <button onclick="loginWithMicrosoft()" class="btn btn-outline-info btn-hover custom-button" style="width: 100%;">
                                 <i class="fab fa-microsoft icon-color"></i> Microsoft
                             </button>
-                            
-                            
                         </div>
                     </div>
+                
                     <div class="or-separator text-center mb-3">
                         <span>or</span>
                     </div>
@@ -173,8 +171,6 @@
                         <a href="#" id="forgotPasswordLink" onclick="toggleResetPasswordForm()">Did you forget your password?</a>
                         </form>
                         
-
-
                     <form id="resetPasswordForm" style="display: none;" onsubmit="resetPassword(event)">
                         <div class="form-group">
                           <div class="input-icon">
@@ -186,7 +182,7 @@
                       </form>
                       
 
-                    <br>
+                
                     <!-- Signup Form -->
                     <form id="signupForm" onsubmit="signup(event)">
                         <div class="form-group">

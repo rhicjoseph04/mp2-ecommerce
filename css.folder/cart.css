@@ -858,3 +858,188 @@ header .shopping span {
   }
 }
 
+.swal2-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  
+  .card {
+    width: 50%;
+    margin: auto;
+  }
+ 
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+/* Additional styles for the shopping icon */
+header .shopping {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header .shopping img {
+  width: 40px;
+}
+
+header .shopping span {
+  background-color: red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  top: -5px;
+  left: 80%;
+  padding: 3px 10px;
+}
+
+
+
+  /* start of footer  */
+
+  .footer {
+      display:inline-block ;
+      justify-content: center;
+      align-items: center;
+      background-color: #0e0e0e;
+      color: white;
+      padding: 20px;
+      position:flex;
+      bottom: 0;
+      width:100%;
+      padding-top:100px;
+    }
+  
+  
+  .footer .icon i {
+    background: linear-gradient(90deg, white 50%, #FFA500 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.3s ease; 
+    font-size: 30px;
+  }
+  
+  .footer .icon i:hover {
+    background: linear-gradient(90deg, #FFA500 50%, white 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .footer .detail, .account, .page, .payment {
+    margin-bottom: 20px; 
+  }
+  
+  .footer  .detail p {
+    margin: 0; 
+  }
+  
+  .footer  .account h5, .page h5, .payment h5 {
+    margin-bottom: 10px;
+    color:	#808080;
+  }
+  
+ 
+.footer .account ul, .footer .page ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  }
+  
+  .footer .account li, .page li {
+    margin-bottom: 5px; /* Adjust margin as needed */
+  }
+  
+  .footer  .account li a, .page li a {
+    color:#ffa500;
+    text-decoration: none;
+  }
+  
+
+  .footer .payment-icon {
+    width: 40px;
+    margin-right: 10px;
+  }
+  
+  /* end of footer  */
+
+  /* Ensure proper alignment of footer with product images */
+@media (max-width: 1200px) {
+  footer {
+    max-width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+  /* Existing styles... */
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  /* Navbar adjustments for smaller screens */
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar .nav {
+    display: none;
+  }
+
+  .navbar .user-cart-icons {
+    margin-left: auto;
+  }
+
+  /* Adjust logo text size */
+  .logo-text {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Further adjustments for smaller screens */
+  .logo-text {
+    font-size: 18px;
+  }
+
+  /* Adjust social icons size for smaller screens */
+  .social-icons a img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  /* Additional adjustments for even smaller screens */
+  .card {
+    width: 140px; /* Adjust card width */
+  }
+}
+
+/* Adjustments for checkout and cart list */
+@media (max-width: 992px) {
+  .card.checkout {
+    width: 100%; /* Adjust card width */
+  }
+
+  .list {
+    grid-template-columns: repeat(2, 1fr); /* Adjust grid for list */
+  }
+}
+@media (max-width: 768px) {
+  .list .item {
+    width: 100%; /* Make items full width on smaller screens */
+  }
+}

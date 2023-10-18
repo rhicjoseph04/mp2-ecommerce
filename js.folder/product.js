@@ -67,6 +67,7 @@
 
 // }
 
+
 const productDetail = [
     
         {
@@ -74,205 +75,112 @@ const productDetail = [
             Title:"TT COURSE – RADIANCE",
             Cat: 'Full-face',
             Price: '150',
-            Img: './img/kythelmet1.png'
+            Img: '../img/kythelmet1.png'
         },
         {
             id:2,
             Title:"NF-R – Hyper Fluo Yellow",
             Cat: 'Full-face',
             Price: '185',
-            Img: './img/kythyperfluo.png'
+            Img: '../img/kythyperfluo.png'
         },
         {
             id:3,
             Title:"NF-R STEEL FLOWER RED",
             Cat: 'Full-face',
             Price: '150',
-            Img: './img/kythelmet7.png'
+            Img: '../img/kythelmet7.png'
         },
         {
             id:4,
             Title:"KR-1 – Plain Matt Black",
             Cat: 'Full-face',
             Price: '280',
-            Img: './img/kytplainmatt.png'
+            Img: '../img/kytplainmatt.png'
         },
         {
             id:5,
             Title:"NF-J – BROC PARKES REPLICA",
             Cat: 'Half-face',
             Price: '135',
-            Img: './img/kythelmet9.png'
+            Img: '../img/kythelmet9.png'
         },
         {
             id:6,
             Title:"NF-J – DENNIS FOGGIA LEOPARD REPLICA",
             Cat: 'Half-face',
             Price: '135',
-            Img: './img/kythelmet10.png'
+            Img: '../img/kythelmet10.png'
         },
         {
             id:7,
             Title:"NF-J – ESPARGARO REPLICA 2020",
             Cat: 'Half-face',
             Price: '135',
-            Img: './img/kythelmet11.png'
+            Img: '../img/kythelmet11.png'
         },
         {
             id:8,
             Title:"NF-J – JAUME MASIA REPLICA",
             Cat: 'Half-face',
             Price: '135',
-            Img: './img/kytJAUME-MASIA-REPLICA1.png'
+            Img: '../img/kytJAUME-MASIA-REPLICA1.png'
         },
         {
             id:9,
             Title:"NF-J – RADAR AQUA BLUE",
             Cat: 'Half-face',
             Price: '135',
-            Img: './img/kythelmet13.png'
+            Img: '../img/kythelmet13.png'
         },
         {
             id:10,
             Title:"Strike Eagle – Potion Yellow",
             Cat: 'Off-Road',
             Price: '225',
-            Img: './img/kytpotion.png'
+            Img: '../img/kytpotion.png'
         },
         {
             id:11,
             Title:"Strike Eagle – Simpson Replica Orange",
             Cat: 'Off-Road',
             Price: '225',
-            Img: './img/kythelmet15.png'
+            Img: '../img/kythelmet15.png'
         },
         {
             id:12,
             Title:"Strike Eagle – Web Matt White/Blue",
             Cat: 'Off-Road',
             Price: '225',
-            Img: './img/kythelmet16.png'
+            Img: '../img/kythelmet16.png'
         },
         {
             id:13,
             Title:"TT COURSE – Photochromic Visor",
             Cat: 'Accessories',
             Price: '45',
-            Img: './img/kytacceso.png'
+            Img: '../img/kytacceso.png'
         },
         {
             id:14,
             Title:"YG DESIGN – Wireless Charging Phone Mount",
             Cat: 'Accessories',
             Price: '40',
-            Img: './img/kythelmetaccesso2.jpeg'
+            Img: '../img/kythelmetaccesso2.jpeg'
         },
            
-        
-     
-        {
-            id:1,
-            Title:"TT COURSE – RADIANCE",
-            Cat: 'Full-face',
-            Price: '150',
-            Img: './img/kythelmet1.png'
-        },
-        {
-            id:2,
-            Title:"NF-R – Hyper Fluo Yellow",
-            Cat: 'Full-face',
-            Price: '185',
-            Img: './img/kythyperfluo.png'
-        },
-        {
-            id:3,
-            Title:"NF-R STEEL FLOWER RED",
-            Cat: 'Full-face',
-            Price: '150',
-            Img: './img/kythelmet7.png'
-        },
-        {
-            id:4,
-            Title:"KR-1 – Plain Matt Black",
-            Cat: 'Full-face',
-            Price: '280',
-            Img: './img/kytplainmatt.png'
-        },
-        {
-            id:5,
-            Title:"NF-J – BROC PARKES REPLICA",
-            Cat: 'Half-face',
-            Price: '135',
-            Img: './img/kythelmet9.png'
-        },
-        {
-            id:6,
-            Title:"NF-J – DENNIS FOGGIA LEOPARD REPLICA",
-            Cat: 'Half-face',
-            Price: '135',
-            Img: './img/kythelmet10.png'
-        },
-        {
-            id:7,
-            Title:"NF-J – ESPARGARO REPLICA 2020",
-            Cat: 'Half-face',
-            Price: '135',
-            Img: './img/kythelmet11.png'
-        },
-        {
-            id:8,
-            Title:"NF-J – JAUME MASIA REPLICA",
-            Cat: 'Half-face',
-            Price: '135',
-            Img: './img/kytJAUME-MASIA-REPLICA1.png'
-        },
-        {
-            id:9,
-            Title:"NF-J – RADAR AQUA BLUE",
-            Cat: 'Half-face',
-            Price: '135',
-            Img: './img/kythelmet13.png'
-        },
-        {
-            id:10,
-            Title:"Strike Eagle – Potion Yellow",
-            Cat: 'Off-Road',
-            Price: '225',
-            Img: './img/kytpotion.png'
-        },
-        {
-            id:11,
-            Title:"Strike Eagle – Simpson Replica Orange",
-            Cat: 'Off-Road',
-            Price: '225',
-            Img: './img/kythelmet15.png'
-        },
-        {
-            id:12,
-            Title:"Strike Eagle – Web Matt White/Blue",
-            Cat: 'Off-Road',
-            Price: '225',
-            Img: './img/kythelmet16.png'
-        },
-        {
-            id:13,
-            Title:"TT COURSE – Photochromic Visor",
-            Cat: 'Accessories',
-            Price: '45',
-            Img: './img/kytacceso.png'
-        },
-        {
-            id:14,
-            Title:"YG DESIGN – Wireless Charging Phone Mount",
-            Cat: 'Accessories',
-            Price: '40',
-            Img: './img/kythelmetaccesso2.jpeg'
-        },
-           
-           
-    
     
 ];
+
+let cart = [];
+
+function calculateTotalPHP() {
+    let totalPHP = 0;
+    products.forEach(product => {
+      totalPHP += product.pricePHP * product.quantity;
+    });
+    return totalPHP;
+  }
 
 document.addEventListener('DOMContentLoaded', () => {
     const productsContainer = document.getElementById('app');
@@ -298,52 +206,38 @@ document.addEventListener('DOMContentLoaded', () => {
       cartIcon.classList.add('icon', 'cart-icon');
       cartIcon.innerHTML = '<i class="fas fa-shopping-cart"></i>';
       cartIcon.addEventListener('click', () => {
-        addToCart(product);
+        addToCartModal(product);
         updateCartCount();
         alert('Product added to cart!');
-      });
-      
-      function addToCart(product) {
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        cart.push(product);
-        localStorage.setItem('cart', JSON.stringify(cart));
-      }
-      
-      function updateCartCount() {
-        const cartCountElement = document.getElementById('cartCount');
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        cartCountElement.textContent = cart.length;
-      }
-      
+    });
 
-      const viewIcon = document.createElement('button');
-      viewIcon.classList.add('icon', 'view-icon');
-      viewIcon.innerHTML = '<i class="far fa-eye"></i>';
-      viewIcon.addEventListener('click', () => {
+    const viewIcon = document.createElement('button');
+    viewIcon.classList.add('icon', 'view-icon');
+    viewIcon.innerHTML = '<i class="far fa-eye"></i>';
+    viewIcon.addEventListener('click', () => {
         openProductDetail(product);
-      });
+    });
 
-const heartIcon = document.createElement('button');
-heartIcon.classList.add('icon', 'heart-icon');
-heartIcon.innerHTML = '<i class="far fa-heart"></i>';
-let isHearted = false;  // Flag to track if hearted
-
-heartIcon.addEventListener('click', () => {
-  if (isHearted) {
-    // If already hearted, remove the highlight
+    const heartIcon = document.createElement('button');
+    heartIcon.classList.add('icon', 'heart-icon');
     heartIcon.innerHTML = '<i class="far fa-heart"></i>';
-    isHearted = false;
-  } else {
-    // If not hearted, add the highlight
-    heartIcon.innerHTML = '<i class="fas fa-heart"></i>';
-    isHearted = true;
-  }
-});
+    let isHearted = false;
 
-icons.appendChild(cartIcon);
-icons.appendChild(viewIcon);
-icons.appendChild(heartIcon);
-imgBox.appendChild(icons);
+    heartIcon.addEventListener('click', () => {
+        if (isHearted) {
+            heartIcon.innerHTML = '<i class="far fa-heart"></i>';
+            isHearted = false;
+        } else {
+            heartIcon.innerHTML = '<i class="fas fa-heart"></i>';
+            isHearted = true;
+        }
+    });
+
+    icons.appendChild(cartIcon);
+    icons.appendChild(viewIcon);
+    icons.appendChild(heartIcon);
+    imgBox.appendChild(icons);
+
       productBox.appendChild(imgBox);
 
       const detail = document.createElement('div');
@@ -374,13 +268,31 @@ imgBox.appendChild(icons);
       productsContainer.appendChild(productBox);
     });
 
-    allProducts(); // Display all products initially
+    function addToCartModal(product) {
+        console.log('Added to cart:', product.Title);
+    }
+    
+
+    allProducts();
   });
+
+  function renderProduct(product) {
+    const productBox = document.createElement("div");
+    // ... (rest of the product rendering code)
+
+    productBox.addEventListener("click", e => {
+      if (!e.target.classList.contains("icon")) {
+        openProductDetail(product);
+      }
+    });
+
+    productsContainer.appendChild(productBox);
+  }
 
   function openProductDetail(product) {
     const productDetailContent = document.getElementById('productDetailContent');
 
-    // Set up the product detail content based on the selected product
+
     productDetailContent.innerHTML = `
         <h2>${product.Title}</h2>
         <p>Category: ${product.Cat}</p>
@@ -391,19 +303,94 @@ imgBox.appendChild(icons);
     $('#productDetailModal').modal('show');  // Show the modal
   }
 
-  function addToCart(product) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.push(product);
-    localStorage.setItem('cart', JSON.stringify(cart));
-    alert('Product added to cart!');
-    updateCartCount();  // Update the cart count
-    renderCart();       // Update the cart display
+  function renderCart() {
+    // Function to render cart
+    const cartContent = document.getElementById("cartContent");
+    // ... (rest of the cart rendering code)
   }
 
-  function updateCartCount() {
-    const cartCountElement = document.getElementById('cartCount');
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cartCountElement.textContent = cart.length;
+  // ... (other product-related functions)
+
+
+
+  function addToCart(product) {
+    let existingItem = cart.find(x => x.id === product.id);
+  
+    if (existingItem) {
+      existingItem.qty += 1;
+    } else {
+      const newItem = { ...product, qty: 1 };
+      cart.push(newItem);
+    }
+  
+    updateCartUI();
+    alert("Product added to cart!");
+  }
+
+  function updateCartUI() {
+    const cartContent = document.getElementById('cartContent');
+    cartContent.innerHTML = ''; // Clear previous content
+  
+    cart.forEach(item => {
+      const cartItemDiv = document.createElement('div');
+      cartItemDiv.classList.add('cart_item');
+  
+      cartItemDiv.innerHTML = `
+        <div class="img_box">
+          <img src="${item.Img}" alt="${item.Title}">
+        </div>
+        <div class="detail">
+          <div class="info">
+            <h4>${item.Cat}</h4>
+            <h3>${item.Title}</h3>
+            <p>Price: ₱${parseFloat(item.Price) * 50.0}</p>
+            <div class="qty">
+              <button class="incqty" onclick="incQty(${item.id})">+</button>
+              <input type="text" value="${item.qty}" disabled>
+              <button class="decqty" onclick="decQty(${item.id})">-</button>
+            </div>
+            <h4 class="subtotal">Subtotal: ₱${parseFloat(item.Price) * item.qty * 50.0}</h4>
+          </div>
+          <div class="close">
+            <button onclick="removeProduct(${item.id})">Remove</button>
+          </div>
+        </div>
+      `;
+  
+      cartContent.appendChild(cartItemDiv);
+    });
+  
+    const totalPriceElement = document.querySelector(".totalprice");
+    totalPriceElement.textContent = `Total: ₱${calculateTotalPHP()}`;
+  }
+
+  function calculateTotalPHP() {
+    let totalPHP = 0;
+    cart.forEach(item => {
+      totalPHP += parseFloat(item.Price) * item.qty * 50.0;
+    });
+    return totalPHP.toFixed(2);
+  }
+  
+  function incQty(itemId) {
+    const item = cart.find(x => x.id === itemId);
+    if (item) {
+      item.qty += 1;
+      updateCartUI();
+    }
+  }
+  
+  function decQty(itemId) {
+    const item = cart.find(x => x.id === itemId);
+    if (item && item.qty > 0) {
+      item.qty -= 1;
+      updateCartUI();
+    }
+  }
+  
+  function removeProduct(itemId) {
+    cart = cart.filter(x => x.id !== itemId);
+    updateCartUI();
   }
 
   function allProducts() {
@@ -440,9 +427,14 @@ function filterProduct(category) {
 filterProduct('Full-face'); 
 
 
-   function openModal() {
-    document.getElementById('productDetailModal').style.display = 'block';
-  }
+// Event listener for the "Add to Cart" button in the modal
+document.getElementById('productDetailModal').addEventListener('click', (event) => {
+    if (event.target.classList.contains('btn-primary')) {
+        // Add to Cart button was clicked
+        addToCart(selectedProductId);
+        $('#productDetailModal').modal('hide'); // Close the modal
+    }
+});
 
 
 function closeModal() {
@@ -454,109 +446,31 @@ function closeModal() {
     console.log('Added to cart:', product.Title);
 }
 
-
-   
     const category = 'All Products'; 
 const filteredProductBoxes = document.querySelectorAll(`.productbox .box[data-category="${category}"]`);
 filteredProductBoxes.forEach(box => {
     box.style.display = 'inline-block';
 });
 
-
     filteredProductBoxes.forEach(box => {
         box.style.display = 'inline-block';
       });
 
+    
+      let openShopping = document.querySelector('.shopping');
+      let closeShopping = document.querySelector('.closeShopping');
+      
+      openShopping.addEventListener('click', () => {
+          body.classList.add('active');
+      });
+      closeShopping.addEventListener('click', () => {
+          body.classList.remove('active');
+      });
 
-
-      const itemsPerPage = 4; // Number of items to display per page
-      let currentPage = 1;
-      
-      function paginateProductBoxes() {
-          const startIndex = (currentPage - 1) * itemsPerPage;
-          const endIndex = startIndex + itemsPerPage;
-          const productsToDisplay = productDetail.slice(startIndex, endIndex);
-      
-          const productBox = document.getElementById('productBox');
-          productBox.innerHTML = ''; // Clear previous content
-      
-          productsToDisplay.forEach(product => {
-              const productBoxItem = document.createElement('div');
-              productBoxItem.classList.add('box');
-              productBoxItem.setAttribute('data-category', product.Cat);
-      
-              // Create elements for product details (image, title, category, price)
-              const imgBox = document.createElement('div');
-              imgBox.classList.add('img_box');
-      
-              const productImage = document.createElement('img');
-              productImage.src = product.Img;
-              productImage.alt = product.Title;
-      
-              imgBox.appendChild(productImage);
-      
-              const icon = document.createElement('div');
-              icon.classList.add('icon');
-      
-              const cartIcon = document.createElement('li');
-              cartIcon.innerHTML = '<i class="fas fa-shopping-cart"></i>';
-      
-              // Add event listener for cart icon
-              cartIcon.addEventListener('click', () => {
-                  console.log('Clicked cart icon for product:', product);
-              });
-      
-              icon.appendChild(cartIcon);
-              imgBox.appendChild(icon);
-              productBoxItem.appendChild(imgBox);
-      
-              const detail = document.createElement('div');
-              detail.classList.add('detail');
-      
-              const category = document.createElement('p');
-              category.textContent = product.Cat;
-      
-              const title = document.createElement('h3');
-              title.textContent = product.Title;
-      
-              const price = document.createElement('h4');
-              price.textContent = `₱${parseFloat(product.Price) * 50.0}`;
-      
-              detail.appendChild(category);
-              detail.appendChild(title);
-              detail.appendChild(price);
-              productBoxItem.appendChild(detail);
-      
-              productBox.appendChild(productBoxItem);
-          });
-      }
-
-            // Get the pagination buttons
-const prevButton = document.getElementById('prevButton');
-const nextButton = document.getElementById('nextButton');
-
-// Add event listeners to the pagination buttons
-prevButton.addEventListener('click', prevPage);
-nextButton.addEventListener('click', nextPage);
-      
-      function nextPage() {
-          const maxPages = Math.ceil(productDetail.length / itemsPerPage);
-          if (currentPage < maxPages) {
-              currentPage++;
-              paginateProductBoxes();
-          }
-      }
-      
-      function prevPage() {
-          if (currentPage > 1) {
-              currentPage--;
-              paginateProductBoxes();
-          }
-      }
-      
-      // Call this function initially to display the first page of items
-      paginateProductBoxes();
+      // ... (existing code) ...
 
 
 
-      
+
+
+

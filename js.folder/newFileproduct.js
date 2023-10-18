@@ -21,9 +21,8 @@ function filterProduct(category) {
     });
 }
 
-filterProduct('Full-face');  // Example: Filtering by Full-face category initially
+filterProduct('Full-face');  
 
-// Handle modal close button
 const closeModalButton = document.getElementById('closeModalBtn');
 closeModalButton.addEventListener('click', () => {
     closeModal();

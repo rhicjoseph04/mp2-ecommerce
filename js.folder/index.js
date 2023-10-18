@@ -1,4 +1,50 @@
-// Function to view product details
+let items = document.querySelectorAll('.slider .item');
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let active = 3;
+
+function loadShow() {
+    let stt = 0;
+    items[active].style.transform = 'none';
+    items[active].style.zIndex = 1;
+    items[active].style.filter = 'blur(0)';
+    items[active].style.opacity = 1;
+
+    for (let i = 0; i < items.length; i++) {
+        if (i !== active) {
+            stt++;
+            let blurValue = stt > 2 ? 5 : 1 + stt; // Adjust blur based on position
+            items[i].style.transform = `translateX(${(i - active) * -120}px) scale(${1 - 0.2 * stt}) perspective(16px) rotateY(${(active - i) * -1}deg)`;
+            items[i].style.zIndex = -stt;
+            items[i].style.filter = `blur(${blurValue}px)`;
+            items[i].style.opacity = stt > 2 ? 0 : 0.6;
+        }
+    }
+}
+
+function nextSlide() {
+    active = (active + 1) % items.length;
+    loadShow();
+}
+
+function prevSlide() {
+    active = (active - 1 + items.length) % items.length;
+    loadShow();
+}
+
+next.onclick = nextSlide;
+prev.onclick = prevSlide;
+
+// Automatically advance slides every 1000 milliseconds (1 second)
+setInterval(nextSlide, 1000);
+
+// Initially show the first slide
+loadShow();
+
+
+
+
+
 function viewProduct(product) {
   console.log('Viewing product:', product);
   // Update the modal with product details
@@ -42,6 +88,22 @@ function showModal(title, content) {
 function closeModal() {
   $('#myModal').modal('hide');  // Hide Bootstrap modal
 }
+
+function loginWithFacebook() {
+  // Add your Facebook login logic here
+  console.log('Logging in with Facebook...');
+}
+
+function loginWithGoogle() {
+  // Add your Google login logic here
+  console.log('Logging in with Google...');
+}
+
+function loginWithMicrosoft() {
+  // Add your Microsoft login logic here
+  console.log('Logging in with Microsoft...');
+}
+
 
 
 
