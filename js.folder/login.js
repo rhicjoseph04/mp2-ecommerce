@@ -74,14 +74,13 @@ function login(event) {
   const email = $("#loginUsername").val();
   const loginPassword = $("#loginPassword").val();
 
-
   if (!isSignupSuccessful) {
     showModal("Signup Required", "Please sign up first before logging in.", "danger");
     return;
   }
 
   if (!validateEmail(email) || !validatePassword(loginPassword)) {
-    showModal("Invalid Email or Password", "Please enter valid email and password.", "danger");
+    showModal("Invalid Email or Password", "Please enter a valid email and password.", "danger");
     return;
   }
 
@@ -91,11 +90,16 @@ function login(event) {
     return;
   }
 
+  // Check if login is successful
+  // For simplicity, assuming login is always successful
+  // Replace this with actual login logic (e.g., AJAX request to server for authentication)
 
-  window.location.href = '../index.html';
+  // Redirect to cart.html after successful login
+  window.location.href = 'cart2.html';
 
   showModal("Login Successful", "Welcome! You can now freely use the checkout functionalities.", "success");
 }
+
 
 
 function signup(event) {

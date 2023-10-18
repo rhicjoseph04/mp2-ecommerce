@@ -17,7 +17,7 @@ let products =
 
 
 [
-       
+    
     {
         id:1,
         Title:"TT COURSE – RADIANCE",
@@ -157,7 +157,7 @@ function calculateTotalPHP() {
 let listCards = [];
 
 function initApp() {
-    products.forEach((value, key) => {
+    products.forEach((value) => {
       let newDiv = document.createElement('div');
       newDiv.classList.add('item');
       newDiv.innerHTML = `
@@ -172,6 +172,34 @@ function initApp() {
     });
 
 }
+
+function filterBrandMain(brand) {
+    const alllistcard = document.querySelectorAll('.listcard  .list');
+    alllistcard.forEach(card => {
+        const boxBrand = card.getAttribute('data-brand');
+        if (brand === 'All Brands' || boxBrand === brand) {
+            box.style.display = 'inline-block';
+        } else {
+            box.style.display = 'none';
+        }
+    });
+}
+
+function filterProduct(category) {
+    const alllistcard = document.querySelectorAll('.listcard .list');
+    alllistcard.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        if (category === 'All Products' || cardCategory === category) {
+            box.style.display = 'inline-block';
+        } else {
+            box.style.display = 'none';
+        }
+    });
+}
+
+filterProduct('Full-face'); 
+
+
 
 function cancelOrder() {
     // Clear the cart and session storage
@@ -192,56 +220,60 @@ function cancelOrder() {
 
 initApp();
 
-let isLoggedIn = false;  // Set this to true if the user is logged in
+let isLoggedIn = true;  // Set this to true if the user is logged in
 
 // Function to handle successful login
 function loginSuccess() {
     isLoggedIn = true;  // Update isLoggedIn to true upon successful login
     // You may want to redirect the user to the product page after successful login
-    window.location.href = 'product.html';
+    window.location.href = 'cart2.html';
 }
 
 function addToCart(key) {
-    console.log('isLoggedIn:', isLoggedIn);
+
 
     // Check if the user is logged in
-    if (!isLoggedIn) {
-        // Use SweetAlert for the message
-        Swal.fire({
-            icon: 'warning',
-            title: 'You need to log in before proceeding to checkout.',
-            text: 'Click the button to log in.',
-            showCancelButton: true,
-            confirmButtonText: 'Login',
-            cancelButtonText: 'Cancel',
-            customClass: {
-                container: 'custom-swal-container',
-                popup: 'custom-swal-popup',
-                title: 'custom-swal-title',
-                cancelButton: 'custom-swal-button',
-                confirmButton: 'custom-swal-button'
-            }
-        }).then((result) => {
-            if (result.isConfirmed) {
-                window.location.href = 'login.html';
-            }
-        });
+    // if (!isLoggedIn) {
+    //     // Use SweetAlert for the message
+    //     Swal.fire({
+    //         icon: 'warning',
+    //         title: 'You need to log in before proceeding to checkout.',
+    //         text: 'Click the button to log in.',
+    //         showCancelButton: true,
+    //         confirmButtonText: 'Login',
+    //         cancelButtonText: 'Cancel',
+    //         customClass: {
+    //             container: 'custom-swal-container',
+    //             popup: 'custom-swal-popup',
+    //             title: 'custom-swal-title',
+    //             cancelButton: 'custom-swal-button',
+    //             confirmButton: 'custom-swal-button'
+    //         }
+    //     }).then((result) => {
+    //         if (result.isConfirmed) {
+    //             window.location.href = 'login.html';
+    //         }
+    //     });
     
-    } else {
-       
-        localStorage.setItem('username', 'exampleUser'); 
-
-        // Redirect to the product page for making orders
-        window.location.href = 'cart2.html';
-    }
-
-    // const product = products.find(item => item.id === key);
-    // if (!listCards[product.id]) {
-    //     listCards[product.id] = { ...product, quantity: 1 };
+    
+    
+    
     // } else {
-    //     listCards[product.id].quantity++;
+    //     // If the user is logged in, proceed to product.html for placing orders
+    //     // You can also store registration credentials in local storage here
+    //     localStorage.setItem('username', 'exampleUser');  // Store a sample username
+
+    //     // Redirect to the product page for making orders
+    //     window.location.href = 'cart2.html';
     // }
-    // reloadCart();
+
+    const product = products.find(item => item.id === key);
+    if (!listCards[product.id]) {
+        listCards[product.id] = { ...product, quantity: 1 };
+    } else {
+        listCards[product.id].quantity++;
+    }
+    reloadCart();
 
     Swal.fire({
         icon: 'success',
@@ -255,30 +287,30 @@ function addToCart(key) {
     });
 }
 
-// Add this function to set the login status in localStorage
-function setLoginStatus() {
-    localStorage.setItem('isLoggedIn', 'true');
-}
 
-// Update the loginSuccess function to call setLoginStatus
-function loginSuccess() {
-    isLoggedIn = true;  // Update isLoggedIn to true upon successful login
-    setLoginStatus();  // Set login status to true in localStorage
-    // You may want to redirect the user to the product page after successful login
-    window.location.href = 'cart2.html';
-}
+// function setLoginStatus() {
+//     localStorage.setItem('isLoggedIn', 'true');
+// }
 
-// Add this function to check if the user is logged in
-function checkLoginStatus() {
-    const loginStatus = localStorage.getItem('isLoggedIn');
-    if (loginStatus === 'true') {
-        // User is logged in, remove the alert message
-        openShopping.removeEventListener('click', showLoginAlert);
-        openShopping.addEventListener('click', () => {
-            body.classList.add('active');
-        });
-    }
-}
+// // Update the loginSuccess function to call setLoginStatus
+// function loginSuccess() {
+//     isLoggedIn = true;  // Update isLoggedIn to true upon successful login
+//     setLoginStatus();  // Set login status to true in localStorage
+//     // You may want to redirect the user to the product page after successful login
+//     window.location.href = 'cart2.html';
+// }
+
+// // Add this function to check if the user is logged in
+// function checkLoginStatus() {
+//     const loginStatus = localStorage.getItem('isLoggedIn');
+//     if (loginStatus === 'true') {
+//         // User is logged in, remove the alert message
+//         openShopping.removeEventListener('click', showLoginAlert);
+//         openShopping.addEventListener('click', () => {
+//             body.classList.add('active');
+//         });
+//     }
+// }
 
 // Add this function to show an alert asking the user to log in
 function showLoginAlert() {
@@ -316,7 +348,6 @@ function removeFromCart(key) {
         }
     });
 }
-
 
 function reloadCart() {
     listCard.innerHTML = '';
@@ -361,27 +392,6 @@ function reloadCart() {
         listCard.style.maxHeight = '400px';  
     }
 }
-
-
-function allProducts() {
-    const allProductBoxes = document.querySelectorAll('.box');
-    allProductBoxes.forEach(box => {
-      box.style.display = 'inline-block';
-    });
-  }
-
-
-
-
-// Event listener for the "Add to Cart" button in the modal
-document.getElementById('productDetailModal').addEventListener('click', (event) => {
-    if (event.target.classList.contains('btn-primary')) {
-        // Add to Cart button was clicked
-        addToCart(selectedProductId);
-        $('#productDetailModal').modal('hide'); // Close the modal
-    }
-});
-
 
 
 function proceedToCheckout() {
@@ -431,4 +441,3 @@ loadCartFromSessionStorage();
 
 
 window.addEventListener('unload', saveCartToSessionStorage);
-

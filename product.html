@@ -129,34 +129,44 @@
     <header>
       <h1>Product List<div class="filter">
         <div class="categories">
+          
           <ul>
-            <li onclick="allProducts()">All Products</li>
-            <li onclick="filterProduct('Full-face')">Full-Face Helmet</li>
-            <li onclick="filterProduct('Half-face')">Half-face helmet</li>
-            <li onclick="filterProduct('Off-Road')">Off-Road Helmet</li>
-            <li onclick="filterProduct('Accessories')">Accessories</li>
-          </ul>
+            <li onclick="allProducts('All Products')">All Products</li>
+            <li onclick="filterProduct('Full-face', 'KYT')">Full-Face Helmet (KYT)</li>
+           <li onclick="filterProduct('Half-face', 'KYT')">Half-face Helmet (KYT)</li>
+            <li onclick="filterProduct('Off-Road', 'KYT')">Off-Road Helmet (KYT)</li>
+          <li onclick="filterProduct('Accessories', 'KYT')">Accessories (KYT)</li>
+
         </div></h1>
       <div class="shopping">
         <img src="./img/shopping-cart.png">
         <span class="quantity">0</span>
       </div>
     </header>
+    
     </div>
+   
 
     <div class="products">
+      
       <!-- <div class="container">
         <div class="sidebar">
         
         </div>
       </div> -->
+      <li onclick="filterProduct('All Products', 'KYT')">All KYT Products</li>
+
+      
       <div class="product-images">
         <div id="productBox" class="productbox">
            <div class="content">
              <div id="app"></div>
+             
+              <!-- Existing content for a product box -->
+          </div>
           </div>
         </div>
-      </div>
+      
   </div>
  
     <div class="modal fade" id="productDetailModal" tabindex="-1" aria-labelledby="productDetailModalLabel"

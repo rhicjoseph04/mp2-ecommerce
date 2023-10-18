@@ -74,6 +74,7 @@ const productDetail = [
             id:1,
             Title:"TT COURSE – RADIANCE",
             Cat: 'Full-face',
+            Brand: 'KYT',
             Price: '150',
             Img: '../img/kythelmet1.png'
         },
@@ -81,6 +82,7 @@ const productDetail = [
             id:2,
             Title:"NF-R – Hyper Fluo Yellow",
             Cat: 'Full-face',
+            Brand: 'KYT',
             Price: '185',
             Img: '../img/kythyperfluo.png'
         },
@@ -88,6 +90,7 @@ const productDetail = [
             id:3,
             Title:"NF-R STEEL FLOWER RED",
             Cat: 'Full-face',
+            Brand: 'KYT',
             Price: '150',
             Img: '../img/kythelmet7.png'
         },
@@ -95,6 +98,7 @@ const productDetail = [
             id:4,
             Title:"KR-1 – Plain Matt Black",
             Cat: 'Full-face',
+            Brand: 'KYT',
             Price: '280',
             Img: '../img/kytplainmatt.png'
         },
@@ -102,6 +106,7 @@ const productDetail = [
             id:5,
             Title:"NF-J – BROC PARKES REPLICA",
             Cat: 'Half-face',
+            Brand: 'KYT',
             Price: '135',
             Img: '../img/kythelmet9.png'
         },
@@ -109,6 +114,7 @@ const productDetail = [
             id:6,
             Title:"NF-J – DENNIS FOGGIA LEOPARD REPLICA",
             Cat: 'Half-face',
+            Brand: 'KYT',
             Price: '135',
             Img: '../img/kythelmet10.png'
         },
@@ -116,6 +122,7 @@ const productDetail = [
             id:7,
             Title:"NF-J – ESPARGARO REPLICA 2020",
             Cat: 'Half-face',
+            Brand: 'KYT',
             Price: '135',
             Img: '../img/kythelmet11.png'
         },
@@ -123,6 +130,7 @@ const productDetail = [
             id:8,
             Title:"NF-J – JAUME MASIA REPLICA",
             Cat: 'Half-face',
+            Brand: 'KYT',
             Price: '135',
             Img: '../img/kytJAUME-MASIA-REPLICA1.png'
         },
@@ -130,6 +138,7 @@ const productDetail = [
             id:9,
             Title:"NF-J – RADAR AQUA BLUE",
             Cat: 'Half-face',
+            Brand: 'KYT',
             Price: '135',
             Img: '../img/kythelmet13.png'
         },
@@ -137,6 +146,7 @@ const productDetail = [
             id:10,
             Title:"Strike Eagle – Potion Yellow",
             Cat: 'Off-Road',
+            Brand: 'KYT',
             Price: '225',
             Img: '../img/kytpotion.png'
         },
@@ -144,6 +154,7 @@ const productDetail = [
             id:11,
             Title:"Strike Eagle – Simpson Replica Orange",
             Cat: 'Off-Road',
+            Brand: 'KYT',
             Price: '225',
             Img: '../img/kythelmet15.png'
         },
@@ -151,6 +162,7 @@ const productDetail = [
             id:12,
             Title:"Strike Eagle – Web Matt White/Blue",
             Cat: 'Off-Road',
+            Brand: 'KYT',
             Price: '225',
             Img: '../img/kythelmet16.png'
         },
@@ -158,6 +170,7 @@ const productDetail = [
             id:13,
             Title:"TT COURSE – Photochromic Visor",
             Cat: 'Accessories',
+            Brand: 'KYT',
             Price: '45',
             Img: '../img/kytacceso.png'
         },
@@ -165,6 +178,7 @@ const productDetail = [
             id:14,
             Title:"YG DESIGN – Wireless Charging Phone Mount",
             Cat: 'Accessories',
+            Brand: 'KYT',
             Price: '40',
             Img: '../img/kythelmetaccesso2.jpeg'
         },
@@ -188,7 +202,8 @@ document.addEventListener('DOMContentLoaded', () => {
     productDetail.forEach(product => {
       const productBox = document.createElement('div');
       productBox.classList.add('box');
-      productBox.setAttribute('data-category', product.Cat);
+      productBox.setAttribute('data-category', `${product.Cat} ${product.Brand}`);
+
 
       const imgBox = document.createElement('div');
       imgBox.classList.add('img_box');
@@ -303,15 +318,6 @@ document.addEventListener('DOMContentLoaded', () => {
     $('#productDetailModal').modal('show');  // Show the modal
   }
 
-  function renderCart() {
-    // Function to render cart
-    const cartContent = document.getElementById("cartContent");
-    // ... (rest of the cart rendering code)
-  }
-
-  // ... (other product-related functions)
-
-
 
   function addToCart(product) {
     let existingItem = cart.find(x => x.id === product.id);
@@ -327,6 +333,40 @@ document.addEventListener('DOMContentLoaded', () => {
     alert("Product added to cart!");
   }
 
+  function addToCart() {
+    console.log('isLoggedIn:', isLoggedIn);
+  }
+    // Check if the user is logged in
+    if (!isLoggedIn) {
+        // Use SweetAlert for the message
+        Swal.fire({
+            icon: 'warning',
+            title: 'You need to log in before proceeding to checkout.',
+            text: 'Click the button to log in.',
+            showCancelButton: true,
+            confirmButtonText: 'Login',
+            cancelButtonText: 'Cancel',
+            customClass: {
+                container: 'custom-swal-container',
+                popup: 'custom-swal-popup',
+                title: 'custom-swal-title',
+                cancelButton: 'custom-swal-button',
+                confirmButton: 'custom-swal-button'
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = 'login.html';
+            }
+        });
+      
+    
+       } else {
+       
+        localStorage.setItem('username', 'exampleUser'); 
+
+        // Redirect to the product page for making orders
+        window.location.href = 'cart2.html';
+       }
   function updateCartUI() {
     const cartContent = document.getElementById('cartContent');
     cartContent.innerHTML = ''; // Clear previous content
