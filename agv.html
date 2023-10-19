@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,274 +18,300 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
     <script src="https://kit.fontawesome.com/0023926e4b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js">
+    </script>
 
 
 
-    <title>Agv-helmet</title>
+    <title>Helmethub/Agv-helmet</title>
 
 
 </head>
 
 <body>
-<!-- Messenger Chat Plugin Code -->
-<div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v18.0'
+            });
+        };
 
-<!-- Your Chat Plugin code -->
-<div id="fb-customer-chat" class="fb-customerchat"></div>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
 
-<script>
-  var chatbox = document.getElementById('fb-customer-chat');
-  chatbox.setAttribute("page_id", "161937536984374");
-  chatbox.setAttribute("attribution", "biz_inbox");
-  chatbox.setAttribute("theme_color", "#ffa31a"); // Replace with your desired color
-  chatbox.setAttribute("greeting_dialog_display", "show");
-  chatbox.setAttribute("greeting_dialog_delay", "5000"); // 5 seconds delay before showing the greeting
-</script>
+    <div class="free">
+        <p class="journey-text"><i class="fa-solid fa-motorcycle larger-icon"></i>Your Journey Awaits with <span
+                class="free-shipping-text">FREE SHIPPING🚚</span></p>
+    </div>
 
-<!-- Your SDK code -->
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      xfbml: true,
-      version: 'v18.0'
-    });
-    FB.CustomerChat.showDialog();
-    FB.CustomerChat.update({
-      logged_in_greeting: 'Welcome to our helmet shop! How can we assist you today?' 
-    });// Modify this message
-  };
-
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
-
-<div class="free">
-    <p class="journey-text"><i class="fa-solid fa-motorcycle larger-icon"></i>Your Journey Awaits with <span
-            class="free-shipping-text">FREE SHIPPING 🚚</span></p>
-</div>
-
-
-
-<div class="navbar">
-    <div class="container">
-
-        <div class="logo">
-
-            <div class="icon"> <a href="./index.html">
-                    <i class="fa-brands fa-shopware"></i></a>
+    <div class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand" href="#">
+                    <div class="logo">
+                        <div class="icon">
+                            <a href="./index.html">
+                                <i class="fa-brands fa-shopware"></i>
+                            </a>
+                        </div>
+                        <div class="logo-text">Helmet <span>hub</span></div>
+                    </div>
+                </a>
             </div>
-            <div class="logo-text">Helmet <span>hub</span></div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="true" aria-label="Toggle navigation"
+                onclick="toggleMenu()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="search">
+                <input type="text" placeholder="Sign up and get 100% off on your first order" autocomplete="off">
+            </div>
+            <button class="search-button" onclick="searchFunction()">
+                <i class="fa fa-search"></i>
+            </button>
 
         </div>
 
-        <div class="search">
-            <button><i class="fa fa-search"></i></button>
-            <input type="text" placeholder="     Sign up and get 100% off on your first order" autocomplete="off">
-        </div>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">
+                        <div class="nav-icon">
+                            <i class="fas fa-home larger-icon"></i>
+                            <span>HOME</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./product.html">
+                        <div class="nav-icon">
+                            <i class="fas fa-cube larger-icon"></i>
+                            <span>PRODUCT</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./about.html">
+                        <div class="nav-icon">
+                            <i class="fas fa-info-circle larger-icon"></i>
+                            <span>ABOUT</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../contact.html">
+                        <div class="nav-icon">
+                            <i class="fas fa-envelope larger-icon"></i>
+                            <span>CONTACT</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./login.html">
+                        <div class="user-icon">
+                            <div class="outer-circle">
+                                <div class="inner-circle">
+                                    <div class="nav-icon">
+                                        <i class="fas fa-user larger-icon"></i>
+                                        <span class="login-text">LOGIN</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
 
-
-        <div class="nav">
-            <ul>
-                <li><a href="./index.html" class="link">HOME</a></li>
-                <li><a href="./product.html" class="link">PRODUCT</a></li>
-                <li><a href="../about" class="link">ABOUT</a></li>
-                <li><a href="../contact" class="link">CONTACT</a></li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./cart.html">
+                        <div class="nav-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>CART</span>
+                        </div>
+                    </a>
+                </li>
             </ul>
         </div>
+    </div>
+    </div>
 
-        <div class="user-icon">
-            <a href="./login.html">
-                <div class="outer-circle">
-                    <div class="inner-circle">
-                        <i class="fas fa-user"></i>
+    <div class="social-icons">
+        <div class="container">
+            <p>FOLLOW US ON:</p>
+            <a href="www.facebook.com"><img src="./img/fblogo.png" alt="Facebook"></a>
+            <a href="www.instagram.com"><img src="./img/instag.png" alt="Instagram"></a>
+            <a href="www.twitter.com"><img src="./img/twitter.png" alt="Twitter"></a>
+            <a href="www.youtube.com"><img src="./img/youtube.png" alt="YouTube"></a>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="slider">
+                    <div class="item">
+                        <img src="./img/agvfront.png" alt="Image 1">
+                    </div>
+                    <div class="item">
+                        <img src="./img/agv frontright.png" alt="Image 2">
+                    </div>
+                    <div class="item">
+                        <img src="./img/agvback.png" alt="Image 3">
+                    </div>
+                    <div class="item">
+                        <img src="./img/agvfacingleft2.webp" alt="Image 4">
+                    </div>
+                    <div class="item">
+                        <img src="./img/agvfront2.png" alt="Image 5">
+                    </div>
+                    <div class="item">
+                        <img src="./img/agvfacingright2.png" alt="Image 6">
+                    </div>
+                    <div class="item">
+                        <img src="./img/agvbackright.png" alt="Image 7">
+                    </div>
+                    <div class="item">
+                        <img src="./img/agvfacingsideleft.webp" alt="Image 8">
+                    </div>
+                </div>
+                <button id="next">></button>
+                <button id="prev">
+                    <</button> </div> <br>
+
+                        <div class="col-lg-6">
+                            <div class="product-info">
+                                <h2 class="mb-4"><img src="./img/agvlogo1.png" alt="Logo"> AGV Helmets</h2>
+                                <p class="lead">Discover the epitome of safety and style with AGV Helmets.</p>
+                                <div class="feature-list">
+                                    <h4>Key Features:</h4>
+                                    <ul>
+                                        <li>Advanced Safety Technology: AGV Helmets integrate advanced safety features
+                                            for superior protection on the road.</li>
+                                        <li>Optimal Comfort: Crafted with premium materials, AGV Helmets offer
+                                            exceptional comfort and fit.</li>
+                                        <li>Aerodynamic Design: The helmets are designed to reduce air resistance,
+                                            providing a smoother riding experience.</li>
+                                        <li>Distinctive Styles: AGV Helmets are available in various styles and
+                                            graphics, catering to different rider preferences.</li>
+                                        <li>Reliable Durability: AGV Helmets are built to last and endure the rigors of
+                                            regular use.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="agvModal" tabindex="-1" role="dialog" aria-labelledby="agvModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="agvModalLabel">AGV Helmets</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Modal content goes here -->
+                        <div class="feature-list">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <!-- Add your feature list content -->
+                                <!-- ... -->
+                            </ul>
+                        </div>
+                        <p class="product-description">Experience unmatched safety and style with AGV Helmets. Ride
+                            confidently and in style with AGV.</p>
+                        <a href="./cart.html" class="custom-button">Shop AGV Helmets</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <br>
+        <div class="footer">
+            <div class="row">
+                <div class="col-md-2 col-sm-12">
+                    <div class="icon">
+                        <a href="./index.html">
+                            <i class="fab fa-shopware logo" style="font-size: 5rem;"></i>
+                        </a>
                     </div>
                 </div>
 
-                <div class="login-content">
-                    <button class="btn btn-primary">Login</button>
-                    <button class="btn btn-secondary">Sign Up</button>
+                <div class="col-md-2 col-sm-8">
+                    <div class="detail">
+                        <p>Your Ride, Our Passion!</p>
+                    </div>
                 </div>
-            </a>
-        </div>
-    </div>
-</div>
 
-
-
-<div class="social-icons">
-    <div class="container">
-        <p>FOLLOW US ON:</p>
-        <a href="#"><img src="./img/fblogo.png" alt="Facebook"></a>
-        <a href="#"><img src="./img/instag.png" alt="Instagram"></a>
-        <a href="#"><img src="./img/twitter.png" alt="Twitter"></a>
-        <a href="#"><img src="./img/youtube.png" alt="YouTube"></a>
-
-        <div class="user-cart-icons">
-
-            <a href="#" class="link"><i class="fas fa-user"></i></a>
-            <a href="./cart.html" class="link"><i class="fas fa-shopping-bag"></i></a>
-        </div>
-    </div>
-</div>
-
-
-<div class="container mt-5">
-    <div class="row">
-        <div class="col-lg-6">
-        <div class="slider">
-            <div class="item">
-                <img src="./img/agvfront.png" alt="Image 1">
-            </div>
-            <div class="item">
-                <img src="./img/agv frontright.png" alt="Image 2">
-            </div>
-            <div class="item">
-                <img src="./img/agvback.png" alt="Image 3">
-            </div>
-            <div class="item">
-                <img src="./img/agvfacingleft2.webp" alt="Image 4">
-            </div>
-            <div class="item">
-                <img src="./img/agvfront2.png" alt="Image 5">
-            </div>
-            <div class="item">
-                <img src="./img/agvfacingright2.png" alt="Image 6">
-            </div>
-            <div class="item">
-                <img src="./img/agvbackright.png" alt="Image 7">
-            </div>
-            <div class="item">
-                <img src="./img/agvfacingsideleft.webp" alt="Image 8">
-            </div>
-        </div>
-        <button id="next">></button>
-        <button id="prev"><</button>
-    </div>
-    <br>
-
-    <div class="col-lg-6">
-            <div class="product-info">
-            <h2 class="mb-4"><img src="./img/agvlogo1.png" alt="Logo"> AGV Helmets</h2>
-                <p class="lead">Discover the epitome of safety and style with AGV Helmets.</p>
-                <div class="feature-list">
-                <h4>Key Features:</h4>
-                <ul>
-                    <li>Advanced Safety Technology: AGV Helmets integrate advanced safety features for superior protection on the road.</li>
-                    <li>Optimal Comfort: Crafted with premium materials, AGV Helmets offer exceptional comfort and fit.</li>
-                    <li>Aerodynamic Design: The helmets are designed to reduce air resistance, providing a smoother riding experience.</li>
-                    <li>Distinctive Styles: AGV Helmets are available in various styles and graphics, catering to different rider preferences.</li>
-                    <li>Reliable Durability: AGV Helmets are built to last and endure the rigors of regular use.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
-    <!-- Modal -->
-<div class="modal fade" id="agvModal" tabindex="-1" role="dialog" aria-labelledby="agvModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="agvModalLabel">AGV Helmets</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <!-- Modal content goes here -->
-                <div class="feature-list">
-                    <h4>Key Features:</h4>
-                    <ul>
-                        <!-- Add your feature list content -->
-                        <!-- ... -->
-                    </ul>
+                <div class="col-md-2 col-sm-8">
+                    <div class="account">
+                        <h5>Helmet Hub</h5>
+                        <ul>
+                            <li><a href="#">Account</a></li>
+                            <li><a href="#">Order</a></li>
+                            <li><a href="#">Cart</a></li>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Return</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <p class="product-description">Experience unmatched safety and style with AGV Helmets. Ride confidently and in style with AGV.</p>
-                <a href="./cart.html" class="custom-button">Shop AGV Helmets</a>
+
+                <div class="col-md-2 col-sm-8">
+                    <div class="page">
+                        <h5>Pages</h5>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-8">
+                    <div class="payment">
+                        <h5>Accepted Payments</h5>
+                        <img src='./img/visa.jpg' alt='Visa' class='payment-icon' />
+                        <img src='./img/mastercard.png' alt='Mastercard' class='payment-icon' />
+                        <img src='./img/Western Union.png' alt='Western' class='payment-icon' />
+                        <img src='./img/pinetwork.png' alt='Pinetwork' class='payment-icon' />
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-   
+        <script>
+            // Add a click event listener to handle opening the modal
+            document.querySelector('.product-info h2').addEventListener('click', function () {
+                $('#agvModal').modal('show');
+            });
+        </script>
 
 
 
-
-<br>
-<div class="footer">
-    <div class="row">
-        <div class="col-md-2 col-sm-12">
-            <div class="icon">
-                <a href="./index.html">
-                    <i class="fab fa-shopware logo" style="font-size: 5rem;"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-2 col-sm-8">
-            <div class="detail">
-                <p>Your Ride, Our Passion!</p>
-            </div>
-        </div>
-
-        <div class="col-md-2 col-sm-8">
-            <div class="account">
-                <h5>Helmet Hub</h5>
-                <ul>
-                    <li><a href="#">Account</a></li>
-                    <li><a href="#">Order</a></li>
-                    <li><a href="#">Cart</a></li>
-                    <li><a href="#">Shipping</a></li>
-                    <li><a href="#">Return</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="col-md-2 col-sm-8">
-            <div class="page">
-                <h5>Pages</h5>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="col-md-4 col-sm-8">
-            <div class="payment">
-                <h5>Accepted Payments</h5>
-                <img src='./img/visa.jpg' alt='Visa' class='payment-icon' />
-                <img src='./img/mastercard.png' alt='Mastercard' class='payment-icon' />
-                <img src='./img/Western Union.png' alt='Western' class='payment-icon' />
-                <img src='./img/pinetwork.png' alt='Pinetwork' class='payment-icon' />
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-    // Add a click event listener to handle opening the modal
-    document.querySelector('.product-info h2').addEventListener('click', function() {
-        $('#agvModal').modal('show');
-    });
-</script>
-
-
-
-<script src="./js.folder/agv.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="./js.folder/agv.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 
 
@@ -294,9 +319,3 @@
 
 
 </html>
-
-
-
-
-
- 

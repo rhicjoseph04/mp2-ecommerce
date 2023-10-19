@@ -28,32 +28,12 @@
 </head>
 
 <body>
-    <!-- Messenger Chat Plugin Code -->
-    <div id="fb-root"></div>
-
-    <!-- Your Chat Plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat"></div>
-
-    <script>
-        var chatbox = document.getElementById('fb-customer-chat');
-        chatbox.setAttribute("page_id", "161937536984374");
-        chatbox.setAttribute("attribution", "biz_inbox");
-        chatbox.setAttribute("theme_color", "#ffa31a"); // Replace with your desired color
-        chatbox.setAttribute("greeting_dialog_display", "show");
-        chatbox.setAttribute("greeting_dialog_delay", "5000"); // 5 seconds delay before showing the greeting
-    </script>
-
-    <!-- Your SDK code -->
     <script>
         window.fbAsyncInit = function () {
             FB.init({
                 xfbml: true,
                 version: 'v18.0'
             });
-            FB.CustomerChat.showDialog();
-            FB.CustomerChat.update({
-                logged_in_greeting: 'Welcome to our helmet shop! How can we assist you today?'
-            }); // Modify this message
         };
 
         (function (d, s, id) {
@@ -66,74 +46,119 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
 
-
     <div class="free">
         <p class="journey-text"><i class="fa-solid fa-motorcycle larger-icon"></i>Your Journey Awaits with <span
-                class="free-shipping-text">FREE SHIPPING 🚚</span></p>
+                class="free-shipping-text">FREE SHIPPING🚚</span></p>
     </div>
 
-
-
-    <div class="navbar">
+    <div class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container">
-            <div class="logo">
-                <div class="icon"> <a href="./index.html">
-                        <i class="fa-brands fa-shopware"></i></a>
-                </div>
-                <div class="logo-text">Helmet <span>hub</span></div>
-            </div>
-            <div class="search">
-                <button><i class="fa fa-search"></i></button>
-                <input type="text" placeholder="     Sign up and get 100% off on your first order" autocomplete="off">
-            </div>
-            <div class="nav">
-                <ul>
-                    <li><a href="./index.html" class="link">HOME</a></li>
-                    <li><a href="./product.html" class="link">PRODUCT</a></li>
-                    <li><a href="../about" class="link">ABOUT</a></li>
-                    <li><a href="../contact" class="link">CONTACT</a></li>
-                </ul>
-            </div>
-            <div class="user-icon">
-                <a href="./login.html">
-                    <div class="outer-circle">
-                        <div class="inner-circle">
-                            <i class="fas fa-user"></i>
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand" href="#">
+                    <div class="logo">
+                        <div class="icon">
+                            <a href="./index.html">
+                                <i class="fa-brands fa-shopware"></i>
+                            </a>
                         </div>
-                    </div>
-                    <div class="login-content">
-                        <button class="btn btn-primary">Login</button>
-                        <button class="btn btn-secondary">Sign Up</button>
+                        <div class="logo-text">Helmet <span>hub</span></div>
                     </div>
                 </a>
             </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="true" aria-label="Toggle navigation"
+                onclick="toggleMenu()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="search">
+                <input type="text" placeholder="Sign up and get 100% off on your first order" autocomplete="off">
+            </div>
+            <button class="search-button" onclick="searchFunction()">
+                <i class="fa fa-search"></i>
+            </button>
+
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">
+                        <div class="nav-icon">
+                            <i class="fas fa-home larger-icon"></i>
+                            <span>HOME</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./product.html">
+                        <div class="nav-icon">
+                            <i class="fas fa-cube larger-icon"></i>
+                            <span>PRODUCT</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../about">
+                        <div class="nav-icon">
+                            <i class="fas fa-info-circle larger-icon"></i>
+                            <span>ABOUT</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../contact">
+                        <div class="nav-icon">
+                            <i class="fas fa-envelope larger-icon"></i>
+                            <span>CONTACT</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./login.html">
+                        <div class="user-icon">
+                            <div class="outer-circle">
+                                <div class="inner-circle">
+                                    <div class="nav-icon">
+                                        <i class="fas fa-user larger-icon"></i>
+                                        <span class="login-text">LOGIN</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./cart.html">
+                        <div class="nav-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>CART</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
+    </div>
+
     <div class="social-icons">
         <div class="container">
             <p>FOLLOW US ON:</p>
-            <a href="#"><img src="./img/fblogo.png" alt="Facebook"></a>
-            <a href="#"><img src="./img/instag.png" alt="Instagram"></a>
-            <a href="#"><img src="./img/twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="./img/youtube.png" alt="YouTube"></a>
-
-            <div class="user-cart-icons">
-
-                <a href="#" class="link"><i class="fas fa-user"></i></a>
-                <a href="./cart.html" class="link"><i class="fas fa-shopping-bag"></i></a>
-            </div>
+            <a href="www.facebook.com"><img src="./img/fblogo.png" alt="Facebook"></a>
+            <a href="www.instagram.com"><img src="./img/instag.png" alt="Instagram"></a>
+            <a href="www.twitter"><img src="./img/twitter.png" alt="Twitter"></a>
+            <a href="www.youtube.com"><img src="./img/youtube.png" alt="YouTube"></a>
         </div>
     </div>
 
-
-
-    <!-- start of carousel slides -->
     <div class="container-fluid">
         <div class="row ">
             <div class="col-md-8">
                 <div id="carousel-container">
                     <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="1500">
-                      
+
                         <ul class="carousel-indicators">
                             <li data-target="#carousel" data-slide-to="0" class="active"></li>
                             <li data-target="#carousel" data-slide-to="1"></li>
@@ -195,60 +220,68 @@
             <div class="col-md-4">
                 <div class="row">
                     <!-- Video -->
-                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/y3KPtWbE-PA?autoplay=1&mute=1&controls=0"
+                    <iframe width="100%" height="200"
+                        src="https://www.youtube.com/embed/y3KPtWbE-PA?autoplay=1&mute=1&controls=0"
                         title="KYT TT Course Helmet I Specifications I KYT Helmets" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
-            
+
                 <!-- Video -->
                 <div class="row">
-                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/AcJPqCwSwcU?autoplay=1&mute=1&controls=0"
-                        title="K6 S | AGV" frameborder="0"
+                    <iframe width="100%" height="200"
+                        src="https://www.youtube.com/embed/AcJPqCwSwcU?autoplay=1&mute=1&controls=0" title="K6 S | AGV"
+                        frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
-            
+
                 <!-- Another Video -->
                 <div class="row">
-                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/O_iF9uVwRUk?autoplay=1&mute=1&controls=0"
+                    <iframe width="100%" height="200"
+                        src="https://www.youtube.com/embed/O_iF9uVwRUk?autoplay=1&mute=1&controls=0"
                         title="RPHA 1 - Performance Reinvented" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>
             </div>
-            
+
         </div>
     </div>
 
-<div class="product_type">
-<div class="container">
+    <div class="product_type">
+        <div class="container">
             <h3>
-<div class="helmet-logos">
-    <img src="./img/agvlogo.png" alt="Helmet Brand 1" class="helmet-logo">
-    <img src="./img/ls2logo.webp" alt="Helmet Brand 2" class="helmet-logo">
-    <img src="./img/hjclogo1.png" alt="Helmet Brand 3" class="helmet-logo">
-    Helmet Brand Selections
-    <img src="./img/kytlogo.png" alt="Helmet Brand 4" class="helmet-logo">
-    <img src="./img/arai_logo.png" alt="Helmet Brand 5" class="helmet-logo">
-    <img src="./img/shoeilogo.png" alt="Helmet Brand 6" class="helmet-logo">
-</div></h3>
+                <div class="helmet-logos">
+                    <img src="./img/agvlogo.png" alt="Helmet Brand 1" class="helmet-logo">
+                    <img src="./img/ls2logo.webp" alt="Helmet Brand 2" class="helmet-logo">
+                    <img src="./img/hjclogo1.png" alt="Helmet Brand 3" class="helmet-logo">
+                    Helmet Brand Selections
+                    <img src="./img/kytlogo.png" alt="Helmet Brand 4" class="helmet-logo">
+                    <img src="./img/arai_logo.png" alt="Helmet Brand 5" class="helmet-logo">
+                    <img src="./img/shoeilogo.png" alt="Helmet Brand 6" class="helmet-logo">
+                </div>
+            </h3>
 
-        <div class="box">
-    <div class="img_box">
-        <img src="./img/agvslide2.png" alt="helmet" />
-    </div>
-    <div class="detail">
-        <h4 class="mb-4"><img src="./img/agvfacingsideleft.webp" alt="Logo"> Agv Helmets</h4>
-    </div>
-        </div>
+            <div class="box">
+                <div class="img_box">
+                    <img src="./img/agvfacingleft2.webp" alt="helmet" />
+                </div>
+                <div class="detail">
+                    <a href="./agv.html">
+                        <h4 class="mb-4"><img src="./img/agv.png" alt="Logo"><br><br> Agv Helmets</h4>
+                    </a>
+                </div>
+            </div>
+
             <div class="box">
                 <div class="img_box">
                     <img src="./img/arai.png" alt="helmet" />
                 </div>
                 <div class="detail">
                     <a href="./arai.html">
-                    <h4 class="mb-4"><img src="./img/araibox.png" alt="Logo">Arai Helmets</h4></a>
+                        <h4 class="mb-4"><img src="./img/araibox.png" alt="Logo"><br><br>Arai Helmets</h4>
+                    </a>
                 </div>
             </div>
 
@@ -257,7 +290,9 @@
                     <img src="./img/secslider.png" alt="helmet" />
                 </div>
                 <div class="detail">
-                    <h4 class="mb-4"><img src="./img/secbox.png" alt="Logo">Sec Helmets</h4>
+                    <a href="./sec.html">
+                        <h4 class="mb-4"><img src="./img/secbox.png" alt="Logo"><br><br>Sec Helmets</h4>
+                    </a>
                 </div>
             </div>
 
@@ -266,7 +301,9 @@
                     <img src="./img/kythelmet10.png" alt="helmet " />
                 </div>
                 <div class="detail">
-                    <h4 class="mb-4"><img src="./img/kythelmet11.png" alt="Logo">Kyt Helmets</h4>
+                    <a href="./kyt.html">
+                        <h4 class="mb-4"><img src="./img/kythelmet11.png" alt="Logo"><br><br>Kyt Helmets</h4>
+                    </a>
                 </div>
             </div>
 
@@ -275,7 +312,9 @@
                     <img src="./img/Ls202.png" alt="helmet" />
                 </div>
                 <div class="detail">
-                    <h4 class="mb-4"><img src="./img/Ls2box1.png" alt="Logo">Ls2 Helmets</h4>
+                    <a href="./Ls2.html">
+                        <h4 class="mb-4"><img src="./img/Ls2box1.png" alt="Logo"><br><br>Ls2 Helmets</h4>
+                    </a>
                 </div>
             </div>
 
@@ -284,60 +323,64 @@
                     <img src="./img/hjc09.png" alt="helmet " />
                 </div>
                 <div class="detail">
-                    <h4 class="mb-4"><img src="./img/hjc05.png" alt="Logo">Hjc Helmets</h4>
+                    <a href="./hjc.html">
+                        <h4 class="mb-4"><img src="./img/hjc05.png" alt="Logo"><br><br>Hjc Helmets</h4>
+                    </a>
                 </div>
             </div>
 
             <div class="box">
                 <div class="img_box">
-                    <img src="./img/kythelmet8.png" alt="helmet " />
+                    
+                        <img src="./img/kythelmet8.png" alt="helmet " />
                 </div>
                 <div class="detail">
-                    <h4 class="mb-4"><img src="./img/kythelmet15.png" alt="Logo">Kyt Helmets</h4>
-                </div>
+                    <a href="./kyt.html">
+                    <h4 class="mb-4"><img src="./img/kythelmet15.png" alt="Logo"><br><br>Kyt Helmets</h4>
+                </div></a>
             </div>
+
             <div class="box">
                 <div class="img_box">
                     <img src="./img/evo04.png" alt="helmet" />
                 </div>
                 <div class="detail">
-                    <a href="./evohelmet.html">
-                        <h4 class="mb-4"><img src="./img/evobox.jpg" alt="Logo">Evo Helmets</h4></a>
+                    <a href="./kyt.html">
+                    <h4 class="mb-4"><img src="./img/evobox.jpg" alt="Logo"><br><br>Evo Helmets</h4></a>
+                        
                 </div>
             </div>
 
         </div>
     </div>
-    </div>
+
 
     <div class="about">
-
         <div class="container">
             <div class="section-title">
                 <h3>Why Choose Us?</h3>
                 <p>Discover the reasons to shop with us</p>
             </div>
-            <hr>
-
             <div class="boxes">
                 <div class="box" onclick="showModal('Free Shipping', 'Enjoy free shipping on orders above ₱10,000!')">
+                   
                     <div class="icon">
                         <i class="fas fa-shipping-fast"></i>
-                    </div>
+                    </div> <img class="small-image" src="./img/mega sale.png" alt="FreeShipping" />
                     <div class="detail">
                         <h3 class="box-title">Free Shipping</h3>
-                        <p class="box-content">Enjoy free shipping on orders above ₱10,000! Shop more and save on
-                            shipping costs.</p>
+                        <p class="box-content">Enjoy free shipping on orders above ₱10,000! Shop more and save on shipping costs.</p>
                     </div>
                 </div>
 
                 <div class="box" onclick="showModal('Return & Refund', 'Hassle-free 30-day return and refund policy.')">
                     <div class="icon">
                         <i class="fas fa-hand-holding-usd"></i>
-                    </div>
+                    </div> <img class="small-image" src="./img/money_back_garauntee.png" alt="MoneybackGuarantee" />
                     <div class="detail">
                         <h3 class="box-title">Return & Refund</h3>
-                        <p class="box-content">We offer a hassle-free 30-day return and refund policy. Your satisfaction
+                        <p class="box-content">We offer a hassle-free 30-day return and refund policy. Your
+                            satisfaction
                             is our priority.</p>
                     </div>
                 </div>
@@ -345,7 +388,7 @@
                 <div class="box" onclick="showModal('Member Discount', 'Unlock special discounts as a valued member.')">
                     <div class="icon">
                         <i class="fas fa-percent"></i>
-                    </div>
+                    </div><img class="small-image" src="./img/promo.png" alt="promo" />
                     <div class="detail">
                         <h3 class="box-title">Member Discount</h3>
                         <p class="box-content">Be a valued member and unlock special discounts on a wide range of
@@ -356,46 +399,52 @@
                 <div class="box" onclick="showModal('Customer Support', '24/7 dedicated customer support.')">
                     <div class="icon">
                         <i class="fas fa-headphones-alt"></i>
-                    </div>
+                    </div><img class="small-image" src="./img/customersupport.png" alt="customersupport" />
                     <div class="detail">
                         <h3 class="box-title">Customer Support</h3>
-                        <p class="box-content">Experience exceptional 24/7 customer support. We're here to assist you
+                        <p class="box-content">Experience exceptional 24/7 customer support. We're here to assist
+                            you
                             whenever you need.</p>
                     </div>
                 </div>
             </div>
         </div>
+   
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Modal Title</h2>
+            <p id="modal-content">Modal content goes here.</p>
+        </div>
+    </div>
 
-  
+</div>
 
 
-    <div class="top_product">
+<div class="top_product">
+    <h1 class="top_products"><span>Top</span> Products</h1>
+    <div id="cart-items">
+        <div class="container">
 
-        <h1 class="top_products"><span>Top</span> Products</h1>
+            <div class="box" key="${curElm.id}">
+                <div class="img_box">
+                    <img src="./img/kythelmettop1.png" alt="${curElm.Title}">
+                    <div class="icon">
+                        <button class="view-product"
+                            data-product='{"Title": "TT Course Radiance", "Category": "Fullface Helmet", "Description": "High-quality full-face helmet for riders.", "Price": 7500}'><i
+                            class="fas fa-eye"></i></button>
+                        <button class="add-to-cart"
 
-
-        <div id="cart-items">
-            <div class="container">
-
-                <div class="box" key="${curElm.id}">
-                    <div class="img_box">
-                        <img src="./img/kythelmettop1.png" alt="${curElm.Title}">
-                        <div class="icon">
-                            <button class="view-product"
-                                data-product='{"title": "Product 1", "category": "Category 1", "description": "Description 1", "price": 100}'><i
-                                    class="fas fa-eye"></i></button>
-                            <button class="add-to-cart"
-                                data-product='{"title": "Product 1", "category": "Category 1", "description": "Description 1", "price": 100}'><i
-                                    class="fas fa-cart-plus"></i></button>
-                        </div>
-                    </div>
-                    <div class="detail">
-                        <p>Fullface Helmet</p>
-                        <h3>TT Course Radiance[S-XL].</h3>
-                        <h4>7,500</h4>
+                            data-product='{"Title": "TT Course Radiance", "Category": "Fullface Helmet", "Description": "High-quality full-face helmet for riders.", "Price": 7500}'><i
+                            class="fas fa-cart-plus"></i></button>
                     </div>
                 </div>
-
+                <div class="detail">
+                    <p>Category: Fullface Helmet</p>
+                    <h3>TT Course Radiance[S-XL].</h3>
+                    <h4>7,500</h4>
+                </div>
+            </div>
 
 
                 <div class="box" key="${curElm.id}">
@@ -536,10 +585,8 @@
 
     <!-- end of top_product -->
 
-    <!--start of Product Detail Section -->
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+   
+     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -557,18 +604,16 @@
         </div>
     </div>
 
-    <!-- Modals -->
     <div id="productModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <div class="modalTitle" id="modalTitle"></div>
             <div class="modalText" id="modalText"></div>
         </div>
-    </div>
+    </div> 
 
 
-
-    <!-- <script>
+     <script>
 
         function viewProduct(product) {
             // Parse the product JSON if it's a string
@@ -576,6 +621,12 @@
                 product = JSON.parse(product);
             }
 
+
+                // Define the exchange rate from USD to PHP
+            const exchangeRate = 50;
+
+            // Calculate the price in PHP
+            const  priceInPHP = product.Price * exchangeRate;
             // Update the modal title and text with product details
             document.getElementById('modalTitle').innerText = product.Title;
             document.getElementById('modalText').innerHTML = `
@@ -593,9 +644,7 @@
             const modal = document.getElementById('productModal');
             modal.style.display = 'none';
         }
-
-  
-    </script> -->
+    </script> 
 
 
     <!-- 
@@ -641,71 +690,88 @@
                 <img src="./img/agvfacingsideleft.webp" alt="Image 8">
             </div>
         </div>
+
+        <div class="slider-content">
+            <div class="content-inner">
+                <h2>AGV K1 Yellow Top Helmet</h2>
+                <p>Upgrade your riding gear with the AGV K1 Yellow Top Helmet, designed for maximum safety and style.</p>
+                <a href="./cart.html" class="shop-button">Shop Now</a>
+            </div>
+        </div>
+        
         <button id="next">></button>
-        <button id="prev"><</button>
-    </div>
+        <button id="prev"><</button></div> 
+
+       
+          
+            
+       
+        <div class="footer">
+            <div class="container">
+                <div class="row">
     
-                 <div class="footer">
-                    <div class="row">
-                        <div class="col-md-2 col-sm-12">
-                            <div class="icon">
-                                <a href="./index.html">
-                                    <i class="fab fa-shopware logo" style="font-size: 5rem;"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2 col-sm-8">
-                            <div class="detail">
-                                <p>Your Ride, Our Passion!</p>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2 col-sm-8">
-                            <div class="account">
-                                <h5>Helmet Hub</h5>
-                                <ul>
-                                    <li><a href="#">Account</a></li>
-                                    <li><a href="#">Order</a></li>
-                                    <li><a href="#">Cart</a></li>
-                                    <li><a href="#">Shipping</a></li>
-                                    <li><a href="#">Return</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-md-2 col-sm-8">
-                            <div class="page">
-                                <h5>Pages</h5>
-                                <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                    <li><a href="#">Terms & Conditions</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 col-sm-8">
-                            <div class="payment">
-                                <h5>Accepted Payments</h5>
-                                <img src='./img/visa.jpg' alt='Visa' class='payment-icon' />
-                                <img src='./img/mastercard.png' alt='Mastercard' class='payment-icon' />
-                                <img src='./img/Western Union.png' alt='Western' class='payment-icon' />
-                                <img src='./img/pinetwork.png' alt='Pinetwork' class='payment-icon' />
-                            </div>
+                    <div class="col-md-2 col-sm-12">
+                        <div class="icon">
+                            <a href="./index.html">
+                                <i class="fab fa-shopware logo" style="font-size: 5rem;"></i>
+                            </a>
                         </div>
                     </div>
+    
+                    <div class="col-md-2 col-sm-8">
+                        <div class="detail">
+                            <p>Your Ride, Our Passion!</p>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-2 col-sm-8">
+                        <div class="account">
+                            <h5>Helmet Hub</h5>
+                            <ul>
+                                <li><a href="#">Account</a></li>
+                                <li><a href="#">Order</a></li>
+                                <li><a href="#">Cart</a></li>
+                                <li><a href="#">Shipping</a></li>
+                                <li><a href="#">Return</a></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-2 col-sm-8">
+                        <div class="page">
+                            <h5>Pages</h5>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Terms & Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="col-md-4 col-sm-8">
+                        <div class="payment">
+                            <h5>Accepted Payments</h5>
+                            <img src='./img/visa.jpg' alt='Visa' class='payment-icon' />
+                            <img src='./img/mastercard.png' alt='Mastercard' class='payment-icon' />
+                            <img src='./img/Western Union.png' alt='Western' class='payment-icon' />
+                            <img src='./img/pinetwork.png' alt='Pinetwork' class='payment-icon' />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    
         <script src="./js.folder/index.js"></script>
-        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/0023926e4b.js" crossorigin="anonymous"></script>
+        <script src="login.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-
-
+        
 </body>
-
+    
 </html>

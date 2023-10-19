@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./img/motocareslogo.jpg">
+    <link rel="icon" href="./img/HelemetHub logo.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -11,11 +12,13 @@
     <link rel="icon" href="../img/motocareslogo.jpg">
     <script src="https://kit.fontawesome.com/0023926e4b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css.folder/login.css">
-    <title>Login and Sign Up</title>
+
+
+
+    <title>HelmetHub/LoginPage</title>
 </head>
 
 <body>
-    <!-- Your SDK code -->
     <script>
         window.fbAsyncInit = function () {
             FB.init({
@@ -34,155 +37,185 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
 
-<div class="free">
-    <p class="journey-text"><i class="fa-solid fa-motorcycle larger-icon"></i>Your Journey Awaits with <span
-            class="free-shipping-text">FREE SHIPPING 🚚</span></p>
-</div>
+    <div class="free">
+        <p class="journey-text"><i class="fa-solid fa-motorcycle larger-icon"></i>Your Journey Awaits with <span
+                class="free-shipping-text">FREE SHIPPING🚚</span></p>
+    </div>
 
-
-
-<div class="navbar">
-    <div class="container">
-
-        <div class="logo">
-
-            <div class="icon"> <a href="./index.html">
-                    <i class="fa-brands fa-shopware"></i></a>
+    <div class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container">
+            <div class="d-flex align-items-center">
+                <a class="navbar-brand" href="#">
+                    <div class="logo">
+                        <div class="icon">
+                            <a href="./index.html">
+                                <i class="fa-brands fa-shopware"></i>
+                            </a>
+                        </div>
+                        <div class="logo-text">Helmet  <span>hub</span></div>
+                    </div>
+                </a>
             </div>
-            <div class="logo-text">Helmet <span>hub</span></div>
-
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="true" aria-label="Toggle navigation"
+                onclick="toggleMenu()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="search">
+                <input type="text" placeholder="Sign up and get 100% off on your first order" autocomplete="off">
+              </div>
+              <button class="search-button" onclick="searchFunction()"> <!-- Add a button element outside the .search div -->
+                <i class="fa fa-search"></i>
+              </button>
+            
         </div>
 
-        <div class="search">
-            <button><i class="fa fa-search"></i></button>
-            <input type="text" placeholder="     Sign up and get 100% off on your first order" autocomplete="off">
-        </div>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">
+                        <div class="nav-icon">
+                            <i class="fas fa-home larger-icon"></i>
+                            <span>HOME</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./product.html">
+                        <div class="nav-icon">
+                            <i class="fas fa-cube larger-icon"></i>
+                            <span>PRODUCT</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../about">
+                        <div class="nav-icon">
+                            <i class="fas fa-info-circle larger-icon"></i>
+                            <span>ABOUT</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../contact">
+                        <div class="nav-icon">
+                            <i class="fas fa-envelope larger-icon"></i>
+                            <span>CONTACT</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./login.html">
+                        <div class="user-icon">
+                            <div class="outer-circle">
+                                <div class="inner-circle">
+                                    <div class="nav-icon">
+                                        <i class="fas fa-user larger-icon"></i>
+                                        <span class="login-text">LOGIN</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
 
-
-        <div class="nav">
-            <ul>
-                <li><a href="./index.html" class="link">HOME</a></li>
-                <li><a href="./product.html" class="link">PRODUCT</a></li>
-                <li><a href="../about" class="link">ABOUT</a></li>
-                <li><a href="../contact" class="link">CONTACT</a></li>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./cart.html">
+                        <div class="nav-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>CART</span>
+                        </div>
+                    </a>
+                </li>
             </ul>
         </div>
+    </div>
+    </div>
 
-        <div class="user-icon">
-            <a href="./login.html">
-                <div class="outer-circle">
-                    <div class="inner-circle">
-                        <i class="fas fa-user"></i>
-                    </div>
-                </div>
-
-                <div class="login-content">
-                    <button class="btn btn-primary">Login</button>
-                    <button class="btn btn-secondary">Sign Up</button>
-                </div>
-            </a>
+    <div class="social-icons">
+        <div class="container">
+            <p>FOLLOW US ON:</p>
+            <a href=""><img src="./img/fblogo.png" alt="Facebook"></a>
+            <a href="#"><img src="./img/instag.png" alt="Instagram"></a>
+            <a href="#"><img src="./img/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="./img/youtube.png" alt="YouTube"></a>
         </div>
     </div>
-</div>
-
-
-
-<div class="social-icons">
-    <div class="container">
-        <p>FOLLOW US ON:</p>
-        <a href="#"><img src="./img/fblogo.png" alt="Facebook"></a>
-        <a href="#"><img src="./img/instag.png" alt="Instagram"></a>
-        <a href="#"><img src="./img/twitter.png" alt="Twitter"></a>
-        <a href="#"><img src="./img/youtube.png" alt="YouTube"></a>
-
-        <div class="user-cart-icons">
-
-            <a href="#" class="link"><i class="fas fa-user"></i></a>
-            <a href="./cart.html" class="link"><i class="fas fa-shopping-bag"></i></a>
-        </div>
-    </div>
-</div>
 
 
 
 
     <div id="alertDiv"></div>
 
-    <!-- <div id="video-container">
-        <video autoplay muted loop id="video-background">
-            <source src="./img/vecteezy_men-s-silhouette-with-motocross-on-vacation-the-concept-of_10124634_531.mp4"
-                type="video/mp4">
-            Your browser does not support the video tag.
-        </video></div> -->
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Login or Sign Up</h4>
+                <button type="button" class="close" data-dismiss="modal"
+                    onclick="window.location.href = './index.html'">&times;</button>
+            </div>
 
-  
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title">Login or Sign Up</h4>
-                    <button type="button" class="close" data-dismiss="modal" onclick="window.location.href = './index.html'">&times;</button>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="d-flex justify-content-between mb-3">
+                    <button class="btn btn-outline-primary btn-hover orange-background btn-login"
+                        onclick="toggleLoginForm()">
+                        <span>Login</span>
+                    </button>
+                    <button class="btn btn-outline-secondary btn-hover orange-background" onclick="toggleSignupForm()">
+                        <span>Sign Up</span>
+                    </button>
                 </div>
+                <div class="social-login text-center mb-3">
+                    <button onclick="loginWithFacebook()" class="btn btn-primary btn-hover custom-button">
+                        <i class="fab fa-facebook icon-color"></i> Facebook
+                    </button>
+                    <button onclick="loginWithGoogle()" class="btn btn-outline-danger btn-hover custom-button">
+                        <i class="fab fa-google icon-color"></i> Google
+                    </button>
+                    <button onclick="loginWithMicrosoft()" class="btn btn-outline-info btn-hover custom-button">
+                        <i class="fab fa-microsoft icon-color"></i> Microsoft
+                    </button>
+                </div>
+                <div class="or-separator text-center mb-3">
+                    <span>or</span>
+                </div>
+                <!-- Login Form -->
+                <form id="loginForm" onsubmit="login(event)">
+                    <div class="form-group">
+                        <div class="input-icon">
+                            <i class="fas fa-user"></i>
+                            <input type="text" class="form-control" id="loginUsername" placeholder="Username/Email"
+                                required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-icon">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" class="form-control" id="loginPassword" placeholder=" password must be at least 6 letters long"
+                                required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-orange btn-block">Login</button>
+                    <br>
+                    <a href="#" id="forgotPasswordLink" onclick="toggleResetPasswordForm()">Did you forget your password?</a>
+                    </form>
 
-                <!-- Modal body -->
-                <div class="modal-body">
-                    <div class="d-flex justify-content-center mb-3">
-                        <button class="btn btn-outline-primary btn-hover" onclick="toggleLoginForm()">
-                            <span>Login</span>
-                        </button>
-                        <button class="btn btn-outline-secondary btn-hover" onclick="toggleSignupForm()">
-                            <span>Sign Up</span>
-                        </button>
-                    </div>
-                    <div class="d-flex justify-content-center mb-3">
-                        <div class="social-login">
-                            <button onclick="loginWithFacebook()" class="btn btn-primary btn-hover custom-button" style="width: 100%;">
-                                <i class="fab fa-facebook icon-color"></i> Facebook
-                            </button>
-                            <button onclick="loginWithGoogle()" class="btn btn-outline-danger btn-hover custom-button" style="width: 100%;">
-                                <i class="fab fa-google icon-color"></i> Google
-                            </button>
-                            <button onclick="loginWithMicrosoft()" class="btn btn-outline-info btn-hover custom-button" style="width: 100%;">
-                                <i class="fab fa-microsoft icon-color"></i> Microsoft
-                            </button>
-                        </div>
-                    </div>
-                
-                    <div class="or-separator text-center mb-3">
-                        <span>or</span>
-                    </div>
-                    <!-- Login Form -->
-                    <form id="loginForm" onsubmit="login(event)">
-                        <div class="form-group">
-                            <div class="input-icon">
-                                <i class="fas fa-user"></i>
-                                <input type="text" class="form-control" id="loginUsername" placeholder="Username/Email"
-                                    required>
+                        <form id="resetPasswordForm" style="display: none;" onsubmit="resetPassword(event)">
+                            <div class="form-group">
+                              <div class="input-icon">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" class="form-control" id="resetPasswordEmail" placeholder="Enter your email" required>
+                              </div>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="input-icon">
-                                <i class="fas fa-lock"></i>
-                                <input type="password" class="form-control" id="loginPassword"
-                                    placeholder="Your Password" required>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-orange btn-block">Login</button>
-                        <br>
-                        <a href="#" id="forgotPasswordLink" onclick="toggleResetPasswordForm()">Did you forget your password?</a>
-                        </form>
-                        
-                    <form id="resetPasswordForm" style="display: none;" onsubmit="resetPassword(event)">
-                        <div class="form-group">
-                          <div class="input-icon">
-                            <i class="fas fa-envelope"></i>
-                            <input type="email" class="form-control" id="resetPasswordEmail" placeholder="Enter your email" required>
-                          </div>
-                        </div>
-                        <button type="submit" class="btn btn-orange btn-block">Reset Password</button>
-                      </form>
-                      
+                            <button type="submit" class="btn btn-orange btn-block">Reset Password</button>
+                          </form>
 
-                
+
+
                     <!-- Signup Form -->
                     <form id="signupForm" onsubmit="signup(event)">
                         <div class="form-group">
@@ -202,98 +235,95 @@
                             <div class="input-icon">
                                 <i class="fas fa-lock"></i>
                                 <input type="password" class="form-control" id="signupPassword" placeholder="Password"
-                                    required autocomplete="current-password">
+                                    required autocomplete="">
                             </div>
                         </div>
                         <button type="submit" class="btn btn-orange btn-block">Sign Up</button>
                     </form>
-                </div>
             </div>
         </div>
-   
+    </div>
 
+    <div class="footer">
+        <div class="container">
+            <div class="row">
 
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-    
-    
-                    <div class="col-md-2 col-sm-12">
-                        <div class="icon">
-                            <!-- Add your logo here -->
-                            <a href="./index.html">
-                                <i class="fab fa-shopware logo" style="font-size: 5rem;"></i>
-                            </a>
-                        </div>
+                <div class="col-md-2 col-sm-12">
+                    <div class="icon">
+                        <a href="./index.html">
+                            <i class="fab fa-shopware logo" style="font-size: 5rem;"></i>
+                        </a>
                     </div>
-    
-    
-                    <div class="col-md-2 col-sm-8">
-                        <div class="detail">
-                            <p>Your Ride, Our Passion!</p>
-                        </div>
+                </div>
+
+                <div class="col-md-2 col-sm-8">
+                    <div class="detail">
+                        <p>Your Ride, Our Passion!</p>
                     </div>
-    
-                    <div class="col-md-2 col-sm-8">
-                        <div class="account">
-                            <h5>Helmet Hub</h5>
-                            <ul>
-                                <li><a href="#">Account</a></li>
-                                <li><a href="#">Order</a></li>
-                                <li><a href="#">Cart</a></li>
-                                <li><a href="#">Shipping</a></li>
-                                <li><a href="#">Return</a></li>
-                            </ul>
-                        </div>
+                </div>
+
+                <div class="col-md-2 col-sm-8">
+                    <div class="account">
+                        <h5>Helmet Hub</h5>
+                        <ul>
+                            <li><a href="#">Account</a></li>
+                            <li><a href="#">Order</a></li>
+                            <li><a href="#">Cart</a></li>
+                            <li><a href="#">Shipping</a></li>
+                            <li><a href="#">Return</a></li>
+                        </ul>
                     </div>
-    
-                    <div class="col-md-2 col-sm-8">
-                        <div class="page">
-                            <h5>Pages</h5>
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                            </ul>
-                        </div>
+                </div>
+
+                <div class="col-md-2 col-sm-8">
+                    <div class="page">
+                        <h5>Pages</h5>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                        </ul>
                     </div>
-    
-                    <div class="col-md-4 col-sm-8">
-                        <div class="payment">
-                            <h5>Accepted Payments</h5>
-                            <img src='./img/visa.jpg' alt='Visa' class='payment-icon' />
-                            <img src='./img/mastercard.png' alt='Mastercard' class='payment-icon' />
-                            <img src='./img/Western Union.png' alt='Western' class='payment-icon' />
-                            <img src='./img/pinetwork.png' alt='Pinetwork' class='payment-icon' />
-                        </div>
+                </div>
+
+                <div class="col-md-4 col-sm-8">
+                    <div class="payment">
+                        <h5>Accepted Payments</h5>
+                        <img src='./img/visa.jpg' alt='Visa' class='payment-icon' />
+                        <img src='./img/mastercard.png' alt='Mastercard' class='payment-icon' />
+                        <img src='./img/Western Union.png' alt='Western' class='payment-icon' />
+                        <img src='./img/pinetwork.png' alt='Pinetwork' class='payment-icon' />
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        <script src="https://kit.fontawesome.com/0023926e4b.js" crossorigin="anonymous"></script>
-        <script src="login.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/0023926e4b.js" crossorigin="anonymous"></script>
+    <script src="login.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-        <script>
-            $(document).ready(function() {
-             
-                $('#loginSignupModal').modal({
-                    backdrop: 'static',
-                    keyboard: false
-                });
+    <script>
+        $(document).ready(function () {
+
+            $('#loginSignupModal').modal({
+                backdrop: 'static',
+                keyboard: false
             });
-        </script>
+        });
+    </script>
 
 
 
     <script src="./js.folder/login.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 </body>
 

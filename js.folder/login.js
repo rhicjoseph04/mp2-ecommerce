@@ -192,3 +192,23 @@ function showModal(title, text, alertType) {
     </div>
   `);
 }
+
+
+function toggleMenu() {
+  const navbarContent = document.getElementById('navbarContent');
+  navbarContent.classList.toggle('show');
+}
+
+$(document).ready(function () {
+  $('.navbar-nav .nav-link').click(function () {
+    $('#navbarContent').removeClass('show');
+  });
+
+
+  $(document).click(function (event) {
+    var clickTarget = $(event.target);
+    if (!clickTarget.closest('.navbar').length) {
+      $('#navbarContent').removeClass('show');
+    }
+  });
+});

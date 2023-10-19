@@ -104,6 +104,17 @@ function loginWithMicrosoft() {
   console.log('Logging in with Microsoft...');
 }
 
+function showModal(title, content) {
+  document.getElementById('modal-title').textContent = title;
+  document.getElementById('modal-content').textContent = content;
+  document.getElementById('modal').style.display = 'block';
+}
+
+function closeModal() {
+  document.getElementById('modal').style.display = 'none';
+}
+
+
 
 
 

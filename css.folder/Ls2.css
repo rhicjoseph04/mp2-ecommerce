@@ -8,139 +8,124 @@ body {
 
 }
 
-.container {
-  max-width: 1200px;
-  width: 100%;
-  margin: auto;
-  transition: 0.5s;
-  padding-right:10px;
-  padding-left:10px;
-  box-sizing: border-box; 
-}
+
 .free {
-   background: black;
-   padding: 10px;
-   text-align: center;
-   color:	#ffffff;
-   position: sticky;
-   font-family: Arial, sans-serif;
-   
+  background: black;
+  padding: 10px;
+  text-align: center;
+  color: #ffffff;
+  position: sticky;
+  font-family: Arial, sans-serif;
+
 }
 
 .social-icons {
-
-   align-items: center;
-   background: 	#ffffff;
-   color: 	#ffffff;
-   padding-left: 20px;
-   position: sticky;
-   display: flex;
-   width: 100%;
-   padding-left :0;
-  justify-content:center;
-  align-items:center;
+  align-items: center;
+  background: #ffffff;
+  color: #ffffff;
+  padding-left: 20px;
+  position: sticky;
+  display: flex;
+  width: 100%;
+  padding-left: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .larger-icon {
-   font-size: 24px;
-   color:	#ffa31a;
-   vertical-align: middle;
-   
+  font-size: 24px;
+  color: #ffa31a;
+  vertical-align: middle;
+
 }
 
 .journey-text {
-   font-size: 18px;
-   margin: 0;
+  font-size: 18px;
+  margin: 0;
 }
 
 .free-shipping-text {
-   font-weight: bold;
+  font-weight: bold;
 }
-
-.icon img {
-   width: 30px;
-   height: 30px;
-}
-
-
-.navbar {
-  background:	#0e0e0e;
-  font-family: Arial, sans-serif;
-  justify-content: center;
-  align-items:center;
- text-align:center;
-}
-
 
 .navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
-   
+  padding:10px 10px;
+
 }
 
-.navbar .logo {
+.nav-icon {
   display: flex;
   align-items: center;
-  
 }
 
-.navbar .logo .icon {
-  padding-right: 5px;
+.nav-icon i {
+  font-size: 16px;
+  color: #ffa31a;
+  margin-right: 5px;
+  padding: 25px 10px;
+
 }
 
-.navbar .nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.nav-icon span {
+  font-size: 16px;
+  color: #f4f2ef;
   font-style: italic;
 }
 
-.navbar .nav ul li {
-  display: inline-block;
-  margin-right: 10px;
-  font-size: 14px;
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: #FFA31A;
+  cursor: pointer;
 }
 
-.navbar .nav ul li:last-child {
-  margin-right: 0;
+
+.navbar-nav .nav-link .nav-icon {
+  margin-right: 5px;
 }
 
-.navbar .nav ul li a {
-  color: #fff;
+.navbar-nav .nav-link .nav-icon i {
+  font-size: 24px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffa31a;
   text-decoration: none;
-  font-size: 14px;
 }
 
-.navbar .nav ul li a:hover {
-  color:#ffa31a;
+.navbar-nav .nav-link:hover .nav-icon i {
+  color: #fff;
 }
-.navbar .container {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding-right:5px;
- 
+
+.social-icons a:hover {
+  color: #ffa31a;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1);
 }
 
 .logo {
-   display: flex;
-   align-items: center;
-   padding-top:5px;
-   padding-bottom:5px;
-   justify-content:center;
-   border-radius: 10px;
-   padding-right:5px;
-   padding-left:5px;
-
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  justify-content: center;
+  border-radius: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
 }
 
 .icon img {
-   width: 35px;
-   height: 35px;
-   border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
 
 }
 
@@ -154,35 +139,36 @@ body {
   padding-right: 10px;
   font-size: 2.5rem;
   margin-right: 1rem;
- }
- 
- .logo .icon i:hover {
+}
+
+.logo .icon i:hover {
   background: linear-gradient(90deg, #FFA500 50%, white 50%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
- }
- 
- .logo-text span {
+}
+
+.logo-text span {
   color: black;
   background-color: #FFA31A;
-  padding: 5px 10px; 
+  padding: 5px 10px;
   border-radius: 5px;
- }
- 
- .logo-text {
-   font-size: 2rem;
-   font-weight: bold;
-   color:white;
-  
- }
- 
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+
+}
 
 .search {
   flex: 1;
   margin: 0 20px;
   display: flex;
   position: relative;
+  width: 200px;
+  justify-content: center;
 }
 
 .search input {
@@ -191,56 +177,56 @@ body {
   border: 1px solid #ccc;
   border-radius: 20px;
   font-size: 14px;
-  background-color:	#292929;
+  background-color: #292929;
   color: white;
 }
 
-.search button {
-  margin-left: 10px; 
-  background: none;
+.search-button {
+  background: #FFA31A;
   border: none;
   color: white;
   cursor: pointer;
   font-size: 15px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 0;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #FF7D00
+
 }
 
 
 .social-icons .container {
   display: flex;
   align-items: center;
-  float:left;
+  float: left;
   padding: 10px;
-  max-width: 1200px; 
+  max-width: 1000px;
   margin: 0 auto;
-  padding-bottom:5px;
+  padding-bottom: 5px;
   font-family: Arial, sans-serif;
+
 }
 
 .social-icons {
   display: flex;
   align-items: center;
-  margin-right: 20px; 
-  padding-top:5px;
-  padding-bottom:5px;
-  background:	#0e0e0e;
- justify-content: center;
- font-size:15px;
+  margin-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: black;
+  justify-content: center;
+  font-size: 15px;
 
 }
-
-.social-icons:hover{
-  color:#ffa31a;
-}
-
 
 .social-icons a {
   margin-right: 10px;
-  font-size:20px;
-  color:	#ffffff;
+  font-size: 20px;
+  color: #ffffff;
+  display: inline-block;
 }
 
 .social-icons a img {
@@ -249,20 +235,25 @@ body {
 
 }
 
+.social-icons a:hover img {
+  transform: scale(1.1);
+}
+
 .social-icons a:hover {
-  color:#ffa31a;
+  color: #ffa31a;
 }
 
 .social-icons p {
   margin: 0;
   margin-right: 20px;
-  font-size:16px;
-  font-weight:bold;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .user-icon {
   cursor: pointer;
-  padding:20px;
+  padding: 20px;
+  margin-left: 0;
 }
 
 .outer-circle {
@@ -279,14 +270,15 @@ body {
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  background-color: #000;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .inner-circle i {
-  color: #fff;
+  color: #ffa31a;
+  padding: 10px 10px;
 }
 
 .login-content {
@@ -299,25 +291,119 @@ body {
   margin-bottom: 10px;
 }
 
+.nav-item a i.fas.fa-shopping-bag {
+  color: #FFA31A;
+  font-size: 28px;
 
-.nav ul {
-   list-style-type: none;
-   padding: 0;
-   margin: 0;
-   display: flex;
-   font-size: large;
-   font-weight: bold;
 }
 
-.nav li {
-   margin: 0 10px;
+.close {
+  color: #FFA31A; 
+}
+.nav-item a {
+  color: #FFA31A;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.nav a {
-   color: white;
-   text-decoration: none;
-   font-size: 16px;
+.nav-item a:hover {
+  color: #fff;
 }
+
+.login-text {
+  font-size: 18px;
+  color: #FFA31A;
+  -webkit-text-stroke: 1px #e0d1d1;
+}
+
+.login-text:hover {
+  color: #FFA31A;
+}
+
+
+
+@media (max-width: 767px) {
+  .navbar-toggler {
+    text-align: left;
+  }
+
+  .navbar-brand {
+    text-align: left;
+    margin-right: auto;
+  }
+
+  .navbar-collapse {
+    text-align: left;
+  }
+
+  .navbar-nav {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    padding: 10px 10px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .search input {
+    padding: 10px 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-left: 0;
+    
+  }
+}
+
+@media (min-width: 768px) {
+  .search {
+    flex: 1;
+  }
+
+  .search input {
+    width: 100%;
+  }
+
+  .search button {
+    margin-left: 40px;
+  }
+
+  .navbar-nav .nav-link {
+    color: white;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-toggle {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+  }
+}
+
+.navbar-nav .nav-link {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link .nav-icon {
+  margin-right: 5px;
+  color: #FFA31A;
+}
+
+.navbar-nav .nav-link .nav-icon i {
+  font-size: 24px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #FFA31A;
+}
+
 
 .col-lg-6{
   color:white;
