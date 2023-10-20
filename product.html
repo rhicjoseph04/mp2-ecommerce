@@ -143,37 +143,16 @@
           <a href="www.youtube.com"><img src="./img/youtube.png" alt="YouTube"></a>
       </div>
   </div>
- 
-  <div class="container">
-    <header>
-      <h1>Product List<div class="filter">
-        <div class="categories">
-          
-          <ul>
-            <li onclick="allProducts('All Products')">All Products</li>
-            <li onclick="filterProduct('Full-face', 'KYT')">Full-Face Helmet (KYT)</li>
-           <li onclick="filterProduct('Half-face', 'KYT')">Half-face Helmet (KYT)</li>
-            <li onclick="filterProduct('Off-Road', 'KYT')">Off-Road Helmet (KYT)</li>
-          <li onclick="filterProduct('Accessories', 'KYT')">Accessories (KYT)</li>
+  <div class="categories">
+    <ul>
+        <li onclick="filterProduct('All Products')">All Products</li>
+        <li onclick="filterProduct('Full-face')">Full-Face Helmet (KYT)</li>
+        <li onclick="filterProduct('Half-face')">Half-face Helmet (KYT)</li>
+        <li onclick="filterProduct('Off-Road')">Off-Road Helmet (KYT)</li>
+        <li onclick="filterProduct('Accessories')">Accessories (KYT)</li>
+    </ul>
+</div>
 
-        </div></h1>
-      <div class="shopping">
-        <img src="./img/shopping-cart.png">
-        <span class="quantity">0</span>
-      </div>
-    </header>
-    
-    </div>
-   
-
-    <div class="products">
-      
-      <!-- <div class="container">
-        <div class="sidebar">
-        
-        </div>
-      </div> -->
-      <li onclick="filterProduct('All Products', 'KYT')">All KYT Products</li>
 
       
       <div class="product-images">
@@ -205,11 +184,7 @@
       </div>
     </div>
 
-    <div class="cartcontainer">
-      <div class="content"></div>
-      <h2 class="totalprice">Total: $0.00</h2>
-      <button class="checkout">Checkout</button>
-    </div>
+   
 
     <div class="footer">
       <div class="row">
@@ -289,7 +264,7 @@
     <script src="./js.folder/newFileproduct.js"></script>
     <script src="./js.folder/product.js"></script>
     <script src="./js.folder/productdetails.js"></script>
-    <script src="./js.folder/cart.js"></script>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

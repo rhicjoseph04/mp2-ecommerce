@@ -10,16 +10,18 @@ function allProducts() {
 }
 
 function filterProduct(category) {
-    const allProductBoxes = document.querySelectorAll('.box');
-    allProductBoxes.forEach(box => {
-        const boxCategory = box.getAttribute('data-category');
-        if (category === 'All Products' || boxCategory === category) {
-            box.style.display = 'inline-block';
-        } else {
-            box.style.display = 'none';
-        }
+    const productBoxes = document.querySelectorAll('.box'); // Define productBoxes here
+  
+    productBoxes.forEach((box) => {
+      const boxCategory = box.getAttribute('data-category');
+      if (category === 'All Products' || boxCategory === category) {
+        box.style.display = 'inline-block';
+      } else {
+        box.style.display = 'none';
+      }
     });
-}
+  }
+  
 
 filterProduct('Full-face');  
 

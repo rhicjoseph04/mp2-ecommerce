@@ -68,6 +68,9 @@
 // }
 
 
+
+
+
 const productDetail = [
     
         {
@@ -199,14 +202,20 @@ function calculateTotalPHP() {
 document.addEventListener('DOMContentLoaded', () => {
     const productsContainer = document.getElementById('app');
 
-    productDetail.forEach(product => {
-      const productBox = document.createElement('div');
-      productBox.classList.add('box');
-      productBox.setAttribute('data-category', `${product.Cat} ${product.Brand}`);
+    productDetail.sort((a, b) => a.id - b.id);
+
+    productDetail.forEach((product) => {
+      // Create a product box element and populate it with data
+      const productBox = document.createElement("div");
+      productBox.classList.add("box");
+      productBox.setAttribute("data-category", `${product.Cat} ${product.Brand}`);
+    
 
 
-      const imgBox = document.createElement('div');
-      imgBox.classList.add('img_box');
+      // Create the content for the product box
+  const imgBox = document.createElement("div");
+  imgBox.classList.add("img_box");
+
 
       const productImage = document.createElement('img');
       productImage.src = product.Img;
@@ -216,6 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const icons = document.createElement('div');
       icons.classList.add('icons');
+
       
       const cartIcon = document.createElement('button');
       cartIcon.classList.add('icon', 'cart-icon');
@@ -451,18 +461,22 @@ function filterBrandMain(brand) {
         }
     });
 }
-
 function filterProduct(category) {
-    const allProductBoxes = document.querySelectorAll('.productbox .box');
-    allProductBoxes.forEach(box => {
-        const boxCategory = box.getAttribute('data-category');
-        if (category === 'All Products' || boxCategory === category) {
-            box.style.display = 'inline-block';
-        } else {
-            box.style.display = 'none';
-        }
-    });
+  const productBoxes = document.querySelectorAll('.box'); // Define productBoxes here
+
+
+  productBoxes.forEach((box) => {
+    const boxCategory = box.getAttribute('data-category');
+    if (category === 'All Products' || boxCategory === category) {
+      box.style.display = 'grid';
+    } else {
+      box.style.display = 'none';
+    }
+  });
 }
+
+
+
 
 filterProduct('Full-face'); 
 

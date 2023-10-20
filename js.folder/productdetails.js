@@ -1,5 +1,7 @@
-[
-       
+// Define the products array
+const products = [
+
+  
     {
         id:1,
         Title:"TT COURSE – RADIANCE",
@@ -102,3 +104,16 @@
     
        
 ]
+
+// Include the list.js script
+// Export the products array
+export { products };
+
+// Import the initList function and the products array
+import { initList } from './product.js';
+import { products } from './product.js';
+
+const productListContainer = document.querySelector('.product-list');
+
+// Call the initList function to display the products
+initList(products, productListContainer);

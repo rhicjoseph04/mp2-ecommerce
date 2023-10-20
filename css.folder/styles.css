@@ -2,10 +2,10 @@
 body {
     font-family: Arial, sans-serif;
     border: none;
-    background: radial-gradient(circle, #808080, #000000);
+    background-image: url(../img/holloween.png);
     padding: 0;
     margin: 0;
-    overflow-x: hidden; /* Add this to prevent horizontal scrolling */
+    overflow-x: hidden;
     }
 
     .html{
@@ -13,19 +13,20 @@ body {
         overflow-x: hidden;
     }
 
+
 .free {
-    background: black;
+    background: 	#1b1b1b;
     padding: 10px;
     text-align: center;
     color: #ffffff;
     position: sticky;
     font-family: Arial, sans-serif;
   
-  }
+}
   
   .social-icons {
     align-items: center;
-    background: #ffffff;
+    background: #1b1b1b;
     color: #ffffff;
     padding-left: 20px;
     position: sticky;
@@ -213,19 +214,7 @@ body {
     font-family: Arial, sans-serif;
   
   }
-  
-  .social-icons {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background: black;
-    justify-content: center;
-    font-size: 15px;
-  
-  }
-  
+ 
   .social-icons a {
     margin-right: 10px;
     font-size: 20px;
@@ -411,8 +400,8 @@ body {
   
   
 
- /*start of sliding section*/
- .container-fluid {
+  /*start of sliding section*/
+  .container-fluid {
     background-color: black;
     padding: 1% 0;
     margin: 0;
@@ -436,10 +425,12 @@ body {
   }
   
   .carousel-item img {
-    height: auto; /* Use auto height for responsiveness */
+    height: 600px;
     width: 100%;
+    max-height: 600px; /* Set a maximum height to limit image size */
+    object-fit: cover;
     border: 1px solid #ffffff;
-  }
+}
 
 /* Shop button styling */
 .shop-button {
@@ -451,7 +442,8 @@ body {
     font-size: 18px;
 }
 
-.carousel-control-prev, .carousel-control-next {
+.carousel-control-prev,
+.carousel-control-next {
     display: none;
 }
 
@@ -488,17 +480,36 @@ body {
     }
   }
 
+  @media (max-width: 767px) {
+    .carousel-inner {
+        max-height: 300px; /* Adjust the maximum height as needed */
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: block; /* Show carousel controls for small screens */
+    }
+}
+@media (max-width: 768px) {
+  #carousel-container {
+    width: 100%; /* Adjust the width as needed */
+  }
+
+  .carousel-image {
+    width: 100%; /* Adjust the width as needed */
+  }
+}
 
  /*end of sliding section*/
 
  /* start of product */
  .product_type {
-    background-color: #000000;
-    padding: 20px; /* Add padding to create some space */
+    background-color: black;
+    padding: 20px; 
     overflow-x: hidden;
 }
 .product_type .box {
-    width: 200px; /* Adjust the width of each box */
+    width: 200px; 
     margin: 10px;
     padding: 0;
     background-color:black;
@@ -573,15 +584,14 @@ body {
    padding-bottom:5px;
    font-family: Arial, sans-serif;
 
-   
 }
 .helmet-logo {
     width: 100px;
-    margin-right: 10px; /* Add margin between logos */
+    margin-right: 10px; 
 }
 
  .product_type .container .box {
-     background-color: black;
+     background-color: transparent;
      border-radius: 10px;
      transition: transform 0.3s ease;
      box-shadow: 0 10px 20px rgba(247, 242, 242, 0.3);
@@ -682,7 +692,7 @@ body {
 
  /* About Section */
  .about {
-    background: linear-gradient(45deg, #f7ff1a, #ff523b);
+    background-color: 	#1b1b1b;
     padding: 50px;
     text-align: center;
     font-family: Arial, sans-serif;
@@ -693,62 +703,76 @@ body {
     margin-bottom: 20px;
     font-size: 2rem;
     padding: 5px;
-    color: black;
+    color: #FFA31A;
     font-style: italic;
 }
 
 .about .boxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0px; /* Add some gap between boxes for better spacing */
-    overflow: hidden; /* Hide any overflowing content */
-    height:auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  overflow: hidden;
 }
 
 .about .boxes .box {
-    position: relative; /* Add relative positioning to the box container */
-    flex: 1;
-    min-width: 250px;
-    padding: 20px;
-    margin: 10px;
-    background: radial-gradient(circle, #575656, #000000);
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 10px 20px rgba(247, 242, 242, 0.3);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  position: relative;
+  flex: 1;
+  min-width: 250px; /* Adjust the minimum width as needed */
+  max-width: 300px; /* Adjust the maximum width as needed */
+  padding: 20px;
+  margin: 10px;
+  background: radial-gradient(circle, #575656, #000000);
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(247, 242, 242, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
 }
 
-.about .boxes .box img {
-    max-width: 100%; /* Set the image width to be responsive and fill the container */
-    height: auto; /* Maintain aspect ratio */
+.about .boxes .box .box-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 
+.about .boxes .box img.small-image {
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    width: auto; /* Ensure responsive scaling */
+}
 .about .boxes .box .icon {
-    position: absolute;
-    top: 10px; /* Adjust the top value to control the spacing between the icon and the image */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 50px;
-    color: white;
-    z-index: 1;
-    padding:10px 10px;
+  font-size: 50px;
+  color: white;
 }
 
-/* Square box aspect ratio (1:1) */
-.about .boxes .box:before {
-    content: '';
-    padding-top: 100%; /* 1:1 aspect ratio */
-    display: block;
+.about .boxes .box .detail {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+.about .boxes .box .box-title {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.about .boxes .box .box-content {
+  font-size: 0.8rem;
+}
 @media (min-width: 768px) {
     .about .boxes .box {
-        width: calc(33.33% - 20px); /* Set a specific width for larger screens */
+        width: calc(33.33% - 20px); 
     }
 }
 
@@ -760,270 +784,282 @@ body {
     }
 }
 
-@media (min-width: 768px) {
-    .about .boxes .box {
-        width: calc(33.33% - 20px);
-    }
-}
-
 @media (max-width: 320px) {
-    .about .boxes .box {
-        padding: 10px;
-        font-size: 12px;
-    }
+  .about .boxes .box {
+      padding: 10px; /* Reduce padding for smaller screens */
+  }
+  .about .boxes .box .box-title {
+      font-size: 12px; /* Reduce font size for smaller screens */
+  }
+  .about .boxes .box .box-content {
+    font-size: 10px;
+}
 }
 
-
-/* Modal Styles */
 .about-modal {
-    top: 100px;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999; /* Ensure the modal appears above other content */
+}
+.about-modal .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  max-width: 80%; /* Adjust the maximum width as needed */
+  padding: 20px;
+  text-align: center;
+}
+.modal-content #modal-title {
+  font-size: 24px;
+  color: #FFA31A;
+  font-style: italic;
 }
 
-.about .modal-content {
-    display: none;
-    position: center;
-    color: black;
-    font-style: italic;
-    background: white; /* Blurring background */
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    overflow: auto; /* Add this to enable scrolling if the content exceeds the modal */
-    height: 250px;
-    width: 250px;
-    padding: 20px; /* Adjust padding for content */
+.modal-content #modal-content {
+  font-size: 16px;
+  color: #333; /* Adjust text color as needed */
 }
+
+
 
 .close {
-    position: absolute;
-    top: 15px;
-    right: 10px;
-    padding: 10px;
-    cursor: pointer;
-    color: white;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: #FFA31A;
 }
 
 
+
+/* Improved styling on hover */
 .about .boxes .box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
- .about .container .boxes .box .icon {
-     font-size: 30px;
-     color: white;
-     justify-content: center;
-     cursor: pointer;
-     transition: all 0.3s ease-in-out;
-     text-align: center;
-     margin-bottom: 10px;
- }
 
- .about .container .boxes .box .icon {
-     font-size: 35px;
-     color: #ffa500;
-     box-shadow: 0 10px 20px rgba(242, 238, 238, 0.89) transparent;
- }
+/* Responsive font size adjustments */
+@media (max-width: 320px) {
+  .about-modal .modal-content h2 {
+    font-size: 1.2rem;
+  }
 
- .currency-icon {
-     font-weight: bold;
-     font-size: 20px;
- }
-
- .about .detail {
-     margin-top: 10px;
-     text-align: center;
-     justify-content: center;
-     color:white;
- }
-
- .about .detail h3 {
-     font-size: 24px;
-     margin-bottom: 10px;
-     color: white;
-     
- }
-
- .about .container .boxes .box {
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ffffff;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 70%;
-    max-width: 400px;
-    
+  .about-modal .modal-content p {
+    font-size: 0.9rem;
+  }
 }
+
+.currency-icon {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.about .detail {
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+}
+
+.about .detail h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+
 
 .about .box:hover {
-    background: radial-gradient(circle, #808080, #000000);
+  background: radial-gradient(circle, #808080, #000000);
 }
 
 .about .icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #ff523b; /* Use the major font color of the website */
-    width: 40px;
-    height: 40px;
-    border-radius: 50%; /* Make the icon container a circle */
-    margin: 0 auto 10px; /* Adjust spacing as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff523b;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
 }
 
 .about .icon i {
-    font-size: 20px; /* Adjust the icon size as needed */
-    color: white;
+  font-size: 20px;
+  color: white;
 }
 
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .modal-content {
+      max-width: 90%;
+  }
+
+  .modal-content #modal-title {
+      font-size: 20px;
+  }
+
+  .modal-content #modal-content {
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .modal-content #modal-title {
+      font-size: 18px;
+  }
+}
  /* start of top_product */
 
  .top_product {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: 0;
-    justify-content: center;
-    padding: 20px 0;
-    background-color: #292929;
-    color: #FFA31A;
-    padding-left: 50px;
-    padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #292929;
+  color: #FFA31A;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 
 .top_product .top_products {
-    color: white;
-    width: 100%;
-    padding-top: 5px;
-    padding-bottom:10px 10px;
-    justify-content: center;
-    flex-direction: right;
+  color: white;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
-
-  .top_product .container {
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center ;
-    padding:10px 10px;
-    align-items:center;
-    position:center;
+.top_product .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; 
 }
+
 
 .top_product .container .box {
-    margin-right:10px;
-    padding: 10px 10px;
-    overflow: hidden;
-    width: 250px;
-    height: 390px;
-    border: 1px solid #ffffff;
-    margin-bottom: 20px;
-    transition: 0.5s;
-    cursor: pointer;
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(to bottom, #808080, #000000);
-    box-shadow: 0 10px 20px rgba(252, 252, 252, 0.3);
+  position: relative;
+  padding: 20px;
+  width: 180px;
+  height: 200px;
+  border: 1px solid #ffffff;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, #808080, #000000);
+  box-shadow: 0 10px 20px rgba(252, 252, 252, 0.3);
+  transition: 0.5s;
 }
 
 .top_product .container .box:hover {
-    box-shadow: rgba(250, 247, 247, 0.928) 0px 3px 8px;
+  box-shadow: rgba(250, 247, 247, 0.928) 0px 3px 8px;
+}
+
+@media (min-width: 320px) {
+    .top_product .container .box {
+        flex: 1 1 calc(33.3333% - 30px);
+        max-width: calc(33.3333% - 30px);
+    }
 }
 
 .top_product .container .box .img_box {
     display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #ffffff;
-    padding:10px 10px;
-    margin-left:-30px;
-    border-radius:5px;
-    background-color: transparent;
-}
-
-.top_product .container .box .img_box img {
-    width: 2000px;
-    height: 200px;
-    display:inline-block;
-}
-.top_product .container .box .img_box .icon {
-    z-index: 1;
-    position: relative;
-    right: 15px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    transition: 0.5s;
-    padding:10px 10px;
+    justify-content: space-between; 
+    padding: 10px 10px;
+    margin-left: -30px;
     border-radius: 5px;
- 
+    background-color: transparent;
+    height:auto;
+    width:180px;
+    float:left;
+    padding-left:5px;
+}
+.top_product .container .box .img_box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  justify-content: center;
+  float:left;
+  padding:10px 10px;
 }
 
+.top_product .container .box .img_box .icon {
+  display: flex;
+  justify-content:space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 5px;
+ 
+  transform: translateY(100%);
+  transition: 0.5s;
+  padding-left:10px;
+
+}
 .top_product .container .box .img_box:hover .icon {
     transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
+   
+}
+
+.top_product .container .box .icon button:hover {
+  color: white;
+}
+
+.top_product .container .box .icon button {
+  background: transparent;
+  border: none;
+  color: #FFA31A;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 5px;
+  transition: 0.3s;
 }
 
 
-
-
-.top_product .container .box .img_box .icon li {
-    list-style: none;
-    padding: 5px;
-    color: rgb(235, 236, 246);
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: 0.7s;
-    font-size: 22px;
-    transform: scale(1);
-}
-
-
-.top_product .container .box .img_box .icon li:hover {
-    background: #ffa31a;
-    color: black;
-    transform: scale(1.2); /* Add a scale transform on hover for a zoom effect */
-}
-
- .top_product .container .box .detail {
-    margin-top: 0;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
+.top_product .container .box .detail {
+  text-align: center;
+  padding: 10px;
 }
 
 .top_product .container .box .detail p {
-    font-size: 20px;
-    font-weight: bold;
-    padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 5px;
+  font-style:italic;
+}
+.top_product .container .box .detail h3 {
+  font-size: 16px;
+  color: #ffffff;
+  transition: 0.3s;
 }
 
-.top_product .container .box .detail h3 {
-    font-size: 18px;
-    margin-top: 5px;
-    color: #ffffff;
-    transition: 0.3s;
-}
 
 .top_product .container .box:hover .detail h3 {
     color: #ffa31a;
 }
-
 .top_product .container .box .detail h4 {
-    margin-top: 5px;
-    font-size: 18px;
-    color: #ffffff;
-    padding-bottom: 10px;
+  font-size: 16px;
+  color: #ffffff;
+  padding-bottom: 10px;
 }
 
 @media (max-width: 768px) {
-    .top_product .container .box {
-        flex: 1 1 calc(50% - 40px);
-        max-width: calc(50% - 40px);
-    }
+  .top_product .container .box {
+      flex: 1 1 calc(50% - 20px);
+      max-width: calc(50% - 20px);
+  }
 }
 
 @media (max-width: 768px) {
@@ -1031,58 +1067,105 @@ body {
         flex: 1 1 calc(50% - 40px);
         max-width: calc(50% - 40px);
     }
+    .top_product {
+      padding-left: 20px;
+      padding-right: 20px;
+  }
 }
-
 @media (max-width: 576px) {
-    .top_product .container .box {
-        flex: 1 1 calc(100% - 40px);
-        max-width: calc(100% - 40px);
-    }
-}
-/* Add this CSS to style the icons */
-
-.top_product .icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: black; 
-    width: 40px;
-    height: 40px;
-    border-radius: 50%; 
-    margin: 0 auto 10px; 
+  .top_product .container .box {
+      flex: 1 1 calc(100% - 20px);
+      max-width: calc(100% - 20px);
+  }
 }
 
-.top_product .icon i {
-    font-size: 22px;
-    color: #FFA31A;
-    padding:5px 5px;
-   
+/* Style for the productModal */
+#productModal.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
 }
- .close {
-    color:black;
- }
+
+#productModal .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+#productModal .close {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Add specific styles for the modalTitle and modalText inside productModal */
+#productModal .modalTitle {
+  font-size: 24px;
+  margin: 10px;
+  color: #FFA31A;
+}
+
+#productModal .modalText {
+  padding: 20px;
+  font-style: italic;
+  background: white;
+  color: #FFA31A;
+}
+
+#productModal .modalText p {
+  color:#fff;
+}
 
 
- /* end of top_prouduct */
+#getLocation {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffa31a;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
- /* start of banner */
+#getLocation:hover {
+  background-color: #ff6600;
+}
 
-/* 
+
+/* end of top_prouduct */
+
+ 
+/* start of banner */
+
  .banner {
-     background: 	#292929;
-     padding: 20px;
-     margin-bottom: 0;
-    
-     color: #fff;
+background-color: transparent;
+padding: 20px;
+margin-bottom: 0;
+color: black;
  }
 
  .banner .container .img_box img {
-     max-width: 100%;
-    
-     height: auto;
-    
-     width: 300px;
- 
+    max-width: 50%;
+    height: auto;;
+    width: 700px;
+    float:right;
+
     
  }
 
@@ -1091,6 +1174,8 @@ body {
      display: flex;
      justify-content: space-between;
      align-items: center;
+     justify-content:center;
+     background-color:transparent;
  }
 
  .banner .container .detail {
@@ -1099,8 +1184,13 @@ body {
      padding: 20px;
  }
 
+ .banner .container .detail h1 {
+ color:#FFA31A;
+}
+
+
  .banner .container .detail h4 {
-     font-size: 16px;
+     font-size: 20px;
  }
 
  .banner .container .detail h3 {
@@ -1125,15 +1215,49 @@ body {
  }
 
  .banner .container .detail .link:hover {
-     color: navy;
+     color: rgb(232, 232, 240);
      background: #FFA31A;
- } */
+ }
+
+ 
+    
+.parallax-container {
+  position: relative;
+
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Adjust the height as needed */
+  overflow: hidden;
+}
+
+.parallax-content.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(8, 8, 8, 0.3);
+  height: auto; 
+  padding: 20px; 
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 767px) {
+  .parallax-container {
+    height: 50vh; 
+  }
+  
+  .parallax-content.about {
+    padding: 10px; 
+  }
+}
+  
+
 
  /* end of banner */
 
-/* 
- Product Detail Section */
- /* .product_detail {
+ 
+/* Product Detail Section */
+ .product_detail {
      position: fixed;
      top: 0;
      left: 0;
@@ -1143,6 +1267,7 @@ body {
      display: flex;
      align-items: center;
      justify-content: center;
+   
  }
 
  .product_detail .container {
@@ -1323,22 +1448,23 @@ body {
 
  .product_detail .container .productbox .detail button:hover {
      background: #0989ff;
- } */
+ } 
 
  /* end of product_detail */
 
  .slider-container {
-    background: linear-gradient(to right, #808080, #000000);
-    min-height: 400px;
+    background: transparent;
+    min-height: 300px;
     display: flex;
-    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
-    justify-content: space-between; /* Space content evenly */
+    flex-wrap: wrap; 
+    justify-content: space-between;
     align-items: center;
     font-family: Arial, sans-serif;
     position: relative;
     overflow: hidden;
     padding: 20px;
-    border: 1px solid #ddd;
+   
+    width:100%;
 }
 .slider-content {
     flex: 1;
@@ -1347,8 +1473,8 @@ body {
 }
 
 .content-inner {
-    max-width: 600px; /* Limit content width for readability */
-    margin: 0 auto; /* Center the content horizontally */
+    max-width: 100%; 
+    margin: 0 auto; 
 }
 
 
@@ -1360,8 +1486,10 @@ body {
 
 .slider-content p {
     font-size: 20px;
-    color: #666;
+    color: white;
     margin: 10px 0;
+    justify-content:center;
+    align-items:center;
 }
 
 .slider-content a {
@@ -1384,11 +1512,10 @@ body {
     background: #ff6600;
 }
 
-/* Base styles for the slider */
 .slider {
     width: 100%;
-    max-width: 1200px; /* Set a maximum width for responsiveness */
-    height: 600px; /* Adjust the height for smaller screens */
+    max-width: 1200px; 
+    height: 600px;
     display: flex;
     overflow: hidden;
     position: relative;
@@ -1408,58 +1535,65 @@ body {
 
 .item img {
     width: 600px;
-    height: 600px; /* Maintain aspect ratio */
+    height: 600px; 
     object-fit: cover;
-    float:left;
+  
 }
 
-/* Base styles for previous and next buttons */
 #next, #prev {
     position: absolute;
-    top: 50%;
+    top: 100%;
     color: black;
     background-color: transparent;
     border: none;
     font-size: xxx-large;
     font-family: monospace;
     font-weight: bold;
-    cursor: pointer; /* Add a cursor pointer for better UX */
+    cursor: pointer; 
 }
 
 #next {
-    right: 10px; /* Adjust the right position */
+    right: 10px; 
 }
 
 #prev {
-    left: -40px; /* Adjust the left position */
+    left: -40px; 
 }
 
-
-
-/* Media query for responsiveness */
 @media (max-width: 768px) {
-    .slider-container {
-        min-height: 300px; /* Adjust min-height for smaller screens */
-    }
+  .slider-container {
+      min-height: 300px;
+  }
 
-    .slider {
-        height: 400px; /* Adjust height for smaller screens */
-    }
+  .slider {
+      height: auto;
+  }
 
-    .item {
-        height: 400px; /* Adjust height for smaller screens */
-    }
+  .item {
+      height: auto; 
+  }
 
-    #next, #prev {
-        font-size: larger; /* Adjust font size for smaller screens */
-    }
+  #next, #prev {
+      font-size: larger;
+  }
+}
+    
+.parallax-container {
+  position: relative;
+background-image: url(../img/holloween.png);
+  background-size: cover;
+  background-position: center;
+  height: 600px; 
+  overflow: hidden;
 }
 
+
+  
 
 /* start of footer  */
 
 .footer {
-    background: #1b1b1b;
+    background-color: 	#1b1b1b;
     color: white;
     padding-left: 80px;
     width: 100%;
@@ -1488,7 +1622,6 @@ body {
     background-clip: text;
     color: transparent;
   }
-  
   
   
   .footer .detail,
@@ -1532,7 +1665,6 @@ body {
     width: 60px;
     margin-right: 10px;
   }
-  
-  /* end of footer  */
+
   
   

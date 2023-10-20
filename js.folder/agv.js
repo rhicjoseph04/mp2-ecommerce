@@ -58,3 +58,8 @@ loadShow();
 
 
 
+    function closeModal() {
+        var modal = document.getElementById("agvModal");
+        modal.style.display = "none";
+    }
+

@@ -405,85 +405,78 @@ body {
 }
 
 
-
-
-
-header {
-  display: grid;
-  grid-template-columns: 1fr 50px;
-  margin-top: 50px;
-  color:#FFA31A;
-  padding-left :20px;
-  padding-right :20px;
-  justify-content:center;
-  align-items:center;
-}
-header .shopping {
-  position: relative;
-  text-align: right;
-  padding-left:20px;
-}
-header .shopping img {
-  width: 60px;
-}
-header .shopping span {
-  background-color: #FFA500;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  position: absolute;
-  top: -5px;
-  left: 80%;
-  padding: 3px 10px;
-}
-
-.container .categories ul {
-  list-style-type: none;
+/* Style for categories */
+.categories ul {
+  list-style: none;
   padding: 0;
   margin: 0;
-  font-size:30px;
-  font-style:italic;
-  color:white;
+  font-size: 20px;
+  font-style: italic;
+  color: white;
+  display: flex;
+  justify-content: space-between;
 }
 
-.container .categories li {
+.categories li {
   cursor: pointer;
-}
-.products {
-  padding: 20px;
+  margin-right: 20px;
   color: white;
-  background: radial-gradient(circle, #808080, #000000);
-  text-align: center;
-  margin-right: 0;
-  margin-left: 0;
-  margin-top:0;
+  transition: color 0.3s;
 }
-.products .box {
-  position: sticky; 
-  text-align: center;
+
+.categories li:hover {
+  color: #FFA31A;
+}
+
+/* Style for product boxes */
+.productbox {
   background: radial-gradient(circle, #575656, #000000);
   padding: 10px;
-  box-shadow: 0 30px 30px #757676; 
+  box-shadow: 0 30px 30px #757676;
   border-radius: 10px;
   color: #fff;
-  border: 1px solid #fff;
-  font-size: 14px; 
-  max-width: 400px;
-  width: 200px;
-  padding-bottom:0;
-  display: flex;
-   flex-wrap: wrap; 
- flex: 1 1 200px;
- margin: 10px; 
+  font-size: 14px;
+  width: 300px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  display: inline-block;
+  position:flex;
+  align-items: center;
+  height: 300px; 
 }
-.products .box img {
-  width: 100%;
+
+
+/* Center align the product boxes on smaller screens */
+@media (max-width: 768px) {
+  .products .box {
+    width: calc(50% - 20px); /* Adjust for 2 items in a row */
+  }
+}
+
+
+
+.productbox img {
   max-width: 100%;
-  height: auto; 
+  height: auto;
   border-radius: 10px;
+  width: 100%; /* Make the image take full width of the container */
 }
+
+.productbox h3 {
+  margin: 10px 0;
+  text-align: center; /* Center the title */
+}
+
+.productbox p {
+  margin: 10px 0;
+  text-align: center; /* Center the price */
+}
+
+.productbox:hover {
+  transform: scale(1.02);
+}
+
 @media (max-width: 768px) {
   .products .box {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust column width for smaller screens */
@@ -495,17 +488,59 @@ header .shopping span {
   }
 }
 
-/* .products .container {
-  display: grid;
-  grid-template-columns: 1fr 50px;
-  margin-top: 50px;
-  color:#FFA31A;
-  padding-left :20px;
-  padding-right :20px;
-  justify-content:center;
-  align-items:center;
-} */
 
+/* Style for icons */
+
+.icon {
+  cursor: pointer;
+  margin: 0 5px;
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.icon:hover {
+  color: #FFA31A;
+}
+
+.productbox:hover img {
+  opacity: 0.8;
+}
+
+.products {
+  padding: 20px;
+  background: radial-gradient(circle, #808080, #000000);
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjusted alignment */
+}
+
+/* Center align the product boxes on smaller screens */
+@media (max-width: 768px) {
+  .products .box {
+    width: calc(50% - 20px);
+  margin: 0 auto; /* Center align on smaller screens */
+  }
+}
+
+/* Additional hover effect for the box image */
+.box:hover .img_box img {
+  opacity: 0.8;
+  display: inline-block;
+  
+}
+/* Show the icons when hovering over the box */
+.productbox:hover .view-icon,
+.productbox:hover .cart-icon,
+.productbox:hover .heart-icon {
+  visibility: visible;
+  opacity: 1;
+}
 
  .container .filter h4 {
   margin-bottom: 10px;
@@ -534,15 +569,6 @@ header .shopping span {
   }
 }
 
-.icon{
-  margin-left:5px;
-  margin-right:5px;
-  margin-top: 5px;
-  border-radius:5px;
-  color:#fff;
-  font-size:20px;
-
-}
 
 .icon .overlay {
   position: absolute;
@@ -562,6 +588,7 @@ header .shopping span {
 .icon:hover{
 color:#ffa31a
 }
+
 
 
 .view-icon {
@@ -593,21 +620,6 @@ color:#ffa31a
   padding:10px 10px;
 }
 
-/* Additional hover effect for the box image */
-
-.box:hover .img_box img {
-  opacity: 0.8;
-  display: inline-block;
-}
-
-/* Show the icons when hovering over the box */
-.box:hover .icons .view-icon,
-.box:hover .icons .cart-icon,
-.box:hover .icons .heart-icon {
-  visibility: visible;
-  opacity: 1;
-}
-
 
 /* Bootstrap Modal custom styling */
 .modal-content {
@@ -637,7 +649,8 @@ color:#ffa31a
   margin: 5px 0; /* Adjusted margin */
 }
 
-/* Modal styles */
+
+/* Modal Styles */
 #productDetailModal {
   display: none;
   justify-content: center;
@@ -654,17 +667,17 @@ color:#ffa31a
   border: 3px solid white;
   padding: 20px;
   position: relative;
-  color:	#ffa31a;
+  color: #FFA31A;
 }
 
-#productDetailModal .modal-header{
-   color:yellow;
-  transform: skewX(-10deg); /* Add a skew effect */
-  width:60%;
-  padding-top:5px;
-  padding-bottom:0px;
+#productDetailModal .modal-header {
+  color: yellow;
+  transform: skewX(-10deg);
+  width: 60%;
+  padding-top: 5px;
+  padding-bottom: 0;
+  border: none;
 }
-
 
 #productDetailModal .modal-content::after {
   content: "";
@@ -675,12 +688,9 @@ color:#ffa31a
   margin-top: 10px;
   transform: skewX(-10deg);
   background: yellow;
-
- 
 }
 
 #productDetailModal .modal-content span {
-  background-color:none;
   padding: 0 10px;
   position: relative;
   z-index: 1;
@@ -697,20 +707,12 @@ color:#ffa31a
   left: 50%;
   background: linear-gradient(45deg, #f7ff1a, #ff523b);
   z-index: -1;
-  transform: skewX(-10deg); 
+  transform: skewX(-10deg);
 }
-
-
 
 .modal-product-image {
   max-width: 100%;
-  height:280px;
-}
-
-.modal-header {
-  border-bottom: none;
-  color:	yellow;
-  font-size:50px;
+  height: 280px;
 }
 
 .modal-footer {
@@ -726,9 +728,8 @@ color:#ffa31a
 }
 
 .add-to-cart-btn:hover {
-  color: #ff6b6b; /* Change to your desired hover color */
+  color: #FF6B6B;
 }
-
 
   /* start of footer  */
   .footer {

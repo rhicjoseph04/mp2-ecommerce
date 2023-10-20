@@ -113,8 +113,41 @@ function showModal(title, content) {
 function closeModal() {
   document.getElementById('modal').style.display = 'none';
 }
+function getLocation() {
+  // Check if the geolocation API is available in the browser
+  if ("geolocation" in navigator) {
+      const latitudeSpan = document.getElementById("latitude");
+      const longitudeSpan = document.getElementById("longitude");
+      const getLocationButton = document.getElementById("getLocation");
 
+      // Request the user's geolocation
+      navigator.geolocation.getCurrentPosition(function (position) {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
 
+          // Update the HTML elements with latitude and longitude
+          latitudeSpan.textContent = latitude;
+          longitudeSpan.textContent = longitude;
+      }, function (error) {
+          // Handle errors (e.g., user denied location access)
+          console.error("Error getting location:", error);
+      });
+
+      // Show the geolocation button when hovering over the body
+      document.body.addEventListener("mouseover", function (e) {
+          if (e.target.tagName === "BODY") {
+              getLocationButton.style.display = "block";
+          }
+      });
+
+      // Hide the geolocation button when mouse leaves the button
+      getLocationButton.addEventListener("mouseleave", function () {
+          getLocationButton.style.display = "none";
+      });
+  } else {
+      alert("Geolocation is not available in this browser.");
+  }
+}
 
 
 
