@@ -516,6 +516,26 @@ body {
 }
 
 
+#geolocation-container {
+  display: none;
+  text-align: center;
+  margin-top: 10px; 
+}
+
+#getLocationButton {
+  background-color: #FFA31A;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#getLocationButton:hover {
+  background-color: #FF7D00;
+}
+
+
  /* start of product */
  .product_type {
     background-color: black;
