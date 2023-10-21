@@ -212,3 +212,20 @@ $(document).ready(function () {
     }
   });
 });
+
+const eyes = document.querySelectorAll('.eyes');
+
+document.addEventListener('mousemove', (e) => {
+  eyes.forEach((eye) => {
+    const eyeRect = eye.getBoundingClientRect();
+    const eyeX = eyeRect.left + eyeRect.width / 2;
+    const eyeY = eyeRect.top + eyeRect.height / 2;
+
+    const angle = Math.atan2(e.clientY - eyeY, e.clientX - eyeX);
+    const distance = Math.min(10, Math.hypot(e.clientX - eyeX, e.clientY - eyeY));
+
+    const transform = `translateX(${Math.cos(angle) * distance}px) translateY(${Math.sin(angle) * distance}px)`;
+
+    eye.style.transform = transform;
+  });
+});

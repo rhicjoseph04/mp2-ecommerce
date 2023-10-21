@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     border: none;
-    background-image: url(../img/parallax.png);
+    background-image: url(../img/pax6.webp);
     margin: 0;
     padding: 0;
   }
@@ -403,7 +403,7 @@ body {
   }
   
 .parallax {
-  background-image: url('../img/parallax.png');
+  background-image: url('../img/pax6.webp');
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
@@ -420,15 +420,16 @@ body {
 }
 
 .parallax h1 {
-  font-size: 36px;
+  font-size: 50px;
   margin: 0;
-  color:white;
+  color:#ef8400;
+  font-weight:bold;
 }
 
 .parallax h2 {
-  font-size: 24px;
+  font-size: 30px;
   margin: 20px 0;
-  color:black;
+  color:white;
 }
 
 
