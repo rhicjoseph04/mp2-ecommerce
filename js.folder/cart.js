@@ -174,7 +174,6 @@ function initApp() {
 }
 
 function cancelOrder() {
-    // Clear the cart and session storage
     clearCartFromSessionStorage();
 
     Swal.fire({
@@ -192,21 +191,21 @@ function cancelOrder() {
 
 initApp();
 
-let isLoggedIn = false;  // Set this to true if the user is logged in
+let isLoggedIn = false;  
 
-// Function to handle successful login
+
 function loginSuccess() {
-    isLoggedIn = true;  // Update isLoggedIn to true upon successful login
-    // You may want to redirect the user to the product page after successful login
-    window.location.href = 'product.html';
+    isLoggedIn = true; 
+   
+    window.location.href = 'cart2.html';
 }
 
 function addToCart(key) {
     console.log('isLoggedIn:', isLoggedIn);
 
-    // Check if the user is logged in
+   
     if (!isLoggedIn) {
-        // Use SweetAlert for the message
+    
         Swal.fire({
             icon: 'warning',
             title: 'You need to log in before proceeding to checkout.',
@@ -231,18 +230,10 @@ function addToCart(key) {
        
         localStorage.setItem('username', 'exampleUser'); 
 
-        // Redirect to the product page for making orders
         window.location.href = 'cart2.html';
     }
 
-    // const product = products.find(item => item.id === key);
-    // if (!listCards[product.id]) {
-    //     listCards[product.id] = { ...product, quantity: 1 };
-    // } else {
-    //     listCards[product.id].quantity++;
-    // }
-    // reloadCart();
-
+   
     Swal.fire({
         icon: 'success',
         title: `${product.Title} added to cart.`,
@@ -255,24 +246,22 @@ function addToCart(key) {
     });
 }
 
-// Add this function to set the login status in localStorage
+
 function setLoginStatus() {
     localStorage.setItem('isLoggedIn', 'true');
 }
 
-// Update the loginSuccess function to call setLoginStatus
 function loginSuccess() {
-    isLoggedIn = true;  // Update isLoggedIn to true upon successful login
-    setLoginStatus();  // Set login status to true in localStorage
-    // You may want to redirect the user to the product page after successful login
+    isLoggedIn = true;  
+    setLoginStatus();  
+  
     window.location.href = 'cart2.html';
 }
 
-// Add this function to check if the user is logged in
 function checkLoginStatus() {
     const loginStatus = localStorage.getItem('isLoggedIn');
     if (loginStatus === 'true') {
-        // User is logged in, remove the alert message
+       
         openShopping.removeEventListener('click', showLoginAlert);
         openShopping.addEventListener('click', () => {
             body.classList.add('active');
@@ -280,19 +269,18 @@ function checkLoginStatus() {
     }
 }
 
-// Add this function to show an alert asking the user to log in
+                  
 function showLoginAlert() {
     alert('You need to log in before proceeding to checkout.');
     window.location.href = '../login.html';  
 }
 
-// Update the event listener for openShopping
 openShopping.addEventListener('click', () => {
-    checkLoginStatus();  // Check the login status before showing the cart
+    checkLoginStatus(); 
     body.classList.add('active');
 });
 
-// Call checkLoginStatus on page load
+
 checkLoginStatus();
 
 function removeFromCart(key) {
@@ -372,13 +360,11 @@ function allProducts() {
 
 
 
-
-// Event listener for the "Add to Cart" button in the modal
 document.getElementById('productDetailModal').addEventListener('click', (event) => {
     if (event.target.classList.contains('btn-primary')) {
-        // Add to Cart button was clicked
+    
         addToCart(selectedProductId);
-        $('#productDetailModal').modal('hide'); // Close the modal
+        $('#productDetailModal').modal('hide');
     }
 });
 

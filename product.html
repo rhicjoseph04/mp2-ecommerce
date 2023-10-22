@@ -143,29 +143,30 @@
         <a href="https://www.youtube.com"><img src="./img/youtube.png" alt="YouTube"></a>
     </div>
 </div>
-  <div class="categories">
-    <ul>
-        <li onclick="filterProduct('All Products')">All Products</li>
-        <li onclick="filterProduct('Full-face')">Full-Face Helmet (KYT)</li>
-        <li onclick="filterProduct('Half-face')">Half-face Helmet (KYT)</li>
-        <li onclick="filterProduct('Off-Road')">Off-Road Helmet (KYT)</li>
-        <li onclick="filterProduct('Accessories')">Accessories (KYT)</li>
-    </ul>
+<div class="products">
+  <h2>Products</h2>
+
+  <div class="container">
+      <div class="filter">
+          <div class="categories">
+              <h3>Categories</h3>
+              <ul>
+                  <li onclick="AllProducts()">All Products</li>
+                  <li onclick="filtterproduct('Full-face')">Full-Face Helmet</li>
+                  <li onclick="filtterproduct('Half-face')">Half-face helmet</li>
+                  <li onclick="filtterproduct('Off-Road')">Off-Road Helmet</li>
+                  <li onclick="filtterproduct('Accessories')">Accessories</li>
+              </ul>
+          </div>
+      </div>
+      <div class="productbox">
+          <div class="contant" id="productContainer">
+              <!-- Product items will be appended here -->
+          </div>
+      </div>
+  </div>
 </div>
 
-
-      
-      <div class="product-images">
-        <div id="productBox" class="productbox">
-           <div class="content">
-             <div id="app"></div>
-             
-              <!-- Existing content for a product box -->
-          </div>
-          </div>
-        </div>
-      
-  </div>
  
     <div class="modal fade" id="productDetailModal" tabindex="-1" aria-labelledby="productDetailModalLabel"
       aria-hidden="true">
@@ -264,7 +265,7 @@
 
     <script src="./js.folder/newFileproduct.js"></script>
     <script src="./js.folder/product.js"></script>
-    <script src="./js.folder/productdetails.js"></script>
+  
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
