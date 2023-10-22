@@ -113,189 +113,208 @@ const Productdetail = [
                 Price: '40',
                 Img: '../img/kythelmetaccesso2.jpeg'
             },
+            {
+              id:15,
+              Title:"Agv Pista GP Carbon 2014",
+              Cat: 'Full-face',
+              Brand: 'AGV',
+              Price: '500',
+              Img: '../img/Agv Pista GP Carbon 2014 02.png'
+          },
+          {
+            id:15,
+            Title:"Agv Plain White  Pulito",
+            Cat: 'Full-face',
+            Brand: 'AGV',
+            Price: '500',
+            Img: '../img/agvfront-pulito-814x1024.webp'
+        },
+
                
 ];
 
 let cart = [];
 
-function calculateTotalPHP() {
-    let totalPHP = 0;
-    products.forEach(product => {
-      totalPHP += product.pricePHP * product.quantity;
-    });
-    return totalPHP;
-  }
-
 document.addEventListener('DOMContentLoaded', () => {
-    const productsContainer = document.getElementById('app');
+  const productsContainer = document.getElementById('productContainer');
 
-    productDetail.sort((a, b) => a.id - b.id);
+  // Initialize the product list
+  setProduct(Productdetail);
 
-    productDetail.forEach((product) => {
+  function setProduct(update) {
+    productsContainer.innerHTML = ''; // Clear the existing product list
+
+    update.forEach((curElm) => {
       const productBox = document.createElement("div");
-      productBox.classList.add("box");
-      productBox.setAttribute("data-category", `${product.Cat} ${product.Brand}`);
-    
+      productBox.className = "box";
 
-  const imgBox = document.createElement("div");
-  imgBox.classList.add("img_box");
+      const imgBox = document.createElement("div");
+      imgBox.className = "img_box";
+      const img = document.createElement("img");
+      img.src = curElm.Img;
+      img.alt = curElm.Title;
+      const icon = document.createElement("div");
+      icon.className = "icon";
+
+      // Create cart icon and add-to-cart logic
+      const cartIcon = document.createElement("li");
+      cartIcon.onclick = () => {
+        isAuthenticated ? addToCart(curElm) : loginWithRedirect();
+      };
+      const cartIconContent = document.createElement("i");
+      cartIconContent.className = "fa fa-shopping-cart"; // You may need to define your cart icon class
+      cartIcon.appendChild(cartIconContent);
+
+      // Create view icon and view-product logic
+      const viewIcon = document.createElement("li");
+      viewIcon.onclick = () => view(curElm);
+      const viewIconContent = document.createElement("i");
+      viewIconContent.className = "fa fa-eye"; // You may need to define your view icon class
+      viewIcon.appendChild(viewIconContent);
+
+      // Create heart icon for favorites
+      const heartIcon = document.createElement("li");
+      const heartIconContent = document.createElement("i");
+      heartIconContent.className = "fa fa-heart"; // You may need to define your heart icon class
+      heartIcon.appendChild(heartIconContent);
+
+      // Append icons to the icon div
+      icon.appendChild(cartIcon);
+      icon.appendChild(viewIcon);
+      icon.appendChild(heartIcon);
+
+      imgBox.appendChild(img);
+      imgBox.appendChild(icon);
 
 
-      const productImage = document.createElement('img');
-      productImage.src = product.Img;
-      productImage.alt = product.Title;
+      const detail = document.createElement("div");
+      detail.className = "detail";
+      const cat = document.createElement("p");
+      cat.textContent = curElm.Cat;
+      const title = document.createElement("h3");
+      title.textContent = curElm.Title;
 
-      imgBox.appendChild(productImage);
-
-      const icons = document.createElement('div');
-      icons.classList.add('icons');
-
-      
-      const cartIcon = document.createElement('button');
-      cartIcon.classList.add('icon', 'cart-icon');
-      cartIcon.innerHTML = '<i class="fas fa-shopping-cart"></i>';
-      cartIcon.addEventListener('click', () => {
-        addToCartModal(product);
-        updateCartCount();
-        alert('Product added to cart!');
+        // Convert the price from dollars to pesos
+    const price = document.createElement("h4");
+    const pesosPrice = (parseFloat(curElm.Price) * 50).toLocaleString('en-PH', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
     });
+    price.textContent = `₱${pesosPrice}`;
 
-    const viewIcon = document.createElement('button');
-    viewIcon.classList.add('icon', 'view-icon');
-    viewIcon.innerHTML = '<i class="far fa-eye"></i>';
-    viewIcon.addEventListener('click', () => {
-        openProductDetail(product);
-    });
-
-    const heartIcon = document.createElement('button');
-    heartIcon.classList.add('icon', 'heart-icon');
-    heartIcon.innerHTML = '<i class="far fa-heart"></i>';
-    let isHearted = false;
-
-    heartIcon.addEventListener('click', () => {
-        if (isHearted) {
-            heartIcon.innerHTML = '<i class="far fa-heart"></i>';
-            isHearted = false;
-        } else {
-            heartIcon.innerHTML = '<i class="fas fa-heart"></i>';
-            isHearted = true;
-        }
-    });
-
-    icons.appendChild(cartIcon);
-    icons.appendChild(viewIcon);
-    icons.appendChild(heartIcon);
-    imgBox.appendChild(icons);
-
-      productBox.appendChild(imgBox);
-
-      const detail = document.createElement('div');
-      detail.classList.add('detail');
-
-      const category = document.createElement('p');
-      category.textContent = product.Cat;
-
-      const title = document.createElement('h3');
-      title.textContent = product.Title;
-
-      const pesoPrice = product.Price * 50.0;
-
-      const price = document.createElement('h4');
-      price.textContent = `₱${pesoPrice.toFixed(2)}`;
-
-      detail.appendChild(category);
+      detail.appendChild(cat);
       detail.appendChild(title);
       detail.appendChild(price);
+
+      productBox.appendChild(imgBox);
       productBox.appendChild(detail);
 
       productBox.addEventListener('click', (e) => {
         if (!e.target.classList.contains('icon')) {
-          openProductDetail(product);
+          openProductDetailsModal(curElm);
         }
       });
 
       productsContainer.appendChild(productBox);
     });
+  }
 
-    function addToCartModal(product) {
-        console.log('Added to cart:', product.Title);
-    }
-    
+  function loginWithRedirect() {
+    // Define your login logic here
+    alert('Please log in to add to cart.');
+  }
 
-    allProducts();
-  });
+  // Function to open the product detail modal
+  function openProductDetailsModal(product) {
+    const productDetailModal = new bootstrap.Modal(document.getElementById('productDetailModal'));
+    const productDetailContent = document.getElementById('productDetailContent');
+
+    // Clear existing content in the modal
+    productDetailContent.innerHTML = '';
+
+     // Create a container for the product details
+  const productDetailsContainer = document.createElement('div');
+  productDetailsContainer.className = 'product-details-container';
 
 
-const productContainer = document.getElementById("productContainer");
+    // Create elements for product details
+    const productTitle = document.createElement('h2');
+    productTitle.textContent = product.Title;
 
-function filtterproduct(product) {
-    const update = Productdetail.filter((x) => {
-        return x.Cat === product;
+    const productCategory = document.createElement('p');
+    productCategory.textContent = product.Cat;
+
+    const productPrice = document.createElement("h1");
+    // Convert the price from dollars to pesos using a conversion rate
+    const pesosPrice = (parseFloat(product.Price) * 50).toLocaleString('en-PH', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
     });
-    setProduct(update);
-}
+    productPrice.textContent = `₱${pesosPrice}`;
+    
+    const productNote = document.createElement('h4');
+  productNote.textContent = "NOTE: Helmets displayed with black or mirrored visors, will always be delivered with a clear visor.";
 
-function AllProducts() {
-    setProduct(Productdetail);
-}
+  // Create a container for the product image
+  const productImageContainer = document.createElement('div');
+  productImageContainer.className = 'product-image-container';
+  const productImage = document.createElement('img');
+  productImage.src = product.Img;
+  productImage.alt = product.Title;
+  productImageContainer.appendChild(productImage);
 
-function addToCart(product) {
-      let existingItem = cart.find(x => x.id === product.id);
+
     
-      if (existingItem) {
-        existingItem.qty += 1;
-      } else {
-        const newItem = { ...product, qty: 1 };
-        cart.push(newItem);
-      }
-    
-      updateCartUI();
-      alert("Product added to cart!");
+
+ // Append elements to the modal content
+ productDetailContent.appendChild(productTitle);
+ productDetailContent.appendChild(productCategory);
+ productDetailContent.appendChild(productImage);
+ productDetailContent.appendChild(productNote);
+ productDetailContent.appendChild(productPrice);
+ productDetailContent.appendChild(productImageContainer);
+
+
+
+ // Append the product details container to the modal content
+ productDetailContent.appendChild(productDetailsContainer);
+
+    // Show the modal
+    productDetailModal.show();
+
+   // Handle "Add to Cart" button click
+   const addToCartButton = document.getElementById('addToCartButton');
+   addToCartButton.addEventListener('click', () => {
+     addToCart(product);
+     updateCartUI();
+     alert('Product added to cart!');
+   });
+ }
+
+  function addToCart(product) {
+    let existingItem = cart.find((x) => x.id === product.id);
+
+    if (existingItem) {
+      existingItem.qty += 1;
+    } else {
+      const newItem = { ...product, qty: 1 };
+      cart.push(newItem);
     }
-  
-    function addToCart() {
-      console.log('isLoggedIn:', isLoggedIn);
-    }
-      // Check if the user is logged in
-      if (!isLoggedIn) {
-          // Use SweetAlert for the message
-          Swal.fire({
-              icon: 'warning',
-              title: 'You need to log in before proceeding to checkout.',
-              text: 'Click the button to log in.',
-              showCancelButton: true,
-              confirmButtonText: 'Login',
-              cancelButtonText: 'Cancel',
-              customClass: {
-                  container: 'custom-swal-container',
-                  popup: 'custom-swal-popup',
-                  title: 'custom-swal-title',
-                  cancelButton: 'custom-swal-button',
-                  confirmButton: 'custom-swal-button'
-              }
-          }).then((result) => {
-              if (result.isConfirmed) {
-                  window.location.href = 'login.html';
-              }
-          });
-        
-      
-         } else {
-         
-          localStorage.setItem('username', 'exampleUser'); 
-  
-          // Redirect to the product page for making orders
-          window.location.href = 'cart2.html';
-         }
-    function updateCartUI() {
-      const cartContent = document.getElementById('cartContent');
-      cartContent.innerHTML = ''; // Clear previous content
-    
-      cart.forEach(item => {
-        const cartItemDiv = document.createElement('div');
-        cartItemDiv.classList.add('cart_item');
-    
-        cartItemDiv.innerHTML = `
+  }
+
+  function view(curElm) {
+    // Define your view logic here
+  }
+
+  function updateCartUI() {
+    const cartContent = document.getElementById('cartContent');
+    cartContent.innerHTML = ''; // Clear previous content
+
+    cart.forEach((item) => {
+      const cartItemDiv = document.createElement('div');
+      cartItemDiv.classList.add('cart_item');
+
+      cartItemDiv.innerHTML = `
           <div class="img_box">
             <img src="${item.Img}" alt="${item.Title}">
           </div>
@@ -316,79 +335,44 @@ function addToCart(product) {
             </div>
           </div>
         `;
-    
-        cartContent.appendChild(cartItemDiv);
-      });
-    
-      const totalPriceElement = document.querySelector(".totalprice");
-      totalPriceElement.textContent = `Total: ₱${calculateTotalPHP()}`;
-    }
-  
-function view(curElm) {
-    // Define your view logic here
-}
 
-function setProduct(update) {
-    productContainer.innerHTML = ''; // Clear the existing product list
-    update.forEach((curElm) => {
-        const productBox = document.createElement("div");
-        productBox.className = "box";
-
-        const imgBox = document.createElement("div");
-        imgBox.className = "img_box";
-        const img = document.createElement("img");
-        img.src = curElm.Img;
-        img.alt = curElm.Title;
-        const icon = document.createElement("div");
-        icon.className = "icon";
-        const cartIcon = document.createElement("li");
-        cartIcon.onclick = () => {
-            isAuthenticated ? addtocart(curElm) : loginWithRedirect();
-        };
-        const cartIconContent = document.createElement("i");
-        cartIconContent.className = "fa fa-shopping-cart"; // You may need to define your cart icon class
-        cartIcon.appendChild(cartIconContent);
-        const viewIcon = document.createElement("li");
-        viewIcon.onclick = () => view(curElm);
-        const viewIconContent = document.createElement("i");
-        viewIconContent.className = "fa fa-eye"; // You may need to define your view icon class
-        viewIcon.appendChild(viewIconContent);
-        const heartIcon = document.createElement("li");
-        const heartIconContent = document.createElement("i");
-        heartIconContent.className = "fa fa-heart"; // You may need to define your heart icon class
-        heartIcon.appendChild(heartIconContent);
-        icon.appendChild(cartIcon);
-        icon.appendChild(viewIcon);
-        icon.appendChild(heartIcon);
-        imgBox.appendChild(img);
-        imgBox.appendChild(icon);
-
-        const detail = document.createElement("div");
-        detail.className = "detail";
-        const cat = document.createElement("p");
-        cat.textContent = curElm.Cat;
-        const title = document.createElement("h3");
-        title.textContent = curElm.Title;
-        const price = document.createElement("h4");
-        price.textContent = "$" + curElm.Price;
-        detail.appendChild(cat);
-        detail.appendChild(title);
-        detail.appendChild(price);
-
-        productBox.appendChild(imgBox);
-        productBox.appendChild(detail);
-        productContainer.appendChild(productBox);
+      cartContent.appendChild(cartItemDiv);
     });
+
+    const totalPriceElement = document.querySelector(".totalprice");
+    totalPriceElement.textContent = `Total: ₱${calculateTotalPHP()}`;
+  }
+
+  // Other functions and variable declarations can remain the same
+});
+
+function calculateTotalPHP() {
+  let totalPHP = 0;
+  cart.forEach((product) => {
+    totalPHP += parseFloat(product.Price) * 50.0 * product.qty;
+  });
+  return totalPHP;
 }
 
-function loginWithRedirect() {
-    // Define your login logic here
+function incQty(productId) {
+  // Implement incrementing quantity logic here
 }
 
-// Initialize with all products
-setProduct(Productdetail);
+function decQty(productId) {
+  // Implement decrementing quantity logic here
+}
 
+function removeProduct(productId) {
+  // Implement removing product from cart logic here
+}
 
+// Define the variable `isLoggedIn` based on your authentication logic
+const isLoggedIn = true; // You need to set it according to your authentication logic
+
+// Rest of your code including isAuthenticated handling and other functions can remain the same
+
+// Initial setup to show all products
+AllProducts();
 
 
 // const url = 'http://127.0.0.1:5500/productdetails.js';

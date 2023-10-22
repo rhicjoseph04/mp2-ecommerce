@@ -438,13 +438,12 @@ body {
 #productContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 -10px; /* Negative margin to create space between boxes */
+  gap: 20px;
+  justify-content: center;
 }
-
 /* Style for product boxes */
 .box {
-  width: calc(25% - 20px); /* Adjusted width to account for padding */
+  width: 200px; /* Adjusted width to account for padding */
   margin-bottom: 20px;
   border: 1px solid #ccc;
   padding: 10px;
@@ -453,16 +452,86 @@ body {
 }
 
 /* Style for product images */
-.img_box img {
+
+.img_box {
+  position: relative;
+}
+
+img {
   max-width: 100%;
+  height: auto;
 }
 
 /* Icon styling */
-.icon li {
+.productbox {
+  position: relative; /* Position .productbox relative for absolute positioning of icons */
+  border:black;
+}
+
+
+.productbox .icon {
+  position: absolute;
+  top: -40px; /* Position above the product box, you can adjust this value */
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #fff;
+  opacity: 1; /* Start with 0 opacity to hide the icons */
+  transition: opacity 0.3s ease; /* Add a smooth transition effect */
+}
+
+
+.productbox .icon i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.productbox:hover .icon {
+  top: 10px; /* Show the icons inside the box when hovering */
+  opacity: 1; /* Make the icons visible on hover */
+}
+
+.productbox .icon li {
   display: inline-block;
   margin-right: 10px;
   cursor: pointer;
 }
+.productbox .img_box:hover .icon {
+ 
+  transform: translateX(100%); /* Move icons to the left when visible */
+  background-color: #ffa13a; /* Background color to cover the icons */
+  padding: 5px; /* Add some padding for easier interaction */
+  opacity: 9;
+}
+.productbox .icon {
+  position: absolute;
+  top: 0;
+  right: -10px; /* Position the icons at the top-right corner of .img_box */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s, transform 0.3s; /* Add a transition for a smooth effect */
+  padding: 10px; /* Added padding to create space around the icons */
+}
+
+.productbox .icon i {
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s; /* Add a color transition on hover */
+}
+
+.productbox .icon i:hover {
+  color: #FFA31A; /* Change color on hover */
+}
+
+.productbox .icon li {
+  display: block;
+  cursor: pointer;
+  color: #FFA31A;
+}
+
 
 /* Style for categories */
 .products h2 {
@@ -493,21 +562,6 @@ body {
 
 .categories ul li:hover {
   color: #000; /* Change to your desired hover color */
-}
-
-/* Style for the 'Add To Cart' button */
-button {
-  background-color: #ffa13a; /* Change to your desired button color */
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #0056b3; /* Change to your desired hover color */
 }
 
 /* Style for product details */
@@ -584,13 +638,22 @@ button:hover {
   overflow: auto;
 }
 
-#productDetailModal .modal-dialog {
-  max-width: 60%;
+.product-detail-modal {
+  max-width: 600px; /* Define your preferred maximum width */
 }
+
+#productDetailModal .modal-dialog {
+  width: auto;
+  max-width: 70%; /* Responsive width */
+  margin: 20px; /* Margin for better appearance */
+}
+
 
 #productDetailModal .modal-content {
   background: radial-gradient(circle, #808080, #000000);
-  border: 3px solid white;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(233, 226, 226, 0.2); /* Box shadow for depth */
+  border-radius: 5px;
   padding: 20px;
   position: relative;
   color: #FFA31A;
@@ -603,6 +666,9 @@ button:hover {
   padding-top: 5px;
   padding-bottom: 0;
   border: none;
+  background-color: #343a40; 
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 #productDetailModal .modal-content::after {
@@ -616,12 +682,22 @@ button:hover {
   background: yellow;
 }
 
+#productDetailModal .modal-title {
+  font-size: 24px;
+}
+
 #productDetailModal .modal-content span {
   padding: 0 10px;
   position: relative;
   z-index: 1;
   color: white;
 }
+
+#productDetailModal .modal-body {
+  padding: 20px 20px;
+  text-align: left;
+}
+
 
 #productDetailModal .modal-content::before {
   content: "";
@@ -641,9 +717,88 @@ button:hover {
   height: 280px;
 }
 
-.modal-footer {
-  border-top: none;
+#productDetailModal .modal-footer {
+  background-color: #ffa31a; /* Footer background color */
+  backdrop-filter: blur(15px); /* Blurred background effect */
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: right;
+  padding: 15px;
 }
+
+#productDetailModal .modal-footer .btn-secondary {
+  background-color: #292929; /* Close button background color */
+  color: #fff;
+  border: none;
+}
+
+#productDetailModal .modal-footer .btn-primary {
+  background-color:  #292929; /* Add to Cart button background color */
+  color: #fff;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+#productDetailModal .modal-footer .btn-primary:hover {
+  background-color: #000000; /* Hover effect on Add to Cart button */
+}
+
+#productDetailContent img {
+  max-width: 100%;
+  height: auto; /* Responsive image size */
+  width:300px;
+  border: 1px solid #070707;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Image box shadow */
+}
+
+/* CSS styles for the product details modal */
+.product-details-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.product-image-container {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.product-image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-note {
+  font-style: italic;
+  font-size: 14px;
+  color: #888;
+  margin-top: 10px;
+}
+
+/* Style for the product price */
+.product-details-container h1 {
+  font-size: 24px;
+  color: #FFA31A; /* Your desired color for the price */
+  margin: 10px 0;
+}
+
+
+
+/* Media query for smaller screens (adjust as needed) */
+@media (max-width: 768px) {
+  .product-details-container {
+    flex-direction: column;
+  }
+
+  .product-image-container {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+
+
 
 .add-to-cart-btn {
   background-color: transparent;

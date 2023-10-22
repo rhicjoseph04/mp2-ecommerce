@@ -135,7 +135,7 @@ let products =
         Title:"Espargo Replica 2017",
         Cat: 'Full-Face',
         price: '280',
-        pricePHP: 40 * 50, // Assuming 1 USD = 50 PHP
+        pricePHP: 280 * 50, // Assuming 1 USD = 50 PHP
         image: '../img/kytespargo2017.png'
     },
 
