@@ -1,13 +1,13 @@
-const isAuthenticated = true; // Set to true or false as needed
+const isAuthenticated = true; 
 
 const Productdetail = [
   {
                 id:1,
                 Title:"TT COURSE – RADIANCE",
-                Cat: 'Full-face',
-                Brand: 'KYT',
-                Price: '150',
-                Img: '../img/kythelmet1.png'
+                Cat: "Full-face",
+                Brand: "KYT",
+                Price: "150",
+                Img: "../img/kythelmet1.png"
             },
             {
                 id:2,
@@ -116,6 +116,116 @@ const Productdetail = [
                
 ];
 
+let cart = [];
+
+function calculateTotalPHP() {
+    let totalPHP = 0;
+    products.forEach(product => {
+      totalPHP += product.pricePHP * product.quantity;
+    });
+    return totalPHP;
+  }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const productsContainer = document.getElementById('app');
+
+    productDetail.sort((a, b) => a.id - b.id);
+
+    productDetail.forEach((product) => {
+      const productBox = document.createElement("div");
+      productBox.classList.add("box");
+      productBox.setAttribute("data-category", `${product.Cat} ${product.Brand}`);
+    
+
+  const imgBox = document.createElement("div");
+  imgBox.classList.add("img_box");
+
+
+      const productImage = document.createElement('img');
+      productImage.src = product.Img;
+      productImage.alt = product.Title;
+
+      imgBox.appendChild(productImage);
+
+      const icons = document.createElement('div');
+      icons.classList.add('icons');
+
+      
+      const cartIcon = document.createElement('button');
+      cartIcon.classList.add('icon', 'cart-icon');
+      cartIcon.innerHTML = '<i class="fas fa-shopping-cart"></i>';
+      cartIcon.addEventListener('click', () => {
+        addToCartModal(product);
+        updateCartCount();
+        alert('Product added to cart!');
+    });
+
+    const viewIcon = document.createElement('button');
+    viewIcon.classList.add('icon', 'view-icon');
+    viewIcon.innerHTML = '<i class="far fa-eye"></i>';
+    viewIcon.addEventListener('click', () => {
+        openProductDetail(product);
+    });
+
+    const heartIcon = document.createElement('button');
+    heartIcon.classList.add('icon', 'heart-icon');
+    heartIcon.innerHTML = '<i class="far fa-heart"></i>';
+    let isHearted = false;
+
+    heartIcon.addEventListener('click', () => {
+        if (isHearted) {
+            heartIcon.innerHTML = '<i class="far fa-heart"></i>';
+            isHearted = false;
+        } else {
+            heartIcon.innerHTML = '<i class="fas fa-heart"></i>';
+            isHearted = true;
+        }
+    });
+
+    icons.appendChild(cartIcon);
+    icons.appendChild(viewIcon);
+    icons.appendChild(heartIcon);
+    imgBox.appendChild(icons);
+
+      productBox.appendChild(imgBox);
+
+      const detail = document.createElement('div');
+      detail.classList.add('detail');
+
+      const category = document.createElement('p');
+      category.textContent = product.Cat;
+
+      const title = document.createElement('h3');
+      title.textContent = product.Title;
+
+      const pesoPrice = product.Price * 50.0;
+
+      const price = document.createElement('h4');
+      price.textContent = `₱${pesoPrice.toFixed(2)}`;
+
+      detail.appendChild(category);
+      detail.appendChild(title);
+      detail.appendChild(price);
+      productBox.appendChild(detail);
+
+      productBox.addEventListener('click', (e) => {
+        if (!e.target.classList.contains('icon')) {
+          openProductDetail(product);
+        }
+      });
+
+      productsContainer.appendChild(productBox);
+    });
+
+    function addToCartModal(product) {
+        console.log('Added to cart:', product.Title);
+    }
+    
+
+    allProducts();
+  });
+
+
 const productContainer = document.getElementById("productContainer");
 
 function filtterproduct(product) {
@@ -129,10 +239,91 @@ function AllProducts() {
     setProduct(Productdetail);
 }
 
-function addtocart(curElm) {
-    // Define your add to cart logic here
-}
-
+function addToCart(product) {
+      let existingItem = cart.find(x => x.id === product.id);
+    
+      if (existingItem) {
+        existingItem.qty += 1;
+      } else {
+        const newItem = { ...product, qty: 1 };
+        cart.push(newItem);
+      }
+    
+      updateCartUI();
+      alert("Product added to cart!");
+    }
+  
+    function addToCart() {
+      console.log('isLoggedIn:', isLoggedIn);
+    }
+      // Check if the user is logged in
+      if (!isLoggedIn) {
+          // Use SweetAlert for the message
+          Swal.fire({
+              icon: 'warning',
+              title: 'You need to log in before proceeding to checkout.',
+              text: 'Click the button to log in.',
+              showCancelButton: true,
+              confirmButtonText: 'Login',
+              cancelButtonText: 'Cancel',
+              customClass: {
+                  container: 'custom-swal-container',
+                  popup: 'custom-swal-popup',
+                  title: 'custom-swal-title',
+                  cancelButton: 'custom-swal-button',
+                  confirmButton: 'custom-swal-button'
+              }
+          }).then((result) => {
+              if (result.isConfirmed) {
+                  window.location.href = 'login.html';
+              }
+          });
+        
+      
+         } else {
+         
+          localStorage.setItem('username', 'exampleUser'); 
+  
+          // Redirect to the product page for making orders
+          window.location.href = 'cart2.html';
+         }
+    function updateCartUI() {
+      const cartContent = document.getElementById('cartContent');
+      cartContent.innerHTML = ''; // Clear previous content
+    
+      cart.forEach(item => {
+        const cartItemDiv = document.createElement('div');
+        cartItemDiv.classList.add('cart_item');
+    
+        cartItemDiv.innerHTML = `
+          <div class="img_box">
+            <img src="${item.Img}" alt="${item.Title}">
+          </div>
+          <div class="detail">
+            <div class="info">
+              <h4>${item.Cat}</h4>
+              <h3>${item.Title}</h3>
+              <p>Price: ₱${parseFloat(item.Price) * 50.0}</p>
+              <div class="qty">
+                <button class="incqty" onclick="incQty(${item.id})">+</button>
+                <input type="text" value="${item.qty}" disabled>
+                <button class="decqty" onclick="decQty(${item.id})">-</button>
+              </div>
+              <h4 class="subtotal">Subtotal: ₱${parseFloat(item.Price) * item.qty * 50.0}</h4>
+            </div>
+            <div class="close">
+              <button onclick="removeProduct(${item.id})">Remove</button>
+            </div>
+          </div>
+        `;
+    
+        cartContent.appendChild(cartItemDiv);
+      });
+    
+      const totalPriceElement = document.querySelector(".totalprice");
+      totalPriceElement.textContent = `Total: ₱${calculateTotalPHP()}`;
+    }
+  
 function view(curElm) {
     // Define your view logic here
 }
